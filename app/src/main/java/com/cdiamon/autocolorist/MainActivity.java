@@ -1,5 +1,6 @@
 package com.cdiamon.autocolorist;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,14 +13,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    Button btnGallery = (Button) findViewById(R.id.buttonCatalogue);
+
+    @Override
+    public void setContentView(View view) {
+        super.setContentView(view);
+        btnGallery.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), CarCodesGallery.class));
+            }
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        setContentView(R.layout.content_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -40,6 +58,15 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+//        btnGallery.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), CarCodesGallery.class));
+//            }
+//        });
     }
 
     @Override
@@ -84,6 +111,8 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
+            startActivity(new Intent(getApplicationContext(), CarCodesGallery.class));
+
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -98,4 +127,12 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public MainActivity() {
+
+
+
+    }
+
+
 }

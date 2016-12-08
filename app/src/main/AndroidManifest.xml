@@ -18,6 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CarCodesGallery"
+            android:label="@string/title_activity_car_codes_gallery"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cdiamon.autocolorist.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
