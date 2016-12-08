@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -109,18 +110,20 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            Toast.makeText(getApplicationContext(), "Переходим в 1", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
 
             startActivity(new Intent(getApplicationContext(), CarCodesGallery.class));
+            Toast.makeText(getApplicationContext(), "Переходим в галерею", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_slideshow) {
-
+            Toast.makeText(getApplicationContext(), "Переходим в 3", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_manage) {
-
+            Toast.makeText(getApplicationContext(), "Переходим в 4", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
-
+            Toast.makeText(getApplicationContext(), "Переходим в 5", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
-
+            Toast.makeText(getApplicationContext(), "Переходим в 6", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
