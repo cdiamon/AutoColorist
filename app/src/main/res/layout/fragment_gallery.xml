@@ -5,9 +5,27 @@
     tools:context="com.cdiamon.autocolorist.fragments.GalleryFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent">
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_gallery"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:iconifiedByDefault="false" >
+
+        </SearchView>
+
+        <ExpandableListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/expandableList"
         android:text="@string/hello_gallery_fragment" />
 
 </FrameLayout>
