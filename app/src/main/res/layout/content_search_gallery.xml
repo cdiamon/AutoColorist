@@ -10,21 +10,21 @@
     tools:showIn="@layout/activity_search_gallery">
 
     <SearchView
+        android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/search"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        app:iconifiedByDefault="false" >
+        app:iconifiedByDefault="false">
 
     </SearchView>
 
     <ExpandableListView
+        android:id="@+id/expandableList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/expandableList"
         android:layout_below="@+id/search" />
 
 </RelativeLayout>

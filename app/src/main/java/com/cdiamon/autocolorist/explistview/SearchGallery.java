@@ -1,23 +1,20 @@
 package com.cdiamon.autocolorist.explistview;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
-import java.util.ArrayList;
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.app.SearchManager;
-import android.content.Context;
-import android.view.Menu;
 import android.widget.ExpandableListView;
 import android.widget.SearchView;
 
 import com.cdiamon.autocolorist.R;
+
+import java.net.URL;
+import java.util.ArrayList;
 
 public class SearchGallery extends AppCompatActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener {
 
@@ -36,7 +33,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
     private SearchView search;
     private MyListAdapter listAdapter;
     private ExpandableListView myList;
-    private ArrayList<Continent> continentList = new ArrayList<Continent>();
+    private ArrayList<Vendor> vendorList = new ArrayList<Vendor>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +65,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+
     //method to expand all groups
     private void expandAll() {
         int count = listAdapter.getGroupCount();
@@ -85,7 +83,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         //get reference to the ExpandableListView
         myList = (ExpandableListView) findViewById(R.id.expandableList);
         //create the adapter by passing your ArrayList data
-        listAdapter = new MyListAdapter(SearchGallery.this, continentList);
+        listAdapter = new MyListAdapter(SearchGallery.this, vendorList);
         //attach the adapter to the list
         myList.setAdapter(listAdapter);
 
@@ -93,27 +91,27 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
 
     private void loadSomeData() {
 
-        ArrayList<Country> countryList = new ArrayList<Country>();
-        Country country = new Country("BMU", "Bermuda", 10000000);
-        countryList.add(country);
-        country = new Country("CAN", "Canada", 20000000);
-        countryList.add(country);
-        country = new Country("USA", "United States", 50000000);
-        countryList.add(country);
+        ArrayList<Model> modelList = new ArrayList<Model>();
+        Model model = new Model("2  (DE)", "Mazda", "");
+        modelList.add(model);
+        model = new Model("3  (BK)", "Mazda", "");
+        modelList.add(model);
+        model = new Model("3  (BL)", "Mazda", "");
+        modelList.add(model);
 
-        Continent continent = new Continent("North America", countryList);
-        continentList.add(continent);
+        Vendor vendor = new Vendor("Mazda", modelList);
+        vendorList.add(vendor);
 
-        countryList = new ArrayList<Country>();
-        country = new Country("CHN", "China", 10000100);
-        countryList.add(country);
-        country = new Country("JPN", "Japan", 20000200);
-        countryList.add(country);
-        country = new Country("THA", "Thailand", 50000500);
-        countryList.add(country);
+        modelList = new ArrayList<Model>();
+        model = new Model("Avensis 2  (T250)", "Toyota", "");
+        modelList.add(model);
+        model = new Model("Avensis 3  (T27)", "Toyota", "");
+        modelList.add(model);
+        model = new Model("Auris (E150)", "Toyota", "");
+        modelList.add(model);
 
-        continent = new Continent("Asia", countryList);
-        continentList.add(continent);
+        vendor = new Vendor("Toyota", modelList);
+        vendorList.add(vendor);
 
     }
 

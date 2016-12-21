@@ -4,9 +4,7 @@ package com.cdiamon.autocolorist.explistview;
  * Created by Dmitriy on 21.12.2016.
  */
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Locale;
 
 import android.content.Context;
 import android.util.Log;
@@ -22,25 +20,25 @@ import com.cdiamon.autocolorist.fragments.GalleryFragment;
 public class MyListAdapter extends BaseExpandableListAdapter {
 
     private Context context;
-    private ArrayList<Continent> continentList;
-    private ArrayList<Continent> originalList;
+    private ArrayList<Vendor> vendorList;
+    private ArrayList<Vendor> originalList;
 
-    public MyListAdapter(Context context, ArrayList<Continent> continentList) {
+    public MyListAdapter(Context context, ArrayList<Vendor> vendorList) {
         this.context = context;
-        this.continentList = new ArrayList<Continent>();
-        this.continentList.addAll(continentList);
-        this.originalList = new ArrayList<Continent>();
-        this.originalList.addAll(continentList);
+        this.vendorList = new ArrayList<Vendor>();
+        this.vendorList.addAll(vendorList);
+        this.originalList = new ArrayList<Vendor>();
+        this.originalList.addAll(vendorList);
     }
 
-    public MyListAdapter(GalleryFragment galleryFragment, ArrayList<Continent> continentList) {
+    public MyListAdapter(GalleryFragment galleryFragment, ArrayList<Vendor> vendorList) {
 
     }
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        ArrayList<Country> countryList = continentList.get(groupPosition).getCountryList();
-        return countryList.get(childPosition);
+        ArrayList<Model> modelList = vendorList.get(groupPosition).getModelList();
+        return modelList.get(childPosition);
     }
 
     @Override
@@ -52,18 +50,19 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild,
                              View view, ViewGroup parent) {
 
-        Country country = (Country) getChild(groupPosition, childPosition);
+        Model model = (Model) getChild(groupPosition, childPosition);
         if (view == null) {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.child_row, null);
         }
 
-        TextView code = (TextView) view.findViewById(R.id.code);
-        TextView name = (TextView) view.findViewById(R.id.name);
-        TextView population = (TextView) view.findViewById(R.id.population);
-        code.setText(country.getCode().trim());
-        name.setText(country.getName().trim());
-        population.setText(NumberFormat.getNumberInstance(Locale.US).format(country.getPopulation()));
+        TextView code = (TextView) view.findViewById(R.id.codeModel);
+        TextView name = (TextView) view.findViewById(R.id.nameModel);
+        TextView site = (TextView) view.findViewById(R.id.siteModel);
+        code.setText(model.getCodeModel().trim());
+        name.setText(model.getNameModel().trim());
+        site.setText(model.getSiteModel().trim());
+//        site.setText(NumberFormat.getNumberInstance(Locale.US).format(model.getSiteModel()));
 
         return view;
     }
@@ -71,19 +70,19 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     @Override
     public int getChildrenCount(int groupPosition) {
 
-        ArrayList<Country> countryList = continentList.get(groupPosition).getCountryList();
-        return countryList.size();
+        ArrayList<Model> modelList = vendorList.get(groupPosition).getModelList();
+        return modelList.size();
 
     }
 
     @Override
     public Object getGroup(int groupPosition) {
-        return continentList.get(groupPosition);
+        return vendorList.get(groupPosition);
     }
 
     @Override
     public int getGroupCount() {
-        return continentList.size();
+        return vendorList.size();
     }
 
     @Override
@@ -95,14 +94,14 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int groupPosition, boolean isLastChild, View view,
                              ViewGroup parent) {
 
-        Continent continent = (Continent) getGroup(groupPosition);
+        Vendor vendor = (Vendor) getGroup(groupPosition);
         if (view == null) {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.group_row, null);
         }
 
         TextView heading = (TextView) view.findViewById(R.id.heading);
-        heading.setText(continent.getName().trim());
+        heading.setText(vendor.getNameVendor().trim());
 
         return view;
     }
@@ -120,32 +119,32 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     public void filterData(String query){
 
         query = query.toLowerCase();
-        Log.v("MyListAdapter", String.valueOf(continentList.size()));
-        continentList.clear();
+        Log.v("MyListAdapter", String.valueOf(vendorList.size()));
+        vendorList.clear();
 
         if(query.isEmpty()){
-            continentList.addAll(originalList);
+            vendorList.addAll(originalList);
         }
         else {
 
-            for(Continent continent: originalList){
+            for(Vendor vendor : originalList){
 
-                ArrayList<Country> countryList = continent.getCountryList();
-                ArrayList<Country> newList = new ArrayList<Country>();
-                for(Country country: countryList){
-                    if(country.getCode().toLowerCase().contains(query) ||
-                            country.getName().toLowerCase().contains(query)){
-                        newList.add(country);
+                ArrayList<Model> modelList = vendor.getModelList();
+                ArrayList<Model> newList = new ArrayList<Model>();
+                for(Model model : modelList){
+                    if(model.getCodeModel().toLowerCase().contains(query) ||
+                            model.getNameModel().toLowerCase().contains(query)){
+                        newList.add(model);
                     }
                 }
                 if(newList.size() > 0){
-                    Continent nContinent = new Continent(continent.getName(),newList);
-                    continentList.add(nContinent);
+                    Vendor nVendor = new Vendor(vendor.getNameVendor(),newList);
+                    vendorList.add(nVendor);
                 }
             }
         }
 
-        Log.v("MyListAdapter", String.valueOf(continentList.size()));
+        Log.v("MyListAdapter", String.valueOf(vendorList.size()));
         notifyDataSetChanged();
 
     }
