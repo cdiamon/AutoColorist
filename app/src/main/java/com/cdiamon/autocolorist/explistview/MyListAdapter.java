@@ -17,6 +17,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.cdiamon.autocolorist.R;
+import com.cdiamon.autocolorist.fragments.GalleryFragment;
 
 public class MyListAdapter extends BaseExpandableListAdapter {
 
@@ -30,6 +31,10 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         this.continentList.addAll(continentList);
         this.originalList = new ArrayList<Continent>();
         this.originalList.addAll(continentList);
+    }
+
+    public MyListAdapter(GalleryFragment galleryFragment, ArrayList<Continent> continentList) {
+
     }
 
     @Override
