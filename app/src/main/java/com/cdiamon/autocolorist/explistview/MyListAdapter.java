@@ -6,20 +6,24 @@ package com.cdiamon.autocolorist.explistview;
 
 import java.util.ArrayList;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cdiamon.autocolorist.R;
 import com.cdiamon.autocolorist.fragments.GalleryFragment;
 
 public class MyListAdapter extends BaseExpandableListAdapter {
 
-    private Context context;
+    public Context context;
     private ArrayList<Vendor> vendorList;
     private ArrayList<Vendor> originalList;
 
@@ -113,8 +117,23 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
+
         return true;
+//   Toast.makeText(MyListAdapter.this, "", Toast.LENGTH_SHORT).show();
+//   Toast.makeText(getApplicationContext(), "Testing", Toast.LENGTH_SHORT).show();
     }
+
+
+
+    ExpandableListView.OnChildClickListener myOnChildClickListener = new ExpandableListView.OnChildClickListener() {
+
+        @Override
+        public boolean onChildClick(ExpandableListView parent, View v,
+                                    int groupPosition, int childPosition, long id) {
+            
+            return false;
+        }
+    };
 
     public void filterData(String query){
 
@@ -148,5 +167,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         notifyDataSetChanged();
 
     }
+
+
 
 }
