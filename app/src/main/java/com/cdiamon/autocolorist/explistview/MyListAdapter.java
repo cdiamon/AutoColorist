@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.cdiamon.autocolorist.R;
+
 public class MyListAdapter extends BaseExpandableListAdapter {
 
     private Context context;
