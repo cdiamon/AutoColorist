@@ -5,6 +5,7 @@ package com.cdiamon.autocolorist.explistview;
  */
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,13 +15,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cdiamon.autocolorist.R;
 import com.cdiamon.autocolorist.fragments.GalleryFragment;
+
+
 
 public class MyListAdapter extends BaseExpandableListAdapter implements ExpandableListView.OnChildClickListener {
 
@@ -43,12 +48,13 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        ArrayList<Model> modelList = vendorList.get(groupPosition).getModelList();
-        return modelList.get(childPosition);
+        ArrayList<Model> arrModelList = vendorList.get(groupPosition).getModelList();
+        return arrModelList.get(childPosition);
     }
 
     @Override
     public long getChildId(int groupPosition, int childPosition) {
+
         return childPosition;
     }
 
@@ -156,37 +162,33 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
     }
 
-
-
-//    ExpandableListView.OnChildClickListener myOnChildClickListener = new ExpandableListView.OnChildClickListener() {
-//
-//        @Override
-//        public boolean onChildClick(ExpandableListView parent, View v,
-//                                    int groupPosition, int childPosition, long id) {
-//            Intent intentChild;
-//            intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse("https://volgacolor.ru"));
-//            context.startActivity(intentChild);
-//            Toast.makeText(MyListAdapter.this.context, "Testing", Toast.LENGTH_SHORT).show();
-//            return true;
-//        }
-//    };
-
-//    @Override
-//    public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-//
-//
-//
-//        return false;
-//    }
-
-
     @Override
     public boolean onChildClick(ExpandableListView expandableListView, View view, int getChild, int childPosition, long id) {
-        Toast.makeText(MyListAdapter.this.context, "TEST", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(MyListAdapter.this.context, "TEST", Toast.LENGTH_SHORT).show();
 
-        Intent intentChild;
-        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse("https://volgacolor.ru"));
-        context.startActivity(intentChild);
+        for(Vendor vendor : originalList){
+
+            ArrayList<Model> modelList = vendor.getModelList();
+            ArrayList<Model> newList = new ArrayList<Model>();
+            for(Model model : modelList){
+                if(model.getSiteModel().toLowerCase().contains("http")){
+                    Toast.makeText(MyListAdapter.this.context, (model.getSiteModel()), Toast.LENGTH_SHORT).show();
+                }
+            }
+//            if(newList.size() > 0){
+//                Vendor nVendor = new Vendor(vendor.getNameVendor(),newList);
+//                vendorList.add(nVendor);
+//            }
+        }
+
+            Model model1 = new Model();
+            Toast.makeText(MyListAdapter.this.context, (model1.getSiteModel()), Toast.LENGTH_SHORT).show();
+//        }
+
+//        Toast.makeText(MyListAdapter.this.context, String.valueOf(model.getSiteModel()), Toast.LENGTH_SHORT).show();
+//        Intent intentChild;
+//        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse("http://ya.ru"));
+//        context.startActivity(intentChild);
         return false;
     }
 }

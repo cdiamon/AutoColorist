@@ -31,7 +31,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
     //    }
 
     private SearchView search;
-    private MyListAdapter listAdapter;
+    public static MyListAdapter listAdapter;
     private ExpandableListView myList;
     private ArrayList<Vendor> vendorList = new ArrayList<Vendor>();
 
@@ -96,7 +96,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
     private void loadSomeData() {
 
         ArrayList<Model> modelList = new ArrayList<Model>();
-        Model model = new Model("2  (DE)", "Mazda", "");
+        Model model = new Model("2  (DE)", "Mazda", "http://ya.ru");
         modelList.add(model);
         model = new Model("3  (BK)", "Mazda", "");
         modelList.add(model);

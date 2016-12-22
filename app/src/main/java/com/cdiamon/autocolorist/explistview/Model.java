@@ -6,6 +6,7 @@ package com.cdiamon.autocolorist.explistview;
 
 public class Model {
 
+    public  Object getSiteModel;
     private String codeModel = "";
     private String nameModel = "";
     private String siteModel = "";
@@ -15,6 +16,10 @@ public class Model {
         this.codeModel = code;
         this.nameModel = name;
         this.siteModel = site;
+    }
+
+    public Model() {
+        /////////////////
     }
 
     public String getCodeModel() {

@@ -16,6 +16,11 @@ public class Vendor {
         this.nameVendor = name;
         this.modelList = modelList;
     }
+
+    public Vendor() {
+        //////////////////////
+    }
+
     public String getNameVendor() {
         return nameVendor;
     }
