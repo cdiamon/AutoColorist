@@ -54,6 +54,8 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         //expand all Groups
         expandAll();
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +88,8 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         listAdapter = new MyListAdapter(SearchGallery.this, vendorList);
         //attach the adapter to the list
         myList.setAdapter(listAdapter);
+
+        myList.setOnChildClickListener(listAdapter);
 
     }
 

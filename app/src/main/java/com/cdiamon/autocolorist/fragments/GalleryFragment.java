@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.cdiamon.autocolorist.MainActivity;
 import com.cdiamon.autocolorist.R;
@@ -81,6 +82,7 @@ public class GalleryFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent;
                 intent = new Intent(GalleryFragment.this.getContext(), SearchGallery.class);
+                Toast.makeText(GalleryFragment.this.getContext(), "Переходим в поиск по галерее", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });

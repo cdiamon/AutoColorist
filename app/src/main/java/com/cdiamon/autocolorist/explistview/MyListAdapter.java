@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,11 +22,12 @@ import android.widget.Toast;
 import com.cdiamon.autocolorist.R;
 import com.cdiamon.autocolorist.fragments.GalleryFragment;
 
-public class MyListAdapter extends BaseExpandableListAdapter {
+public class MyListAdapter extends BaseExpandableListAdapter implements ExpandableListView.OnChildClickListener {
 
     public Context context;
     private ArrayList<Vendor> vendorList;
     private ArrayList<Vendor> originalList;
+
 
     public MyListAdapter(Context context, ArrayList<Vendor> vendorList) {
         this.context = context;
@@ -117,23 +119,9 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-
+//        Toast.makeText(MyListAdapter.this.context, "Переходим в калькулятор", Toast.LENGTH_SHORT).show();
         return true;
-//   Toast.makeText(MyListAdapter.this, "", Toast.LENGTH_SHORT).show();
-//   Toast.makeText(getApplicationContext(), "Testing", Toast.LENGTH_SHORT).show();
     }
-
-
-
-    ExpandableListView.OnChildClickListener myOnChildClickListener = new ExpandableListView.OnChildClickListener() {
-
-        @Override
-        public boolean onChildClick(ExpandableListView parent, View v,
-                                    int groupPosition, int childPosition, long id) {
-            
-            return false;
-        }
-    };
 
     public void filterData(String query){
 
@@ -170,4 +158,35 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
 
+//    ExpandableListView.OnChildClickListener myOnChildClickListener = new ExpandableListView.OnChildClickListener() {
+//
+//        @Override
+//        public boolean onChildClick(ExpandableListView parent, View v,
+//                                    int groupPosition, int childPosition, long id) {
+//            Intent intentChild;
+//            intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse("https://volgacolor.ru"));
+//            context.startActivity(intentChild);
+//            Toast.makeText(MyListAdapter.this.context, "Testing", Toast.LENGTH_SHORT).show();
+//            return true;
+//        }
+//    };
+
+//    @Override
+//    public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
+//
+//
+//
+//        return false;
+//    }
+
+
+    @Override
+    public boolean onChildClick(ExpandableListView expandableListView, View view, int getChild, int childPosition, long id) {
+        Toast.makeText(MyListAdapter.this.context, "TEST", Toast.LENGTH_SHORT).show();
+
+        Intent intentChild;
+        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse("https://volgacolor.ru"));
+        context.startActivity(intentChild);
+        return false;
+    }
 }
