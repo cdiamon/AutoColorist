@@ -4,18 +4,11 @@ package com.cdiamon.autocolorist.explistview;
  * Created by Dmitriy on 21.12.2016.
  */
 
-import java.util.ArrayList;
-import java.util.Map;
-
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
@@ -24,6 +17,8 @@ import android.widget.Toast;
 
 import com.cdiamon.autocolorist.R;
 import com.cdiamon.autocolorist.fragments.GalleryFragment;
+
+import java.util.ArrayList;
 
 
 
@@ -75,6 +70,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
         name.setText(model.getNameModel().trim());
         site.setText(model.getSiteModel().trim());
 //        site.setText(NumberFormat.getNumberInstance(Locale.US).format(model.getSiteModel()));
+
 
         return view;
     }
@@ -169,28 +165,32 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
 
     @Override
-    public boolean onChildClick(ExpandableListView expandableListView, View view, int getChild, int childPosition, long id) {
+    public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long id) {
 //        Toast.makeText(MyListAdapter.this.context, "TEST", Toast.LENGTH_SHORT).show();
 
 //        String s = MyListAdapter.this.getGroup(GroupPosition).ToString();
 
-        for(Vendor vendor : originalList){
-
+//        for(Vendor vendor : originalList){
+        Vendor vendor = new Vendor();
             ArrayList<Model> modelList = vendor.getModelList();
-            ArrayList<Model> newList = new ArrayList<Model>();
+//            ArrayList<Model> newList = new ArrayList<Model>();
             for(Model model : modelList){
                 if(model.getSiteModel().toLowerCase().contains("http")){
-//                    Toast.makeText(MyListAdapter.this.context, (model.getSiteModel()), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MyListAdapter.this.context, (ExpandableListAdapter.class.getTypeParameters().toString()), Toast.LENGTH_SHORT).show();
                 }
+                else Toast.makeText(MyListAdapter.this.context, ("NO HTTP"), Toast.LENGTH_SHORT).show();
             }
 //            if(newList.size() > 0){
 //                Vendor nVendor = new Vendor(vendor.getNameVendor(),newList);
 //                vendorList.add(nVendor);
 //            }
-            Model model1 = new Model();
-            Toast.makeText(MyListAdapter.this.context, (model1.getSiteModel()), Toast.LENGTH_SHORT).show();
-        }
-
+//            Model model1 = new Model();
+            Toast.makeText(MyListAdapter.this.context, (String)MyListAdapter.this.getChild(groupPosition, childPosition).toString(), Toast.LENGTH_SHORT).show();
+//
+//        (getChildId(childPosition,childPosition))
+//        }
+        Model model = new Model();
+        System.out.println(model.getSiteModel);
 //            Model model1 = new Model();
 //            Toast.makeText(MyListAdapter.this.context, (model1.getSiteModel()), Toast.LENGTH_SHORT).show();
 //        }
@@ -199,6 +199,6 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 //        Intent intentChild;
 //        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse("http://ya.ru"));
 //        context.startActivity(intentChild);
-        return false;
+        return true;
     }
 }

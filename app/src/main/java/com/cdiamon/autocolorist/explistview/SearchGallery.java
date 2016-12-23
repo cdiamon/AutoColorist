@@ -13,7 +13,6 @@ import android.widget.SearchView;
 
 import com.cdiamon.autocolorist.R;
 
-import java.net.URL;
 import java.util.ArrayList;
 
 public class SearchGallery extends AppCompatActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener {
@@ -30,10 +29,10 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
     //        String value = intent.getStringExtra("key"); //if it's a string you stored.
     //    }
 
-    private SearchView search;
-    public static MyListAdapter listAdapter;
-    private ExpandableListView myList;
-    private ArrayList<Vendor> vendorList = new ArrayList<Vendor>();
+    private SearchView searchview;
+    public static MyListAdapter myListAdapterClass;
+    private ExpandableListView expandablelistview;
+    private ArrayList<Vendor> vendorarraylist = new ArrayList<Vendor>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +42,16 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         setSupportActionBar(toolbar);
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        search = (SearchView) findViewById(R.id.search);
-        search.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        search.setIconifiedByDefault(false);
-        search.setOnQueryTextListener(this);
-        search.setOnCloseListener(this);
+        searchview = (SearchView) findViewById(R.id.searchviewid);
+        searchview.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchview.setIconifiedByDefault(false);
+        searchview.setOnQueryTextListener(this);
+        searchview.setOnCloseListener(this);
 
         //display the list
         displayList();
         //expand all Groups
-        expandAll();
-
+        expandAllGroups();
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -69,10 +67,10 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
 
 
     //method to expand all groups
-    private void expandAll() {
-        int count = listAdapter.getGroupCount();
+    private void expandAllGroups() {
+        int count = myListAdapterClass.getGroupCount();
         for (int i = 0; i < count; i++) {
-            myList.expandGroup(i);
+            expandablelistview.expandGroup(i);
         }
     }
 
@@ -83,29 +81,37 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         loadSomeData();
 
         //get reference to the ExpandableListView
-        myList = (ExpandableListView) findViewById(R.id.expandableList);
+        expandablelistview = (ExpandableListView) findViewById(R.id.expandableList);
         //create the adapter by passing your ArrayList data
-        listAdapter = new MyListAdapter(SearchGallery.this, vendorList);
+        myListAdapterClass = new MyListAdapter(SearchGallery.this, vendorarraylist);
         //attach the adapter to the list
-        myList.setAdapter(listAdapter);
+        expandablelistview.setAdapter(myListAdapterClass);
 
-        myList.setOnChildClickListener(listAdapter);
+        expandablelistview.setOnChildClickListener(myListAdapterClass);
 
     }
 
     private void loadSomeData() {
 
         ArrayList<Model> modelList = new ArrayList<Model>();
+        Model model = new Model("Ceed  (ED/ED FL)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2226#p10880");
+        modelList.add(model);
+        model = new Model("Ceed 2  (JD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=97#p1392");
+        modelList.add(model);
+        model = new Model("Cerato 2  (TD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=91#p1259");
+        modelList.add(model);
+        Vendor vendor = new Vendor("KIA", modelList);
+        vendorarraylist.add(vendor);
 
-        Model model = new Model("2  (DE)", "Mazda", "2 2 2");
+        modelList = new ArrayList<Model>();
+        model = new Model("2  (DE)", "Mazda", "2 2 2");
         modelList.add(model);
         model = new Model("3  (BK)", "Mazda", "3 3 3");
         modelList.add(model);
         model = new Model("3  (BL)", "Mazda", "3 q w");
         modelList.add(model);
-
-        Vendor vendor = new Vendor("Mazda", modelList);
-        vendorList.add(vendor);
+        vendor = new Vendor("Mazda", modelList);
+        vendorarraylist.add(vendor);
 
         modelList = new ArrayList<Model>();
         model = new Model("Avensis 2  (T250)", "Toyota", "av 2 2");
@@ -114,30 +120,29 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         modelList.add(model);
         model = new Model("Auris (E150)", "Toyota", "au au");
         modelList.add(model);
-
         vendor = new Vendor("Toyota", modelList);
-        vendorList.add(vendor);
+        vendorarraylist.add(vendor);
 
     }
 
     @Override
     public boolean onClose() {
-        listAdapter.filterData("");
-        expandAll();
+        myListAdapterClass.filterData("");
+        expandAllGroups();
         return false;
     }
 
     @Override
     public boolean onQueryTextChange(String query) {
-        listAdapter.filterData(query);
-        expandAll();
+        myListAdapterClass.filterData(query);
+        expandAllGroups();
         return false;
     }
 
     @Override
     public boolean onQueryTextSubmit(String query) {
-        listAdapter.filterData(query);
-        expandAll();
+        myListAdapterClass.filterData(query);
+        expandAllGroups();
         return false;
     }
 

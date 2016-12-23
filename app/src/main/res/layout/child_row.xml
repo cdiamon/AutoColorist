@@ -23,7 +23,7 @@
         android:layout_toRightOf="@+id/codeModel"
         android:text="Unknown"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:visibility="invisible" />
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/siteModel"
@@ -35,6 +35,6 @@
         android:text="Unknown"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/darker_gray"
-        android:visibility="invisible" />
+        android:visibility="gone" />
 
 </RelativeLayout>

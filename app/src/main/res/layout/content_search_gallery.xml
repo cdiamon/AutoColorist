@@ -10,12 +10,12 @@
     tools:showIn="@layout/activity_search_gallery">
 
     <SearchView
-        android:id="@+id/search"
+        android:id="@+id/searchviewid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        app:iconifiedByDefault="false">
+        android:iconifiedByDefault="false">
 
     </SearchView>
 
@@ -25,6 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/search" />
+        android:layout_below="@+id/searchviewid" />
 
 </RelativeLayout>
