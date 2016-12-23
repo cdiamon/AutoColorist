@@ -96,22 +96,23 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
     private void loadSomeData() {
 
         ArrayList<Model> modelList = new ArrayList<Model>();
-        Model model = new Model("2  (DE)", "Mazda", "http://ya.ru");
+
+        Model model = new Model("2  (DE)", "Mazda", "2 2 2");
         modelList.add(model);
-        model = new Model("3  (BK)", "Mazda", "");
+        model = new Model("3  (BK)", "Mazda", "3 3 3");
         modelList.add(model);
-        model = new Model("3  (BL)", "Mazda", "");
+        model = new Model("3  (BL)", "Mazda", "3 q w");
         modelList.add(model);
 
         Vendor vendor = new Vendor("Mazda", modelList);
         vendorList.add(vendor);
 
         modelList = new ArrayList<Model>();
-        model = new Model("Avensis 2  (T250)", "Toyota", "");
+        model = new Model("Avensis 2  (T250)", "Toyota", "av 2 2");
         modelList.add(model);
-        model = new Model("Avensis 3  (T27)", "Toyota", "");
+        model = new Model("Avensis 3  (T27)", "Toyota", "av 3 3");
         modelList.add(model);
-        model = new Model("Auris (E150)", "Toyota", "");
+        model = new Model("Auris (E150)", "Toyota", "au au");
         modelList.add(model);
 
         vendor = new Vendor("Toyota", modelList);

@@ -162,9 +162,17 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
     }
 
+//    ExpandableListView view = (ExpandableListView)getChild(getGroup(vendorList));
+//@Override
+//    void ChildClick(object o, ExpandableListView.ChildClickEventArgs e){}
+
+
+
     @Override
     public boolean onChildClick(ExpandableListView expandableListView, View view, int getChild, int childPosition, long id) {
 //        Toast.makeText(MyListAdapter.this.context, "TEST", Toast.LENGTH_SHORT).show();
+
+//        String s = MyListAdapter.this.getGroup(GroupPosition).ToString();
 
         for(Vendor vendor : originalList){
 
@@ -172,17 +180,19 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
             ArrayList<Model> newList = new ArrayList<Model>();
             for(Model model : modelList){
                 if(model.getSiteModel().toLowerCase().contains("http")){
-                    Toast.makeText(MyListAdapter.this.context, (model.getSiteModel()), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(MyListAdapter.this.context, (model.getSiteModel()), Toast.LENGTH_SHORT).show();
                 }
             }
 //            if(newList.size() > 0){
 //                Vendor nVendor = new Vendor(vendor.getNameVendor(),newList);
 //                vendorList.add(nVendor);
 //            }
-        }
-
             Model model1 = new Model();
             Toast.makeText(MyListAdapter.this.context, (model1.getSiteModel()), Toast.LENGTH_SHORT).show();
+        }
+
+//            Model model1 = new Model();
+//            Toast.makeText(MyListAdapter.this.context, (model1.getSiteModel()), Toast.LENGTH_SHORT).show();
 //        }
 
 //        Toast.makeText(MyListAdapter.this.context, String.valueOf(model.getSiteModel()), Toast.LENGTH_SHORT).show();
