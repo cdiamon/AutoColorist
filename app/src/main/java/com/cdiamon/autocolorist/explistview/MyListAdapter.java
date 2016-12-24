@@ -171,6 +171,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 //
         Intent intentChild;
         intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel));
+//        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel));
         context.startActivity(intentChild);
         return true;
     }
