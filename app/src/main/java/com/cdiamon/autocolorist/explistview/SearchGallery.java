@@ -29,10 +29,11 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
     //        String value = intent.getStringExtra("key"); //if it's a string you stored.
     //    }
 
-    private SearchView searchview;
+    private SearchView searchView;
     public static MyListAdapter myListAdapterClass;
-    private ExpandableListView expandablelistview;
-    private ArrayList<Vendor> vendorarraylist = new ArrayList<Vendor>();
+    public ExpandableListView expandableListView;
+    public ArrayList<Vendor> vendorArrayAddingList = new ArrayList<Vendor>();
+    public ArrayList<Model> modelArrayAddingList = new ArrayList<Model>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +43,11 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         setSupportActionBar(toolbar);
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        searchview = (SearchView) findViewById(R.id.searchviewid);
-        searchview.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchview.setIconifiedByDefault(false);
-        searchview.setOnQueryTextListener(this);
-        searchview.setOnCloseListener(this);
+        searchView = (SearchView) findViewById(R.id.searchviewid);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(false);
+        searchView.setOnQueryTextListener(this);
+        searchView.setOnCloseListener(this);
 
         //display the list
         displayList();
@@ -70,7 +71,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
     private void expandAllGroups() {
         int count = myListAdapterClass.getGroupCount();
         for (int i = 0; i < count; i++) {
-            expandablelistview.expandGroup(i);
+            expandableListView.expandGroup(i);
         }
     }
 
@@ -81,47 +82,47 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         loadSomeData();
 
         //get reference to the ExpandableListView
-        expandablelistview = (ExpandableListView) findViewById(R.id.expandableList);
+        expandableListView = (ExpandableListView) findViewById(R.id.expandableList);
         //create the adapter by passing your ArrayList data
-        myListAdapterClass = new MyListAdapter(SearchGallery.this, vendorarraylist);
+        myListAdapterClass = new MyListAdapter(SearchGallery.this, vendorArrayAddingList);
         //attach the adapter to the list
-        expandablelistview.setAdapter(myListAdapterClass);
+        expandableListView.setAdapter(myListAdapterClass);
 
-        expandablelistview.setOnChildClickListener(myListAdapterClass);
+        expandableListView.setOnChildClickListener(myListAdapterClass);
 
     }
 
     private void loadSomeData() {
 
-        ArrayList<Model> modelList = new ArrayList<Model>();
+        modelArrayAddingList = new ArrayList<Model>();
         Model model = new Model("Ceed  (ED/ED FL)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2226#p10880");
-        modelList.add(model);
+        modelArrayAddingList.add(model);
         model = new Model("Ceed 2  (JD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=97#p1392");
-        modelList.add(model);
+        modelArrayAddingList.add(model);
         model = new Model("Cerato 2  (TD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=91#p1259");
-        modelList.add(model);
-        Vendor vendor = new Vendor("KIA", modelList);
-        vendorarraylist.add(vendor);
+        modelArrayAddingList.add(model);
+        Vendor vendor = new Vendor("KIA", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
 
-        modelList = new ArrayList<Model>();
+        modelArrayAddingList = new ArrayList<Model>();
         model = new Model("2  (DE)", "Mazda", "2 2 2");
-        modelList.add(model);
+        modelArrayAddingList.add(model);
         model = new Model("3  (BK)", "Mazda", "3 3 3");
-        modelList.add(model);
+        modelArrayAddingList.add(model);
         model = new Model("3  (BL)", "Mazda", "3 q w");
-        modelList.add(model);
-        vendor = new Vendor("Mazda", modelList);
-        vendorarraylist.add(vendor);
+        modelArrayAddingList.add(model);
+        vendor = new Vendor("Mazda", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
 
-        modelList = new ArrayList<Model>();
+        modelArrayAddingList = new ArrayList<Model>();
         model = new Model("Avensis 2  (T250)", "Toyota", "av 2 2");
-        modelList.add(model);
+        modelArrayAddingList.add(model);
         model = new Model("Avensis 3  (T27)", "Toyota", "av 3 3");
-        modelList.add(model);
+        modelArrayAddingList.add(model);
         model = new Model("Auris (E150)", "Toyota", "au au");
-        modelList.add(model);
-        vendor = new Vendor("Toyota", modelList);
-        vendorarraylist.add(vendor);
+        modelArrayAddingList.add(model);
+        vendor = new Vendor("Toyota", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
 
     }
 

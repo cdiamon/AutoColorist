@@ -5,10 +5,13 @@ package com.cdiamon.autocolorist.explistview;
  */
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
@@ -21,20 +24,19 @@ import com.cdiamon.autocolorist.fragments.GalleryFragment;
 import java.util.ArrayList;
 
 
-
 public class MyListAdapter extends BaseExpandableListAdapter implements ExpandableListView.OnChildClickListener {
 
     public Context context;
-    private ArrayList<Vendor> vendorList;
-    private ArrayList<Vendor> originalList;
+    public ArrayList<Vendor> vendorList;
+    public ArrayList<Vendor> vendorArrList;
 
 
     public MyListAdapter(Context context, ArrayList<Vendor> vendorList) {
         this.context = context;
         this.vendorList = new ArrayList<Vendor>();
         this.vendorList.addAll(vendorList);
-        this.originalList = new ArrayList<Vendor>();
-        this.originalList.addAll(vendorList);
+        this.vendorArrList = new ArrayList<Vendor>();
+        this.vendorArrList.addAll(vendorList);
     }
 
     public MyListAdapter(GalleryFragment galleryFragment, ArrayList<Vendor> vendorList) {
@@ -69,8 +71,6 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
         code.setText(model.getCodeModel().trim());
         name.setText(model.getNameModel().trim());
         site.setText(model.getSiteModel().trim());
-//        site.setText(NumberFormat.getNumberInstance(Locale.US).format(model.getSiteModel()));
-
 
         return view;
     }
@@ -121,33 +121,31 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-//        Toast.makeText(MyListAdapter.this.context, "Переходим в калькулятор", Toast.LENGTH_SHORT).show();
         return true;
     }
 
-    public void filterData(String query){
+    public void filterData(String query) {
 
         query = query.toLowerCase();
         Log.v("MyListAdapter", String.valueOf(vendorList.size()));
         vendorList.clear();
 
-        if(query.isEmpty()){
-            vendorList.addAll(originalList);
-        }
-        else {
+        if (query.isEmpty()) {
+            vendorList.addAll(vendorArrList);
+        } else {
 
-            for(Vendor vendor : originalList){
+            for (Vendor vendor : vendorArrList) {
 
                 ArrayList<Model> modelList = vendor.getModelList();
                 ArrayList<Model> newList = new ArrayList<Model>();
-                for(Model model : modelList){
-                    if(model.getCodeModel().toLowerCase().contains(query) ||
-                            model.getNameModel().toLowerCase().contains(query)){
+                for (Model model : modelList) {
+                    if (model.getCodeModel().toLowerCase().contains(query) ||
+                            model.getNameModel().toLowerCase().contains(query)) {
                         newList.add(model);
                     }
                 }
-                if(newList.size() > 0){
-                    Vendor nVendor = new Vendor(vendor.getNameVendor(),newList);
+                if (newList.size() > 0) {
+                    Vendor nVendor = new Vendor(vendor.getNameVendor(), newList);
                     vendorList.add(nVendor);
                 }
             }
@@ -158,47 +156,22 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
     }
 
-//    ExpandableListView view = (ExpandableListView)getChild(getGroup(vendorList));
-//@Override
-//    void ChildClick(object o, ExpandableListView.ChildClickEventArgs e){}
-
-
-
     @Override
     public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long id) {
-//        Toast.makeText(MyListAdapter.this.context, "TEST", Toast.LENGTH_SHORT).show();
 
-//        String s = MyListAdapter.this.getGroup(GroupPosition).ToString();
-
-//        for(Vendor vendor : originalList){
-        Vendor vendor = new Vendor();
-            ArrayList<Model> modelList = vendor.getModelList();
-//            ArrayList<Model> newList = new ArrayList<Model>();
-            for(Model model : modelList){
-                if(model.getSiteModel().toLowerCase().contains("http")){
-                    Toast.makeText(MyListAdapter.this.context, (ExpandableListAdapter.class.getTypeParameters().toString()), Toast.LENGTH_SHORT).show();
-                }
-                else Toast.makeText(MyListAdapter.this.context, ("NO HTTP"), Toast.LENGTH_SHORT).show();
-            }
-//            if(newList.size() > 0){
-//                Vendor nVendor = new Vendor(vendor.getNameVendor(),newList);
-//                vendorList.add(nVendor);
-//            }
-//            Model model1 = new Model();
-            Toast.makeText(MyListAdapter.this.context, (String)MyListAdapter.this.getChild(groupPosition, childPosition).toString(), Toast.LENGTH_SHORT).show();
-//
-//        (getChildId(childPosition,childPosition))
-//        }
+        Toast.makeText(MyListAdapter.this.context, (String) MyListAdapter.this.getChild(groupPosition, childPosition).toString(), Toast.LENGTH_SHORT).show();
+        System.out.println(" ----- " + groupPosition + "======= " + childPosition);
+        SearchGallery sg = new SearchGallery();
         Model model = new Model();
-        System.out.println(model.getSiteModel);
-//            Model model1 = new Model();
-//            Toast.makeText(MyListAdapter.this.context, (model1.getSiteModel()), Toast.LENGTH_SHORT).show();
-//        }
 
-//        Toast.makeText(MyListAdapter.this.context, String.valueOf(model.getSiteModel()), Toast.LENGTH_SHORT).show();
-//        Intent intentChild;
-//        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse("http://ya.ru"));
-//        context.startActivity(intentChild);
+        System.out.println("\n+++\n" + vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel + "\n+++\n");
+//        String texty =  expandableListView.getExpandableListAdapter().getChildId(groupPosition,childPosition);
+//        System.out.println(expandableListView.getExpandableListAdapter().getChild(groupPosition,childPosition));
+        System.out.println(expandableListView.getExpandableListAdapter().getChild(groupPosition, childPosition));
+//
+        Intent intentChild;
+        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel));
+        context.startActivity(intentChild);
         return true;
     }
 }
