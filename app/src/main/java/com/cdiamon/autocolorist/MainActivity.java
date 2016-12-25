@@ -119,13 +119,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
             fragmentClass = OsvaldFragment.class;
-            Toast.makeText(getApplicationContext(), "Переходим в 1", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Переходим к кругу", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
             fragmentClass = GalleryFragment.class;
             Toast.makeText(getApplicationContext(), "Переходим в галерею", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_slideshow) {
             fragmentClass = TablesFragment.class;
-            Toast.makeText(getApplicationContext(), "Переходим в 3", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Переходим к таблице перевода", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_manage) {
             fragmentClass = OsvaldFragment.class;
             Toast.makeText(getApplicationContext(), "Переходим в 4", Toast.LENGTH_SHORT).show();

@@ -51,7 +51,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         //display the list
         displayList();
         //expand all Groups
-        expandAllGroups();
+//        expandAllGroups();
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
