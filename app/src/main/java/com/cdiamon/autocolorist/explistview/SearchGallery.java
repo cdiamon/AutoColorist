@@ -105,21 +105,23 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("2  (DE)", "Mazda", "2 2 2");
+        model = new Model("BT-50  (J97M)", "Mazda", "http://rustamcolor.ru/viewtopic.php?f=13&t=2158#p10455");
         modelArrayAddingList.add(model);
-        model = new Model("3  (BK)", "Mazda", "3 3 3");
+        model = new Model("2  (DE)", "Mazda", "http://rustamcolor.ru/viewtopic.php?f=13&t=131#p1916");
         modelArrayAddingList.add(model);
-        model = new Model("3  (BL)", "Mazda", "3 q w");
+        model = new Model("3  (BK)", "Mazda", "http://rustamcolor.ru/viewtopic.php?f=13&t=3102#p21217");
+        modelArrayAddingList.add(model);
+        model = new Model("3  (BL)", "Mazda", "http://rustamcolor.ru/viewtopic.php?f=13&t=1350#p6092");
         modelArrayAddingList.add(model);
         vendor = new Vendor("Mazda", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("Avensis 2  (T250)", "Toyota", "av 2 2");
+        model = new Model("Avensis 2  (T250)", "Toyota", "http://rustamcolor.ru/viewtopic.php?f=13&t=3138#p21646");
         modelArrayAddingList.add(model);
-        model = new Model("Avensis 3  (T27)", "Toyota", "av 3 3");
+        model = new Model("Avensis 3  (T27)", "Toyota", "http://rustamcolor.ru/viewtopic.php?f=13&t=204#p2557");
         modelArrayAddingList.add(model);
-        model = new Model("Auris (E150)", "Toyota", "au au");
+        model = new Model("Auris (E150)", "Toyota", "http://rustamcolor.ru/viewtopic.php?f=13&t=1743#p7818");
         modelArrayAddingList.add(model);
         vendor = new Vendor("Toyota", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);

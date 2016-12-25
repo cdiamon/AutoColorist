@@ -156,6 +156,14 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
     }
 
+//   TODO myListAdapterClass(MyListAdapter).vendorList.0(kia).modelList.0(siteModel=url!!)
+//
+//   TODO vendorArrList.0(Vendor)(kia).modelList(ArrayList).0(Model)(siteModel=url!!)
+//
+//   TODO mAdapter(MyListAdapter).context(SearchGallery).vendorArrayAddingList(ArrayList).0{Model}(nameVendor=kia).modelList.0(siteModel=url!!)
+//
+//   TODO mAdapter.getChild(groupPosition, childPosition).getPopulation();
+
     @Override
     public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long id) {
 
@@ -167,11 +175,14 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
         System.out.println("\n+++\n" + vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel + "\n+++\n");
 //        String texty =  expandableListView.getExpandableListAdapter().getChildId(groupPosition,childPosition);
 //        System.out.println(expandableListView.getExpandableListAdapter().getChild(groupPosition,childPosition));
-        System.out.println(expandableListView.getExpandableListAdapter().getChild(groupPosition, childPosition));
+        System.out.println(vendorList.get(groupPosition).getModelList().get(childPosition).getSiteModel());
 //
         Intent intentChild;
-        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel));
+        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorList.get(groupPosition).getModelList().get(childPosition).getSiteModel()));
 //        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel));
+
+//        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel));
+
         context.startActivity(intentChild);
         return true;
     }
