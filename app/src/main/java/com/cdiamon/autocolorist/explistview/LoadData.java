@@ -337,7 +337,7 @@ public class LoadData {
         modelArrayAddingList.add(model);
         model = new Model("Creta / IX25", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=2973&p=20153#p20153");
         modelArrayAddingList.add(model);
-        model = new Model("IX35 (LM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=101#p1477");
+        model = new Model("IX35  (LM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=101#p1477");
         modelArrayAddingList.add(model);
         model = new Model("IX55 / Veracruz", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=2907#p19558");
         modelArrayAddingList.add(model);
@@ -351,35 +351,35 @@ public class LoadData {
         modelArrayAddingList.add(model);
         model = new Model("Veloster", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=103#p1498");
         modelArrayAddingList.add(model);
-        model = new Model("Verna (MC)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3155&p=21775#p21775");
+        model = new Model("Verna  (MC)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3155&p=21775#p21775");
         modelArrayAddingList.add(model);
-        model = new Model("Santa Fe (SM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3162#p21853");
+        model = new Model("Santa Fe  (SM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3162#p21853");
         modelArrayAddingList.add(model);
-        model = new Model("Santa Fe II (CM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3161#p21832");
+        model = new Model("Santa Fe II  (CM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3161#p21832");
         modelArrayAddingList.add(model);
-        model = new Model("Santa Fe III (DM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=133#p1945");
+        model = new Model("Santa Fe III  (DM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=133#p1945");
         modelArrayAddingList.add(model);
-        model = new Model("Grand Santa Fe (DM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=1893#p9093");
+        model = new Model("Grand Santa Fe  (DM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=1893#p9093");
         modelArrayAddingList.add(model);
         model = new Model("Elantra IV (HD)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=2856#p19024");
         modelArrayAddingList.add(model);
-        model = new Model("Elantra/Avante V (MD/UD)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=176#p2021");
+        model = new Model("Elantra/Avante V  (MD/UD)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=176#p2021");
         modelArrayAddingList.add(model);
-        model = new Model("Elantra/Avante VI (AD)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3122#p21512");
+        model = new Model("Elantra/Avante VI  (AD)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3122#p21512");
         modelArrayAddingList.add(model);
         model = new Model("Genesis", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=179#p2055");
         modelArrayAddingList.add(model);
-        model = new Model("Grandeur IV (TG)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3207#p22528");
+        model = new Model("Grandeur IV  (TG)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3207#p22528");
         modelArrayAddingList.add(model);
-        model = new Model("Grandeur V (HG)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3205#p22508");
+        model = new Model("Grandeur V  (HG)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3205#p22508");
         modelArrayAddingList.add(model);
         model = new Model("TUCSON  (JM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=864#p4385");
         modelArrayAddingList.add(model);
-        model = new Model("TUCSON III (TL)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=2939#p19935");
+        model = new Model("TUCSON III  (TL)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=2939#p19935");
         modelArrayAddingList.add(model);
-        model = new Model("Sonata V (NF)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3206#p22517");
+        model = new Model("Sonata V  (NF)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3206#p22517");
         modelArrayAddingList.add(model);
-        model = new Model("Sonata VI/VII (YF/LF)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=1267#p5690");
+        model = new Model("Sonata VI/VII  (YF/LF)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=1267#p5690");
         modelArrayAddingList.add(model);
         model = new Model("Porter", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3071&p=20908#p20908");
         modelArrayAddingList.add(model);
@@ -394,58 +394,109 @@ public class LoadData {
         modelArrayAddingList.add(model);
         model = new Model("Q70  (M)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=111#p1624");
         modelArrayAddingList.add(model);
-        model = new Model("EX (QX50)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3116#p21423");
+        model = new Model("EX  (QX50)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3116#p21423");
         modelArrayAddingList.add(model);
-        model = new Model("FX (S50)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3168#p21907");
+        model = new Model("FX  (S50)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3168#p21907");
         modelArrayAddingList.add(model);
-        model = new Model("FX II (S51)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=2841#p18887");
+        model = new Model("FX II  (S51)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=2841#p18887");
         modelArrayAddingList.add(model);
         model = new Model("QX70", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=110#p1615");
         modelArrayAddingList.add(model);
-        model = new Model("QX III (QX80)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=2840#p18860");
+        model = new Model("QX III  (QX80)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=2840#p18860");
         modelArrayAddingList.add(model);
-        model = new Model("JX (QX60)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3192#p22294");
+        model = new Model("JX  (QX60)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3192#p22294");
         modelArrayAddingList.add(model);
 
         vendor = new Vendor("Infiniti", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("", "", "");
+        model = new Model("F-Pace  (X761)", "Jaguar", "http://rustamcolor.ru/viewtopic.php?f=13&t=3250#p23311");
+        modelArrayAddingList.add(model);
+        model = new Model("F-Type  (X152)", "Jaguar", "http://rustamcolor.ru/viewtopic.php?f=13&t=3254&p=23377#p23377");
+        modelArrayAddingList.add(model);
+        model = new Model("XE  (X760)", "Jaguar", "http://rustamcolor.ru/viewtopic.php?f=13&t=3252#p23351");
+        modelArrayAddingList.add(model);
+        model = new Model("XF  (X250)", "Jaguar", "http://rustamcolor.ru/viewtopic.php?f=13&t=3260#p23423");
+        modelArrayAddingList.add(model);
+        model = new Model("XF 2  (X260)", "Jaguar", "http://rustamcolor.ru/viewtopic.php?f=13&t=3251#p23330");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("", modelArrayAddingList);
+        vendor = new Vendor("Jaguar", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("", "", "");
+        model = new Model("Cherokee  (KL)", "Jeep", "http://rustamcolor.ru/viewtopic.php?f=13&t=194#p2314");
+        modelArrayAddingList.add(model);
+        model = new Model("Grand Cherokee  (WK2)", "Jeep", "http://rustamcolor.ru/viewtopic.php?f=13&t=198#p2422");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("", modelArrayAddingList);
-        vendorArrayAddingList.add(vendor);
-
-        modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("", "", "");
-        modelArrayAddingList.add(model);
-
-        vendor = new Vendor("", modelArrayAddingList);
-        vendorArrayAddingList.add(vendor);
-
-        modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("", "", "");
-        modelArrayAddingList.add(model);
-
-        vendor = new Vendor("", modelArrayAddingList);
+        vendor = new Vendor("Jeep", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
         model = new Model("Ceed  (ED/ED FL)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2226#p10880");
         modelArrayAddingList.add(model);
-        model = new Model("Ceed 2  (JD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=97#p1392");
+        model = new Model("Ceed II  (JD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=97#p1392");
         modelArrayAddingList.add(model);
-        model = new Model("Cerato 2  (TD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=91#p1259");
+        model = new Model("Cerato II  (TD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=91#p1259");
         modelArrayAddingList.add(model);
+        model = new Model("Cerato III  (YD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=90#p1248");
+        modelArrayAddingList.add(model);
+        model = new Model("Venga", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=89#p1230");
+        modelArrayAddingList.add(model);
+        model = new Model("Picanto  (SA)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2891#p19442");
+        modelArrayAddingList.add(model);
+        model = new Model("Picanto II  (TA)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=81#p1113");
+        modelArrayAddingList.add(model);
+        model = new Model("Soul  (AM)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=117#p1697");
+        modelArrayAddingList.add(model);
+        model = new Model("Soul II  (PS)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=79#p1090");
+        modelArrayAddingList.add(model);
+        model = new Model("Rio II  (JB)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=12#p111");
+        modelArrayAddingList.add(model);
+        model = new Model("Rio III  (UB/QB)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=7#p35");
+        modelArrayAddingList.add(model);
+        model = new Model("Sportage II  (KM)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2993&p=20349#p20349");
+        modelArrayAddingList.add(model);
+        model = new Model("Sportage III  (SL)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=73#p966");
+        modelArrayAddingList.add(model);
+        model = new Model("Sportage IV  (QL)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=3003&p=20445#p20445");
+        modelArrayAddingList.add(model);
+        model = new Model("Spectra", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=14#p154");
+        modelArrayAddingList.add(model);
+        model = new Model("Sorento  (BL)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2837#p18839");
+        modelArrayAddingList.add(model);
+        model = new Model("Sorento II  (XM)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2834#p18814");
+        modelArrayAddingList.add(model);
+        model = new Model("Sorento III  PRIME (UM)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2835#p18815");
+        modelArrayAddingList.add(model);
+        model = new Model("Optima III  (TF)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=128#p1852");
+        modelArrayAddingList.add(model);
+        model = new Model("Optima IV  (JF)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=3119#p21450");
+        modelArrayAddingList.add(model);
+        model = new Model("Magentis II  (MG)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2832#p18802");
+        modelArrayAddingList.add(model);
+        model = new Model("Mohave  (HM)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=3202&p=22449#p22449");
+        modelArrayAddingList.add(model);
+        model = new Model("Quoris K9  (KH)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2958#p20067");
+        modelArrayAddingList.add(model);
+
         vendor = new Vendor("Kia", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
