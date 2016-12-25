@@ -32,8 +32,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
     private SearchView searchView;
     public static MyListAdapter myListAdapterClass;
     public ExpandableListView expandableListView;
-    public ArrayList<Vendor> vendorArrayAddingList = new ArrayList<Vendor>();
-    public ArrayList<Model> modelArrayAddingList = new ArrayList<Model>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,17 +73,17 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
             expandableListView.expandGroup(i);
         }
     }
-
+LoadData loadData = new LoadData();
     //method to expand all groups
     private void displayList() {
 
         //display the list
-        loadSomeData();
+        loadData.loadSomeData();
 
         //get reference to the ExpandableListView
         expandableListView = (ExpandableListView) findViewById(R.id.expandableList);
         //create the adapter by passing your ArrayList data
-        myListAdapterClass = new MyListAdapter(SearchGallery.this, vendorArrayAddingList);
+        myListAdapterClass = new MyListAdapter(SearchGallery.this, loadData.vendorArrayAddingList);
         //attach the adapter to the list
         expandableListView.setAdapter(myListAdapterClass);
 
@@ -92,41 +91,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
 
     }
 
-    private void loadSomeData() {
 
-        modelArrayAddingList = new ArrayList<Model>();
-        Model model = new Model("Ceed  (ED/ED FL)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=2226#p10880");
-        modelArrayAddingList.add(model);
-        model = new Model("Ceed 2  (JD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=97#p1392");
-        modelArrayAddingList.add(model);
-        model = new Model("Cerato 2  (TD)", "Kia", "http://rustamcolor.ru/viewtopic.php?f=13&t=91#p1259");
-        modelArrayAddingList.add(model);
-        Vendor vendor = new Vendor("KIA", modelArrayAddingList);
-        vendorArrayAddingList.add(vendor);
-
-        modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("BT-50  (J97M)", "Mazda", "http://rustamcolor.ru/viewtopic.php?f=13&t=2158#p10455");
-        modelArrayAddingList.add(model);
-        model = new Model("2  (DE)", "Mazda", "http://rustamcolor.ru/viewtopic.php?f=13&t=131#p1916");
-        modelArrayAddingList.add(model);
-        model = new Model("3  (BK)", "Mazda", "http://rustamcolor.ru/viewtopic.php?f=13&t=3102#p21217");
-        modelArrayAddingList.add(model);
-        model = new Model("3  (BL)", "Mazda", "http://rustamcolor.ru/viewtopic.php?f=13&t=1350#p6092");
-        modelArrayAddingList.add(model);
-        vendor = new Vendor("Mazda", modelArrayAddingList);
-        vendorArrayAddingList.add(vendor);
-
-        modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("Avensis 2  (T250)", "Toyota", "http://rustamcolor.ru/viewtopic.php?f=13&t=3138#p21646");
-        modelArrayAddingList.add(model);
-        model = new Model("Avensis 3  (T27)", "Toyota", "http://rustamcolor.ru/viewtopic.php?f=13&t=204#p2557");
-        modelArrayAddingList.add(model);
-        model = new Model("Auris (E150)", "Toyota", "http://rustamcolor.ru/viewtopic.php?f=13&t=1743#p7818");
-        modelArrayAddingList.add(model);
-        vendor = new Vendor("Toyota", modelArrayAddingList);
-        vendorArrayAddingList.add(vendor);
-
-    }
 
     @Override
     public boolean onClose() {
