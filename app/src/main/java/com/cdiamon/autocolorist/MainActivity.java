@@ -1,5 +1,6 @@
 package com.cdiamon.autocolorist;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -22,6 +23,8 @@ import com.cdiamon.autocolorist.fragments.GalleryFragment;
 import com.cdiamon.autocolorist.fragments.OsvaldFragment;
 import com.cdiamon.autocolorist.fragments.TablesFragment;
 
+import static android.R.attr.onClick;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, TablesFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener, OsvaldFragment.OnFragmentInteractionListener {
 
@@ -42,8 +45,24 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Здесь будет отправка email разработчику", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+
+                Snackbar.make(view, "Отправить email разработчику", Snackbar.LENGTH_LONG)
+                        .setAction("Отправить", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent Email = new Intent(Intent.ACTION_SEND);
+                                startActivity(Intent.createChooser(Email, "Send Feedback:"));
+                                Email.setType("text/email");
+                                Email.putExtra(Intent.EXTRA_EMAIL,
+                                        new String[]{"padmitriy@gmail.com"});  //developer 's email
+                                Email.putExtra(Intent.EXTRA_SUBJECT,
+                                        "Отзыв/предложение по AutoColorist"); // Email 's Subject
+                                Email.putExtra(Intent.EXTRA_TEXT, "Здравствуйте, Дмитрий. " +
+                                        "У меня есть исправление/дополнение для вашего приложения AutoColorist.\n" + "");  //Email 's Greeting text
+                                startActivity(Intent.createChooser(Email, "Send Feedback:"));
+                            }
+                        }).show();
             }
         });
 
@@ -94,11 +113,11 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             // startActivity(new Intent(getApplicationContext(), WHAT.class));
-            Toast.makeText(getApplicationContext(), "Переходим в настройки", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Настройки в разработке", Toast.LENGTH_SHORT).show();
             return true;
         } else if (id == R.id.menu_calculator) {
             // startActivity(new Intent(getApplicationContext(), WHAT.class));
-            Toast.makeText(getApplicationContext(), "Переходим в калькулятор", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Калькулятор колориста в разработке", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -116,7 +135,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_circle) {
             // Handle the camera action
             fragmentClass = OsvaldFragment.class;
             Toast.makeText(getApplicationContext(), "Переходим к кругу", Toast.LENGTH_SHORT).show();
@@ -128,13 +147,13 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(getApplicationContext(), "Переходим к таблице перевода", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_manage) {
             fragmentClass = OsvaldFragment.class;
-            Toast.makeText(getApplicationContext(), "Переходим в 4", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Раздел Инструменты в разработке", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
             fragmentClass = OsvaldFragment.class;
-            Toast.makeText(getApplicationContext(), "Переходим в 5", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Раздел Поделиться в разработке", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
             fragmentClass = OsvaldFragment.class;
-            Toast.makeText(getApplicationContext(), "Переходим в 6", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Раздел Отправить в разработке", Toast.LENGTH_SHORT).show();
         }
 
         try {

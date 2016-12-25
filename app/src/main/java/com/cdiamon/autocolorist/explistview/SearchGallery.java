@@ -2,6 +2,7 @@ package com.cdiamon.autocolorist.explistview;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -58,8 +59,22 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Отправить email разработчику", Snackbar.LENGTH_LONG)
+                        .setAction("Отправить", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent Email = new Intent(Intent.ACTION_SEND);
+                                startActivity(Intent.createChooser(Email, "Send Feedback:"));
+                                Email.setType("text/email");
+                                Email.putExtra(Intent.EXTRA_EMAIL,
+                                        new String[]{"padmitriy@gmail.com"});  //developer 's email
+                                Email.putExtra(Intent.EXTRA_SUBJECT,
+                                        "Отзыв/предложение по AutoColorist"); // Email 's Subject
+                                Email.putExtra(Intent.EXTRA_TEXT, "Здравствуйте, Дмитрий. " +
+                                        "У меня есть исправление/дополнение для вашего приложения AutoColorist.\n" + "");  //Email 's Greeting text
+                                startActivity(Intent.createChooser(Email, "Send Feedback:"));
+                            }
+                        }).show();
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -73,7 +88,9 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
             expandableListView.expandGroup(i);
         }
     }
-LoadData loadData = new LoadData();
+
+    LoadData loadData = new LoadData();
+
     //method to expand all groups
     private void displayList() {
 
@@ -90,7 +107,6 @@ LoadData loadData = new LoadData();
         expandableListView.setOnChildClickListener(myListAdapterClass);
 
     }
-
 
 
     @Override

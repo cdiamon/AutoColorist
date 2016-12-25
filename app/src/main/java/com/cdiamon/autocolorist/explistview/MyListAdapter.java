@@ -167,22 +167,13 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
     @Override
     public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long id) {
 
-        Toast.makeText(MyListAdapter.this.context, (String) MyListAdapter.this.getChild(groupPosition, childPosition).toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MyListAdapter.this.context, "Устанавливается соединение..", Toast.LENGTH_SHORT).show();
         System.out.println(" ----- " + groupPosition + "======= " + childPosition);
         SearchGallery sg = new SearchGallery();
         Model model = new Model();
 
-        System.out.println("\n+++\n" + vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel + "\n+++\n");
-//        String texty =  expandableListView.getExpandableListAdapter().getChildId(groupPosition,childPosition);
-//        System.out.println(expandableListView.getExpandableListAdapter().getChild(groupPosition,childPosition));
-        System.out.println(vendorList.get(groupPosition).getModelList().get(childPosition).getSiteModel());
-//
         Intent intentChild;
         intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorList.get(groupPosition).getModelList().get(childPosition).getSiteModel()));
-//        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel));
-
-//        intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorArrList.get(groupPosition).modelList.get(childPosition).siteModel));
-
         context.startActivity(intentChild);
         return true;
     }

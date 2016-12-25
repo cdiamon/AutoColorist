@@ -27,19 +27,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Галерея автомобилей по маркам и моделям"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="26sp"
-        android:layout_below="@+id/imageViewCarCollage"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="18dp" />
-
     <Button
         android:id="@+id/fragm_button_go"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -52,7 +39,27 @@
         android:textStyle="normal|bold"
         android:layout_below="@+id/textView4"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="22dp" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Галерея автомобилей по маркам и моделям"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:layout_below="@+id/imageViewCarCollage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Галерея сайта rustamcolor.ru Рустама Кабирова"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragm_button_go"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2"
+        android:textColor="@android:color/darker_gray" />
 
 </RelativeLayout>
