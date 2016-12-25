@@ -371,27 +371,43 @@ public class LoadData {
         modelArrayAddingList.add(model);
         model = new Model("Grandeur IV (TG)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3207#p22528");
         modelArrayAddingList.add(model);
-        model = new Model("Grandeur V (HG)", "Hyundai", "");
+        model = new Model("Grandeur V (HG)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3205#p22508");
         modelArrayAddingList.add(model);
-        model = new Model("TUCSON  (JM)", "Hyundai", "");
+        model = new Model("TUCSON  (JM)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=864#p4385");
         modelArrayAddingList.add(model);
-        model = new Model("TUCSON III (TL)", "Hyundai", "");
+        model = new Model("TUCSON III (TL)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=2939#p19935");
         modelArrayAddingList.add(model);
-        model = new Model("Sonata V (NF)", "Hyundai", "");
+        model = new Model("Sonata V (NF)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3206#p22517");
         modelArrayAddingList.add(model);
-        model = new Model("Sonata VI/VII (YF/LF)", "Hyundai", "");
+        model = new Model("Sonata VI/VII (YF/LF)", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=1267#p5690");
         modelArrayAddingList.add(model);
-        model = new Model("Porter", "Hyundai", "");
+        model = new Model("Porter", "Hyundai", "http://rustamcolor.ru/viewtopic.php?f=13&t=3071&p=20908#p20908");
         modelArrayAddingList.add(model);
 
         vendor = new Vendor("Hyundai", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("", "", "");
+        model = new Model("Q30", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=2956&p=20042#p20042");
+        modelArrayAddingList.add(model);
+        model = new Model("Q50  (G)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=2885#p19385");
+        modelArrayAddingList.add(model);
+        model = new Model("Q70  (M)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=111#p1624");
+        modelArrayAddingList.add(model);
+        model = new Model("EX (QX50)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3116#p21423");
+        modelArrayAddingList.add(model);
+        model = new Model("FX (S50)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3168#p21907");
+        modelArrayAddingList.add(model);
+        model = new Model("FX II (S51)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=2841#p18887");
+        modelArrayAddingList.add(model);
+        model = new Model("QX70", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=110#p1615");
+        modelArrayAddingList.add(model);
+        model = new Model("QX III (QX80)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=2840#p18860");
+        modelArrayAddingList.add(model);
+        model = new Model("JX (QX60)", "Infiniti", "http://rustamcolor.ru/viewtopic.php?f=13&t=3192#p22294");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("", modelArrayAddingList);
+        vendor = new Vendor("Infiniti", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
