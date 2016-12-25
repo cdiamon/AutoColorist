@@ -746,10 +746,28 @@ public class LoadData {
 
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("", "", "");
+        model = new Model("Corsa (D)", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=1896#p9118");
+        modelArrayAddingList.add(model);
+        model = new Model("Antara", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=1426#p6332");
+        modelArrayAddingList.add(model);
+        model = new Model("Mokka / Mokka X", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=44#p591");
+        modelArrayAddingList.add(model);
+        model = new Model("Astra (H)", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=45#p602");
+        modelArrayAddingList.add(model);
+        model = new Model("Astra (J)", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=38#p514");
+        modelArrayAddingList.add(model);
+        model = new Model("Astra (K)", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=2957#p20054");
+        modelArrayAddingList.add(model);
+        model = new Model("Insignia (G09)", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=39#p534");
+        modelArrayAddingList.add(model);
+        model = new Model("Meriva B", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=109#p1598");
+        modelArrayAddingList.add(model);
+        model = new Model("Zafira B", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=3182#p22069");
+        modelArrayAddingList.add(model);
+        model = new Model("Zafira Tourer C", "Opel", "http://rustamcolor.ru/viewtopic.php?f=13&t=1542#p6831");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("", modelArrayAddingList);
+        vendor = new Vendor("Opel", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
 
