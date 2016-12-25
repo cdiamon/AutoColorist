@@ -2,21 +2,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    tools:context="com.cdiamon.autocolorist.fragments.TablesFragment">
+    tools:context=".fragments.NewFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Раздел в этот самый момент находится в процессе разработки. Предложения с радостью принимаются по email. Email будет удобно отправить по кнопке внизу."
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="138dp"
-        android:textAlignment="center"
+        android:layout_marginTop="139dp"
         android:textStyle="normal|bold"
+        android:textAlignment="center"
         android:textColor="?android:attr/colorActivatedHighlight"
+        android:textSize="14sp"
         android:textAllCaps="true"
-        android:textSize="14sp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

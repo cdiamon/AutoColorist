@@ -13,7 +13,7 @@
             android:title="Цвета, коды" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/icon_table_grid"
             android:title="Таблица перевода" />
         <item
             android:id="@+id/nav_manage"

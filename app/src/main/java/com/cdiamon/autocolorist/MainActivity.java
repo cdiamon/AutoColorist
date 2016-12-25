@@ -20,13 +20,14 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.cdiamon.autocolorist.fragments.GalleryFragment;
+import com.cdiamon.autocolorist.fragments.NewFragment;
 import com.cdiamon.autocolorist.fragments.OsvaldFragment;
 import com.cdiamon.autocolorist.fragments.TablesFragment;
 
 import static android.R.attr.onClick;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, TablesFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener, OsvaldFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, NewFragment.OnFragmentInteractionListener, TablesFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener, OsvaldFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity
             fragmentClass = TablesFragment.class;
             Toast.makeText(getApplicationContext(), "Переходим к таблице перевода", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_manage) {
-            fragmentClass = OsvaldFragment.class;
+            fragmentClass = NewFragment.class;
             Toast.makeText(getApplicationContext(), "Раздел Инструменты в разработке", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
             fragmentClass = OsvaldFragment.class;
