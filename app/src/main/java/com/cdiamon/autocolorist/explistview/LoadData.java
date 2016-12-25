@@ -772,10 +772,46 @@ public class LoadData {
 
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("", "", "");
+        model = new Model("RCZ", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2919#p19738");
+        modelArrayAddingList.add(model);
+        model = new Model("107", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2219#p10827");
+        modelArrayAddingList.add(model);
+        model = new Model("1007", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2922#p19779");
+        modelArrayAddingList.add(model);
+        model = new Model("206", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=3076#p20931");
+        modelArrayAddingList.add(model);
+        model = new Model("207", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=3069#p20890");
+        modelArrayAddingList.add(model);
+        model = new Model("208", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2400#p11909");
+        modelArrayAddingList.add(model);
+        model = new Model("2008  (A94)", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2920&p=19750#p19750");
+        modelArrayAddingList.add(model);
+        model = new Model("301", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2234&p=10952#p10952");
+        modelArrayAddingList.add(model);
+        model = new Model("307", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=3020#p20514");
+        modelArrayAddingList.add(model);
+        model = new Model("308  (T7)", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=56#p733");
+        modelArrayAddingList.add(model);
+        model = new Model("308  (T9)", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2879#p19261");
+        modelArrayAddingList.add(model);
+        model = new Model("3008", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2890#p19426");
+        modelArrayAddingList.add(model);
+        model = new Model("3008 II", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=3226#p22865");
+        modelArrayAddingList.add(model);
+        model = new Model("407", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2314#p11360");
+        modelArrayAddingList.add(model);
+        model = new Model("4007", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2908#p19571");
+        modelArrayAddingList.add(model);
+        model = new Model("408", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2230#p10924");
+        modelArrayAddingList.add(model);
+        model = new Model("4008", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2915#p19691");
+        modelArrayAddingList.add(model);
+        model = new Model("508", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2323#p11433");
+        modelArrayAddingList.add(model);
+        model = new Model("5008 (T87)", "Peugeot", "http://rustamcolor.ru/viewtopic.php?f=13&t=2909#p19585");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("", modelArrayAddingList);
+        vendor = new Vendor("Peugeot", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
 
