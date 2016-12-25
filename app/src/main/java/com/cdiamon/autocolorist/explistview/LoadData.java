@@ -146,102 +146,144 @@ public class LoadData {
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
+        model = new Model("Spark 2  (M200/M250)", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=2286#p11275");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Spark 3  (M300)", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=2283#p11262");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Captiva", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=1428#p6354");
+        modelArrayAddingList.add(model);
+        model = new Model("Tracker", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=3181&p=22057#p22057");
+        modelArrayAddingList.add(model);
+        model = new Model("Trailblazer", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=88#p1221");
+        modelArrayAddingList.add(model);
+        model = new Model("AVEO (T200/T250)", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=86#p1182");
+        modelArrayAddingList.add(model);
+        model = new Model("AVEO 2 (T300)", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=40#p550");
+        modelArrayAddingList.add(model);
+        model = new Model("CRUZE (1G/J300)", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=37#p495");
+        modelArrayAddingList.add(model);
+        model = new Model("Cobalt", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=8#p46");
+        modelArrayAddingList.add(model);
+        model = new Model("Lacetti", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=11#p92");
+        modelArrayAddingList.add(model);
+        model = new Model("Niva", "Chevrolet Lada", "http://rustamcolor.ru/viewtopic.php?f=13&t=13#p125");
+        modelArrayAddingList.add(model);
+        model = new Model("Orlando", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=116#p1686");
+        modelArrayAddingList.add(model);
+        model = new Model("Epica", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=177#p2040");
+        modelArrayAddingList.add(model);
+        model = new Model("Malibu", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=219#p3181");
+        modelArrayAddingList.add(model);
+        model = new Model("Rezzo", "Chevrolet", "http://rustamcolor.ru/viewtopic.php?f=13&t=3148#p21726");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("Chevrolet", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
+        model = new Model("300C  (8X)", "Chrysler", "http://rustamcolor.ru/viewtopic.php?f=13&t=3246#p23268");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
-        modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("300C II", "Chrysler", "http://rustamcolor.ru/viewtopic.php?f=13&t=3244&p=23189#p23189");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("Chrysler", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
+        model = new Model("on-DO", "Datsun", "http://rustamcolor.ru/viewtopic.php?f=13&t=22#p297");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
-        modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("on-DO", "Datsun", "http://rustamcolor.ru/viewtopic.php?f=13&t=1289#p5833");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("Datsun", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
+        model = new Model("Nexia  (N150)", "Daewoo нексия", "http://rustamcolor.ru/viewtopic.php?f=13&t=1543#p6849");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Matiz  (M150)", "Daewoo матиз", "http://rustamcolor.ru/viewtopic.php?f=13&t=16#p180");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Gentra", "Daewoo", "http://rustamcolor.ru/viewtopic.php?f=13&t=15#p168");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("Daewoo", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
-        modelArrayAddingList.add(model);
-        model = new Model("", "", "");
-        modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Caliber", "Dodge", "http://rustamcolor.ru/viewtopic.php?f=13&t=3196#p22353");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("Dodge", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
+        model = new Model("Albea", "Fiat", "http://rustamcolor.ru/viewtopic.php?f=13&t=21#p286");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Doblo", "Fiat", "http://rustamcolor.ru/viewtopic.php?f=13&t=3217#p22678");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Linea (323)", "Fiat", "http://rustamcolor.ru/viewtopic.php?f=13&t=3189#p22235");
+        modelArrayAddingList.add(model);
+        model = new Model("Tipo (Typ 356)", "Fiat", "http://rustamcolor.ru/viewtopic.php?f=13&t=3201#p22439");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("Fiat", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
+        model = new Model("Mondeo 4", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=2822#p18729");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Mondeo 5", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=1460#p6480");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Edge", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=1458#p6459");
+        modelArrayAddingList.add(model);
+        model = new Model("Focus 2", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=10#p70");
+        modelArrayAddingList.add(model);
+        model = new Model("Focus 3", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=9#p57");
+        modelArrayAddingList.add(model);
+        model = new Model("Kuga", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=2862#p19124");
+        modelArrayAddingList.add(model);
+        model = new Model("Kuga 2", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=57#p749");
+        modelArrayAddingList.add(model);
+        model = new Model("Fiesta 5", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=125#p1807");
+        modelArrayAddingList.add(model);
+        model = new Model("Fiesta 6", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=124#p1790");
+        modelArrayAddingList.add(model);
+        model = new Model("Fusion", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=126#p1826");
+        modelArrayAddingList.add(model);
+        model = new Model("Ecosport", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=127#p1846");
+        modelArrayAddingList.add(model);
+        model = new Model("C-Max", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=201#p2508");
+        modelArrayAddingList.add(model);
+        model = new Model("Ranger  (T6)", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=2874#p19220");
+        modelArrayAddingList.add(model);
+        model = new Model("Explorer 5  (U502)", "Ford", "http://rustamcolor.ru/viewtopic.php?f=13&t=3121#p21474");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("Ford", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
+        model = new Model("Газель, Соболь, Баргузин", "GAZEL sobol barguzin газ ", "http://rustamcolor.ru/viewtopic.php?f=13&t=2827#p18761");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Next", "GAZel газ некст газель", "http://rustamcolor.ru/viewtopic.php?f=13&t=2863#p19141");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Волга Сайбер", "GAZ газ volga Siber сибер", "http://rustamcolor.ru/viewtopic.php?f=13&t=107#p1556");
+        modelArrayAddingList.add(model);
+        model = new Model("Волга", "GAZ газ volga", "http://rustamcolor.ru/viewtopic.php?f=13&t=34#p463");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("GAZ", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
-        model = new Model("A1  (8X)", "Audi", "url");
+        model = new Model("MK", "Geely", "http://rustamcolor.ru/viewtopic.php?f=13&t=2393#p11846");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("MK CROSS", "Geely", "http://rustamcolor.ru/viewtopic.php?f=13&t=2394#p11862");
         modelArrayAddingList.add(model);
-        model = new Model("", "", "");
+        model = new Model("Emgrand EC7", "Geely", "http://rustamcolor.ru/viewtopic.php?f=13&t=2399#p11898");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("vendor", modelArrayAddingList);
+        vendor = new Vendor("Geely", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
