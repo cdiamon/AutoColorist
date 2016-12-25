@@ -486,6 +486,44 @@ public class LoadData {
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("Bogdan", "Lada Лада ВАЗ VAZ Таз Богдан", "http://rustamcolor.ru/viewtopic.php?f=13&t=1835#p8563");
+        modelArrayAddingList.add(model);
+        model = new Model("Vesta", "Lada Лада ВАЗ VAZ Таз Веста", "http://rustamcolor.ru/viewtopic.php?f=13&t=1764#p7946");
+        modelArrayAddingList.add(model);
+        model = new Model("Xray", "Lada Лада ВАЗ VAZ Таз иксрей иксрэй", "http://rustamcolor.ru/viewtopic.php?f=13&t=1680#p7544");
+        modelArrayAddingList.add(model);
+        model = new Model("Niva", "Lada Лада ВАЗ VAZ Таз Нива", "http://rustamcolor.ru/viewtopic.php?f=13&t=3040#p20647");
+        modelArrayAddingList.add(model);
+        model = new Model("4x4 Urban", "Lada Лада ВАЗ VAZ Таз 4х4 урбан Нива", "http://rustamcolor.ru/viewtopic.php?f=13&t=1574#p7036");
+        modelArrayAddingList.add(model);
+        model = new Model("Kalina", "Lada Лада ВАЗ VAZ Таз Калина", "http://rustamcolor.ru/viewtopic.php?f=13&t=96#p1361");
+        modelArrayAddingList.add(model);
+        model = new Model("Kalina 2", "Lada Лада ВАЗ VAZ Таз Калина", "http://rustamcolor.ru/viewtopic.php?f=13&t=94#p1329");
+        modelArrayAddingList.add(model);
+        model = new Model("Kalina Cross", "Lada Лада ВАЗ VAZ Таз Калина Кросс", "http://rustamcolor.ru/viewtopic.php?f=13&t=1432#p6370");
+        modelArrayAddingList.add(model);
+        model = new Model("Priora  (2170/2171/2172)", "Lada Лада ВАЗ VAZ Таз Приора", "http://rustamcolor.ru/viewtopic.php?f=13&t=92#p1277");
+        modelArrayAddingList.add(model);
+        model = new Model("Samara  (2113/2114/2115)", "Lada Лада ВАЗ VAZ Таз Самара", "http://rustamcolor.ru/viewtopic.php?f=13&t=2926#p19848");
+        modelArrayAddingList.add(model);
+        model = new Model("Largus", "Lada Лада ВАЗ VAZ Таз Ларгус", "http://rustamcolor.ru/viewtopic.php?f=13&t=23#p305");
+        modelArrayAddingList.add(model);
+        model = new Model("Granta Ижевск", "Lada Лада ВАЗ VAZ Таз Гранта", "http://rustamcolor.ru/viewtopic.php?f=13&t=31#p407");
+        modelArrayAddingList.add(model);
+        model = new Model("Granta Тольятти", "Lada Лада ВАЗ VAZ Таз Гранта", "http://rustamcolor.ru/viewtopic.php?f=13&t=32#p426");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("Lada", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+        modelArrayAddingList = new ArrayList<Model>();
         model = new Model("", "", "");
         modelArrayAddingList.add(model);
 
@@ -511,6 +549,71 @@ public class LoadData {
         vendor = new Vendor("Mazda", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
         modelArrayAddingList = new ArrayList<Model>();
         model = new Model("Avensis 2  (T250)", "Toyota", "http://rustamcolor.ru/viewtopic.php?f=13&t=3138#p21646");
         modelArrayAddingList.add(model);
@@ -519,6 +622,30 @@ public class LoadData {
         model = new Model("Auris (E150)", "Toyota", "http://rustamcolor.ru/viewtopic.php?f=13&t=1743#p7818");
         modelArrayAddingList.add(model);
         vendor = new Vendor("Toyota", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
+        vendorArrayAddingList.add(vendor);
+
+
+        modelArrayAddingList = new ArrayList<Model>();
+        model = new Model("", "", "");
+        modelArrayAddingList.add(model);
+
+        vendor = new Vendor("", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
     }
