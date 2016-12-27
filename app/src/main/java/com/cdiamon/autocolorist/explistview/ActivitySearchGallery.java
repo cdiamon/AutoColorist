@@ -14,9 +14,7 @@ import android.widget.SearchView;
 
 import com.cdiamon.autocolorist.R;
 
-import java.util.ArrayList;
-
-public class SearchGallery extends AppCompatActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener {
+public class ActivitySearchGallery extends AppCompatActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener {
 
     // TODO send info url of car pics
     // Intent myIntent = new Intent(CurrentActivity.this, NextActivity.class);
@@ -100,7 +98,7 @@ public class SearchGallery extends AppCompatActivity implements SearchView.OnQue
         //get reference to the ExpandableListView
         expandableListView = (ExpandableListView) findViewById(R.id.expandableList);
         //create the adapter by passing your ArrayList data
-        myListAdapterClass = new MyListAdapter(SearchGallery.this, loadData.vendorArrayAddingList);
+        myListAdapterClass = new MyListAdapter(ActivitySearchGallery.this, loadData.vendorArrayAddingList);
         //attach the adapter to the list
         expandableListView.setAdapter(myListAdapterClass);
 

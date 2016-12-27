@@ -11,11 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.cdiamon.autocolorist.MainActivity;
 import com.cdiamon.autocolorist.R;
-import com.cdiamon.autocolorist.explistview.SearchGallery;
-
-import static com.cdiamon.autocolorist.R.id.container;
+import com.cdiamon.autocolorist.explistview.ActivitySearchGallery;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,7 +78,7 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                intent = new Intent(GalleryFragment.this.getContext(), SearchGallery.class);
+                intent = new Intent(GalleryFragment.this.getContext(), ActivitySearchGallery.class);
                 Toast.makeText(GalleryFragment.this.getContext(), "Переходим в поиск по галерее", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }

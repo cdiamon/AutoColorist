@@ -11,9 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -160,7 +158,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 //
 //   TODO vendorArrList.0(Vendor)(kia).modelList(ArrayList).0(Model)(siteModel=url!!)
 //
-//   TODO mAdapter(MyListAdapter).context(SearchGallery).vendorArrayAddingList(ArrayList).0{Model}(nameVendor=kia).modelList.0(siteModel=url!!)
+//   TODO mAdapter(MyListAdapter).context(ActivitySearchGallery).vendorArrayAddingList(ArrayList).0{Model}(nameVendor=kia).modelList.0(siteModel=url!!)
 //
 //   TODO mAdapter.getChild(groupPosition, childPosition).getPopulation();
 
@@ -169,7 +167,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
         Toast.makeText(MyListAdapter.this.context, "Устанавливается соединение..", Toast.LENGTH_SHORT).show();
         System.out.println(" ----- " + groupPosition + "======= " + childPosition);
-        SearchGallery sg = new SearchGallery();
+        ActivitySearchGallery sg = new ActivitySearchGallery();
         Model model = new Model();
 
         Intent intentChild;

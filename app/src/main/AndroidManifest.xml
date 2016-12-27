@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".explistview.SearchGallery"
+            android:name=".explistview.ActivitySearchGallery"
             android:label="@string/title_activity_search_gallery"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="sensorPortrait"
@@ -30,7 +30,7 @@
                 android:value="com.cdiamon.autocolorist.MainActivity" />
         </activity>
         <activity
-            android:name=".tables.ConvertTables"
+            android:name=".tables.ActivityConvertTables"
             android:label="@string/title_activity_convert_tables"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
