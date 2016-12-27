@@ -29,6 +29,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cdiamon.autocolorist.MainActivity" />
         </activity>
+        <activity
+            android:name=".tables.ConvertTables"
+            android:label="@string/title_activity_convert_tables"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cdiamon.autocolorist.MainActivity" />
+        </activity>
     </application>
 
 </manifest> <!-- android:icon="@mipmap/ic_launcher" -->

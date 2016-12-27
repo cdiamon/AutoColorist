@@ -6,6 +6,7 @@
     tools:context="com.cdiamon.autocolorist.fragments.TablesFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,5 +19,14 @@
         android:textColor="?android:attr/colorActivatedHighlight"
         android:textAllCaps="true"
         android:textSize="14sp" />
+
+    <Button
+        android:text="В тестовый раздел"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tables_button_go"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="123dp" />
 
 </RelativeLayout>
