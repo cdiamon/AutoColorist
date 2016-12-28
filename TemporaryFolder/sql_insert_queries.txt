@@ -1,0 +1,936 @@
+/* CREATE TABLE */
+CREATE TABLE table_name(
+ID DOUBLE,
+Comment VARCHAR(100),
+SH DOUBLE,
+Standox DOUBLE,
+Profiline DOUBLE,
+Brulex DOUBLE,
+Mobihel DOUBLE,
+Normex DOUBLE,
+NOMIX DOUBLE,
+REIZ VARCHAR(100),
+PPG DOUBLE,
+NEXA VARCHAR(100),
+Debeer VARCHAR(100),
+Maxmeyer DOUBLE,
+Sikkens VARCHAR(100),
+Lesonal DOUBLE,
+Kapci DOUBLE,
+DuPont VARCHAR(100),
+Challenger VARCHAR(100),
+Duxone VARCHAR(100),
+Vika VARCHAR(100),
+RockPaint VARCHAR(100),
+YatuEasiCoat DOUBLE,
+Hebake DOUBLE,
+RM DOUBLE,
+GreenLine DOUBLE,
+QuickLine DOUBLE,
+Lechler DOUBLE,
+General DOUBLE
+);
+
+/* INSERT QUERY NO: 1 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+1, 'Кисель (биндер)', 299, 599, 481, 199, 496, 199, 60, 'E100', 895, '376 5600', '577 588', 81, '065 070', 05, 300, '', 'CL310', '', '', 'P150', 5520, 7, 100, 005, 91, 082, 850
+);
+
+/* INSERT QUERY NO: 2 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+2, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 00, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 92, 0, 0
+);
+
+/* INSERT QUERY NO: 3 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+3, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 088, 0
+);
+
+/* INSERT QUERY NO: 4 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+4, 'Флоп добавка', 799, 008, 485, 177, 495, 699, 99, 'S190', 759, '938', '599', 80, '190 191', 04, 707, '4530S', '124', '5136', '8022', '0095', 0, 6, 101, 850, 90, 089, 860
+);
+
+/* INSERT QUERY NO: 5 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+5, 'US', 0, 0, 0, 0, 0, 0, 59, '', 0, '', '', 0, '', 0, 0, '', '380', '5299', 'Uni silver', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 6 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+6, '', 0, 0, 0, 0, 0, 0, 0, '', 966, '902', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 7 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+7, 'T', 501, 570, 411, 110, 301, 401, 31, 'E12', 0, '', '500', 11, '110', 11, 010, '2', 'CLT03', '0132', '9003', '0204', 0, 603, 105, 100, 12, 000, 702
+);
+
+/* INSERT QUERY NO: 8 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+8, 'HP', 511, 870, 415, 168, 302, 411, 62, '', 753, '900', '', 12, '120', 14, 012, '1', '120', '5131', '8020', '0204', 0, 602, 190, 101, 11, 0, 701
+);
+
+/* INSERT QUERY NO: 9 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+9, 'Иней', 542, 810, 813, 151, 300, 442, 61, 'E14', 959, 'HE01', '501', 19, '195', 12, 011, '3', '122', '5134', '8021', '0201', 0, 601, 195, 870, 13, 100, 710
+);
+
+/* INSERT QUERY NO: 10 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+10, 'Графит', 575, 851, 493, 154, 365, 475, 18, '', 942, '', '', 93, '198', 0, 979, '8', '', '', '', '4402', 0, 639, 260, 0, 0, 080, 0
+);
+
+/* INSERT QUERY NO: 11 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+11, '', 525, 564, 498, 184, 363, 425, 41, '', 967, '904', '', 95, '160+ 070', 0, 0, '7', 'CLT01', '', '', 'T030', 0, 635, 260, 836, 18, 0, 682
+);
+
+/* INSERT QUERY NO: 12 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+12, '', 527, 563, 492, 103, 362, 427, 01, '', 756, '933', '512', 91, '160', 22, 390, '6', '', '0112', '9001', '0030', 0, 636, 250, 702, 16, 0, 781
+);
+
+/* INSERT QUERY NO: 13 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+13, '', 502, 571, 495, 111, 361, 402, 10, 'E23 (прозрачн.) E21 (502+574)', 0, '', '511', 92, '140+ 160', 23, 0, '5', '100', '5111', '8000', '077- 0234', 0, 637, 0, 700, 17, 081, 783
+);
+
+/* INSERT QUERY NO: 14 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+14, '', 574, 854, 499, 155, 364, 474, 37, '', 0, '', '', 0, '140+ 160', 0, 392, '', '108', '', '', '0250', 0, 638, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 15 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+15, '', 551, 897, 497, 197, 0, 0, 0, 'E22', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 16 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+16, '', 0, 0, 0, 0, 367, 0, 0, '', 789, '', '5-70', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 17 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+17, '', 0, 0, 0, 0, 368, 0, 0, '', 740, '948', '511', 92, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 18 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+18, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 705, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 19 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+19, '', 0, 0, 0, 0, 0, 0, 0, 'E24', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 087, 0
+);
+
+/* INSERT QUERY NO: 20 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+20, 'RAL9005', 32783272, 02072068, 3045001, 49554, 366, 554, 19, '', 0, '950', '5-7', 9036, '140', 21, 0, '', '', '', '', '', 0, 0, 0, 701, 0, 0, 784
+);
+
+/* INSERT QUERY NO: 21 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+21, 'Super Deep Black', 32000022, 02000466, 3045002, 49555, 0, 0, 0, '', 0, '', '', 0, '140', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 22 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+22, '', 536, 566, 429, 104, 329, 436, 22, '', 979, '961', '519', 53, '725', 0, 654, '66', '176', '5189', '8073', '0041', 0, 618, 881, 402, 58, 0, 759
+);
+
+/* INSERT QUERY NO: 23 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+23, '', 529, 576, 424, 115, 328, 429, 25, '', 0, '921', '544', 49, '726', 82, 653, '64', '132', '5145', '8032', '0049', 0, 620, 840, 404, 53, 0, 758
+);
+
+/* INSERT QUERY NO: 24 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+24, '', 0, 0, 0, 0, 0, 0, 0, '', 764, '976', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 25 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+25, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '139', '5149', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 26 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+26, '', 545, 896, 0, 196, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 27 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+27, '', 577, 856, 421, 157, 330, 477, 38, 'E35', 0, '', '', 49, '279', 83, 653, '', '134', '5146', '8033', '0048', 0, 616, 828, 0, 0, 055, 759
+);
+
+/* INSERT QUERY NO: 28 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+28, '', 0, 0, 0, 0, 0, 0, 0, 'E34', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 052, 0
+);
+
+/* INSERT QUERY NO: 29 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+29, '', 503, 857, 426, 162, 322, 403, 35, 'E37', 0, '', '522', 0, '279', 35, 0, '86', '131', '5144', '8031', '0010', 0, 617, 832, 318, 26, 0, 749
+);
+
+/* INSERT QUERY NO: 30 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+30, '', 504, 816, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 31 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+31, '', 0, 0, 0, 0, 0, 0, 0, '', 749, '978', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 32 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+32, '', 581, 583, 475, 127, 326, 481, 12, 'E36', 748, '923', '555', 33, '', 0, 651, '', '138', '5148', '8035', '0017', 0, 621, 828, 324, 43, 050, 0
+);
+
+/* INSERT QUERY NO: 33 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+33, '', 582, 883, 477, 178, 327, 482, 13, 'E39', 748, '923', '556', 47, '271', 81, 652, '85', '114', '5123', '8012', '0017', 0, 622, 820, 322, 52, 054, 756
+);
+
+/* INSERT QUERY NO: 34 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+34, '', 524, 586, 423, 129, 324, 424, 14, 'E42', 978, '926', '557', 46, '232', 72, 658, '~55', '136', '5147', '8036 8034', '0035', 0, 614, 825, 321, 51, 045, 0
+);
+
+/* INSERT QUERY NO: 35 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+35, '', 543, 561, 422, 102, 325, 443, 05, 'E31', 752, '980', '537', 59, '231', 31, 659, '50', '', '', '', '0011', 0, 641, 816, 0, 0, 0, 755
+);
+
+/* INSERT QUERY NO: 36 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+36, 'HP', 544, 861, 425, 164, 825, 444, 39, '', 0, '941', '537', 59, '231', 33, 659, '50', '', '', '', '', 0, 612, 816, 329, 55, 0, 0
+);
+
+/* INSERT QUERY NO: 37 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+37, '', 0, 0, 0, 0, 0, 0, 0, 'E33', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 38 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+38, '', 0, 0, 0, 0, 0, 0, 0, 'E32', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 39 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+39, '', 506, 567, 427, 105, 323, 406, 20, '', 779, '907', '521', 50, '239', 34, 650, '84', 'CLT02', '0124', '9002', '0225+ 0067', 0, 613, 805, 804, 54, 0, 0
+);
+
+/* INSERT QUERY NO: 40 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+40, '', 530, 882, 432, 170, 320, 430, 07, 'E38', 0, '942', '', 0, '328', 0, 632, '', '110', '5121', '8010', '0070+ 0069', 0, 619, 800, 820, 0, 0, 752
+);
+
+/* INSERT QUERY NO: 41 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+41, '', 531, 582, 437, 183, 321, 431, 24, '', 790, '942', '528', 32, '328+ 070', 37, 0, '91', '112', '5122', '8011', '0070+ 0069', 0, 615, 810, 323, 50, 0, 753
+);
+
+/* INSERT QUERY NO: 42 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+42, '', 507, 815, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 43 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+43, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 41, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 56, 0, 0
+);
+
+/* INSERT QUERY NO: 44 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+44, '', 535, 579, 433, 124, 314, 435, 53, '', 792, '973', '533', 43 , '235', 0, 640, '53', '130', '5143', '8030', '0053+ 0054', 0, 611, 0, 320, 57, 0, 736
+);
+
+/* INSERT QUERY NO: 45 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+45, '', 523, 580, 431, 182, 313, 423, 04, '', 780, '983', '548', 23, '348', 0, 224, '45', '142 140', '5163 5162', '8041 8040', '0057', 0, 610, 621, 209, 30, 0, 734
+);
+
+/* INSERT QUERY NO: 46 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+46, '', 0, 577, 439, 119, 312, 433, 51, 'E52', 0, '972', '531', 25, '439', 63, 222, '46', '148', '5168', '8040', '0054', 0, 609, 0, 208, 31, 0, 632
+);
+
+/* INSERT QUERY NO: 47 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+47, '', 0, 0, 0, 0, 0, 0, 0, 'E56', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 48 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+48, '', 505, 574, 428, 114, 315, 405, 33, '', 778, '905', '502', 31, '437', 65, 230, '81 ', '', '', '', '0233', 0, 607, 605, 203, 36, 0, 735
+);
+
+/* INSERT QUERY NO: 49 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+49, '', 532, 581, 436, 181, 316, 432, 32, 'E54', 980, '982', '527', 28, '436', 64, 226, '90', '116', '5126', '8013', '0064', 0, 608, 600, 827, 34, 0, 754
+);
+
+/* INSERT QUERY NO: 50 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+50, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '903', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 51 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+51, 'HP', 521, 884, 435, 172, 310, 421, 63, '', 794, '937', '542', 29, '452', 62, 229, '41', '147', '5167', '8043', '0062+ 0056', 0, 604, 0, 0, 35, 0, 739
+);
+
+/* INSERT QUERY NO: 52 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+52, 'T', 528, 575, 434, 116, 311, 428, 52, 'E51', 0, '937', '532', 27, '455', 0, 227, '43', '146', '5166', '8042', '0059 0054', 0, 640, 615, 225, 32, 0, 731
+);
+
+/* INSERT QUERY NO: 53 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+53, '', 578, 587, 443, 142, 308, 478, 17, '', 750, '975', '543', 65, '431', 53, 225, '33', '154', '5173', '8052', '0073', 0, 631, 610, 0, 42, 0, 726
+);
+
+/* INSERT QUERY NO: 54 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+54, '', 522, 573, 442, 112, 352, 422, 21, 'E62', 777, '', '506', 62, '550', 51, 763, '32', '150', '5171', '8050', '0077', 0, 632, 510, 600, 41, 070, 724
+);
+
+/* INSERT QUERY NO: 55 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+55, '', 538, 589, 445, 123, 351, 438, 15, 'E61', 797, '954', '546', 61, '564', 52, 760, '30', '152', '5172', '8051', '0076', 0, 633, 500, 602, 40, 072, 721
+);
+
+/* INSERT QUERY NO: 56 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+56, '', 553, 588, 451, 121, 344, 453, 16, 'E71', 776, '957', '545', 75, '671', 41, 474, '26', '164', '5184', '8062 806', '0071', 0, 624, 410, 506, 22, 062, 613
+);
+
+/* INSERT QUERY NO: 57 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+57, '', 554, 859, 455, 153, 343, 454, 02, '', 754, '922', '503', 76, '652', 47, 0, '27 ', '162', '5182', '8061', '0072', 0, 628, 0, 0, 23, 066, 717
+);
+
+/* INSERT QUERY NO: 58 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+58, '', 0, 0, 0, 0, 0, 0, 0, 'E72', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 59 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+59, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 060, 0
+);
+
+/* INSERT QUERY NO: 60 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+60, '', 0, 0, 0, 0, 0, 0, 0, 'E75', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 069, 0
+);
+
+/* INSERT QUERY NO: 61 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+61, '', 555, 562, 453, 101, 342, 455, 03, 'E73', 761, '952', '505', 72, '673', 43, 472, '28', '170', '5185', '8070', '0082+ 0079', 0, 625, 0, 502, 20, 0, 0
+);
+
+/* INSERT QUERY NO: 62 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+62, '', 0, 0, 0, 0, 346, 0, 28, 'E76', 795, '956', '', 79, '', 0, 471, '29', '160', '5181', '', '', 0, 0, 0, 0, 0, 0, 711
+);
+
+/* INSERT QUERY NO: 63 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+63, '', 559, 0, 0, 0, 0, 0, 23, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 64 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+64, '', 547, 885, 459, 173, 345, 446, 36, '', 762, '930', '', 78, '678', 45, 0, '', '', '', '', '', 0, 626, 470, 503, 24, 0, 0
+);
+
+/* INSERT QUERY NO: 65 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+65, '', 0, 0, 0, 0, 0, 0, 0, 'E74', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 061, 0
+);
+
+/* INSERT QUERY NO: 66 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+66, '', 552, 585, 452, 148, 341, 452, 11, '', 977, '', '', 73, '~678', 0, 0, '21', '172', '5187', '8071', '0083+ 0041', 0, 627, 0, 0, 21, 0, 0
+);
+
+/* INSERT QUERY NO: 67 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+67, 'T', 520, 569, 466, 109, 332, 420, 30, '', 0, '', '529', 0, '766+ 070', 0, 0, '', '', '', '', '0036', 0, 623, 0, 0, 0, 0, 648
+);
+
+/* INSERT QUERY NO: 68 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+68, '', 556, 855, 465, 160, 331, 456, 34, 'E81', 981, '920', '530', 56, '766', 84, 456, '20', '174', '5188', '8072', '0036', 0, 629, 300 , 401, 27, 058, 747
+);
+
+/* INSERT QUERY NO: 69 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+69, 'S', 515, 818, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 70 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+70, 'S', 560, 893, 0, 0, 0, 0, 0, '', 9070, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 71 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+71, 'S', 516, 595, 611, 135, 403, 416, 68, '', 767, '985', '513VF', 05, '811B', 0, 130, '10', '310', '5217', '8106', '0085', 0, 664, 0, 883, 63, 0, 799
+);
+
+/* INSERT QUERY NO: 72 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+72, 'S', 518, 594, 621, 137, 401, 418, 69, 'S34', 770, '986', '513F', 02, '811E', 0, 0, '', '306', '5214', '8103', '0086', 0, 663, 170, 863, 60, 0, 795
+);
+
+/* INSERT QUERY NO: 73 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+73, '', 0, 0, 0, 0, 0, 0, 65, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 74 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+74, '', 0, 0, 0, 0, 0, 0, 70, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 75 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+75, 'S', 509, 892, 694, 0, 409, 409, 0, '', 0, '', '', 0, '~811J', 0, 0, '', '', '', '', '4003', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 76 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+76, 'S', 0, 0, 0, 0, 0, 0, 0, 'S31', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 77 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+77, 'S', 557, 812, 634, 132, 405, 457, 0, '', 946, '984 992', '513B', 83, '811J', 0, 152, '13', '314', '5223', '8107', '4006', 0, 669, 0, 885, 68, 0, 898
+);
+
+/* INSERT QUERY NO: 78 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+78, 'S', 549, 813, 671, 136, 408, 449, 0, 'S23', 0, '991', '', 85, '811E+ 811J', 0, 180, '', '308', '5215', '8105', '0094', 0, 670, 140, 843, 0, 093, 0
+);
+
+/* INSERT QUERY NO: 79 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+79, 'S', 519, 0, 0, 0, 407, 0, 0, '', 769, '', '', 06, '811E+ 811J', 0, 180, '', '', '', '', '', 0, 0, 0, 0, 64, 0, 0
+);
+
+/* INSERT QUERY NO: 80 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+80, 'S', 514, 590, 651, 133, 400, 414, 0, 'S322B', 771, '', '513', 04, '811E+ 811J', 0, 180, '11', '304', '5213', '8102', '0087', 0, 661, 170, 873, 62, 099, 798
+);
+
+/* INSERT QUERY NO: 81 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+81, 'S', 0, 0, 0, 0, 0, 0, 0, 'S26', 0, '', '', 0, '811J', 0, 0, '17', '', '', '', '', 0, 0, 0, 0, 0, 091, 0
+);
+
+/* INSERT QUERY NO: 82 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+82, 'S', 0, 0, 0, 0, 0, 0, 0, 'S21', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 094, 0
+);
+
+/* INSERT QUERY NO: 83 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+83, 'S', 508, 891, 695, 0, 410, 408, 0, '', 989, '', '', 0, '~811M', 0, 0, '', '', '', '', '4005', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 84 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+84, 'S', 513, 593, 692, 130, 402, 413, 66, 'S18 Крупнее', 772, '988', '', 03, '811P', 0, 170, '14', '302', '5212', '8101', '0088', 0, 662, 180, 0, 61, 092, 794
+);
+
+/* INSERT QUERY NO: 85 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+85, 'S', 0, 0, 0, 0, 0, 0, 71, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 86 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+86, 'S', 0, 0, 0, 0, 0, 0, 72, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 87 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+87, 'S', 558, 811, 691, 131, 406, 458, 0, 'S22 Крупнее', 952, '998', '513C', 0, '811M', 0, 161, '95', '312', '5221', '8106', '4009+ 4007', 0, 668, 0, 0, 67, 097, 894
+);
+
+/* INSERT QUERY NO: 88 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+88, 'S', 517, 819, 0, 0, 0, 0, 67, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 89 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+89, 'S', 0, 0, 0, 0, 0, 0, 74, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 90 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+90, 'S', 510, 598, 654, 138, 404, 410, 75, 'S11', 953, '989', '513VC', 09, '811U 811R', 0, 0, '94', '300', '5211', '8100', '0093', 0, 667, 185, 195, 65, 098, 793
+);
+
+/* INSERT QUERY NO: 91 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+91, 'S', 0, 0, 0, 0, 0, 0, 0, '', 0, 'HE05', '', 0, '833G', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 92 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+92, 'S', 579, 806, 831, 149, 415, 479, 82, 'S918', 944, 'HE04', '567', 22, '843H', 0, 935, '78', '316', '5224', '8108', '0452', 0, 606, 0, 834, 66, 419, 771
+);
+
+/* INSERT QUERY NO: 93 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+93, 'P', 0, 0, 814, 0, 420, 791, 78, 'P11', 751, 'PP05', '553', 20, '911M', 0, 916, '73', '340', '5231', '8200', '4351', 0, 680, 111, 866, 77, 183, 772
+);
+
+/* INSERT QUERY NO: 94 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+94, 'P', 570, 829, 815, 207, 421, 770, 77, 'P12', 0, 'PP06', '559', 10, '914F', 0, 915, '732', '342', '5232', '8201', '4320', 0, 690, 109, 833, 76, 187, 762
+);
+
+/* INSERT QUERY NO: 95 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+95, 'P', 586, 836, 811, 218, 422, 786, 97, 'P13', 954, 'PP60', '578', 07, '914C', 0, 910, '731', '', '', '', '4361', 0, 692, 0, 832, 75, 185, 769
+);
+
+/* INSERT QUERY NO: 96 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+96, 'P', 589, 841, 826, 225, 453, 789, 89, '', 0, '', '', 48, '', 0, 0, '', '', '', '', '', 0, 694, 0, 0, 0, 0, 768
+);
+
+/* INSERT QUERY NO: 97 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+97, 'P', 595, 805, 822, 205, 451, 795, 87, 'P31', 793, 'PP08', '554', 58, '922M', 0, 942, '72', '344', '5241', '8202', '4314', 0, 684, 115, 868, 83, 142, 776
+);
+
+/* INSERT QUERY NO: 98 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+98, 'P', 594, 804, 825, 206, 450, 794, 88, 'P32', 765, 'PP62', '552', 57, '922F', 0, 940, '721', '346', '5242', '8203', '4303', 0, 683, 1182, 848, 82, 146, 775
+);
+
+/* INSERT QUERY NO: 99 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+99, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 175, 0
+);
+
+/* INSERT QUERY NO: 100 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+100, 'P', 571, 831, 862, 224, 452, 771, 96, 'P30', 960, 'PP61', '560', 30, '925M', 0, 950, '724', '348', '5243', '8204', '4306', 0, 691, 0, 864, 78, 150, 779
+);
+
+/* INSERT QUERY NO: 101 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+101, 'P', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 137, 0
+);
+
+/* INSERT QUERY NO: 102 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+102, 'P', 564, 828, 875, 221, 440, 764, 86, 'P33', 955, 'PP10', '566', 34, '933M+ 943M', 0, 945, '77', '350', '5244', '8205', '4305', 0, 689, 0, 858, 79, 131, 770
+);
+
+/* INSERT QUERY NO: 103 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+103, 'P', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '941F', 0, 930, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 104 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+104, 'P', 592, 802, 835, 202, 430, 792, 80, 'P52', 956, 'PP09', '563', 60, '941M', 0, 930, '76?', '360', '8272 5271', '8210', '4325', 0, 681, 1265, 867, 84, 122, 773
+);
+
+/* INSERT QUERY NO: 105 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+105, 'P', 0, 0, 0, 0, 0, 0, 0, 'P51', 0, '', '', 0, '943M', 0, 935, '', '', '', '', '', 0, 0, 0, 0, 0, 128, 0
+);
+
+/* INSERT QUERY NO: 106 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+106, 'P', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '952M', 0, 943, '728', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 107 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+107, 'P', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '954M', 0, 975, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 108 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+108, 'P', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 177, 0
+);
+
+/* INSERT QUERY NO: 109 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+109, 'P', 0, 0, 0, 0, 0, 0, 0, 'P62', 0, '', '', 0, '951F', 0, 972, '751', '', '', '', '', 0, 0, 0, 0, 0, 172, 0
+);
+
+/* INSERT QUERY NO: 110 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+110, 'p', 572, 824, 844, 217, 481, 772, 93, 'P61', 957, 'PP65', '562', 66, '954S', 0, 970, '75', '354', '5261', '8207', '4316', 0, 687, 0, 0, 0, 0, 777
+);
+
+/* INSERT QUERY NO: 111 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+111, 'P', 593, 803, 855, 203, 470, 793, 92, '', 763, 'PP07', '', 0, '964R', 0, 920, '74', '', '', '8206', '4304', 0, 682, 1245, 861, 80, 0, 778
+);
+
+/* INSERT QUERY NO: 112 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+112, 'P', 0, 0, 0, 0, 0, 0, 0, 'P70', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 113 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+113, 'P', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 174, 0
+);
+
+/* INSERT QUERY NO: 114 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+114, 'P', 561, 823, 845, 215, 480, 761, 95, '', 0, '', '564', 63, '954G 954M', 0, 0, '756', '358', '5263', '8209', '4323', 0, 686, 0, 837, 0, 0, 767
+);
+
+/* INSERT QUERY NO: 115 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+115, 'P', 563, 825, 853, 208, 471, 763, 91, 'P71', 0, 'PP63', '561', 40, '964H+ 964R', 0, 0, '', '352', '5251', '', '4310', 0, 688, 118, 882, 86, 162, 766
+);
+
+/* INSERT QUERY NO: 116 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+116, 'P', 587, 839, 854, 211, 472, 787, 90, 'P72', 943, 'PP63', '', 70, '964H', 0, 925, '741', '', '', '', '4308', 0, 693, 0, 0, 86, 0, 0
+);
+
+/* INSERT QUERY NO: 117 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+117, 'P', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '356', '5262', '8208', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 118 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+118, 'P', 568, 821, 464, 209, 460, 768, 98, 'P81', 958, 'PP64', '565', 54, '975S', 0, 960, '76?', '370', '5282 5281', '8211', '4315', 0, 685, 0, 862, 81, 152, 774
+);
+
+/* INSERT QUERY NO: 119 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+119, 'SP', 576, 895, 693, 0, 416, 476, 83, '', 983, 'HE05', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 835, 0, 0, 764
+);
+
+/* INSERT QUERY NO: 120 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+120, 'SP', 580, 894, 0, 222, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 121 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+121, 'SP', 590, 888, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 122 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+122, 'Xi', 596, 826, 817, 216, 500, 796, 42, 'X12', 0, 'XR10', '571', 0, '911H', 0, 917, '735', '390', '5300', '8300', '4330', 0, 721, 1190, 886, 01, 0, 872
+);
+
+/* INSERT QUERY NO: 123 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+123, '', 0, 0, 0, 0, 0, 0, 0, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 04, 0, 0
+);
+
+/* INSERT QUERY NO: 124 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+124, '', 0, 0, 0, 0, 0, 0, 46, '', 0, '', '', 0, '', 0, 0, '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0
+);
+
+/* INSERT QUERY NO: 125 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+125, 'Xi', 597, 827, 821, 210, 503, 797, 43, 'X30', 0, 'XR12', '569', 0, '923H', 0, 947, '725', '391', '5301', '8301', '', 0, 722, 1815, 888, 05, 195, 875
+);
+
+/* INSERT QUERY NO: 126 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+126, 'Xi', 584, 844, 836, 220, 502, 784, 48, 'X33', 0, 'XR16', '', 0, '933F', 0, 0, '775', '395', '5305', '8305', '', 0, 724, 0, 0, 03, 0, 870
+);
+
+/* INSERT QUERY NO: 127 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+127, 'Xi', 583, 843, 837, 213, 501, 783, 44, 'X50', 0, 'XR11', '573', 0, '941H', 0, 931, '765', '394', '5304', '8304', '', 0, 723, 0, 887, 02, 0, 873
+);
+
+/* INSERT QUERY NO: 128 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+128, 'Xi', 598, 846, 847, 212, 505, 798, 47, 'X60', 0, 'XR17', '574', 0, '951H', 0, 971, '755', '393', '5304', '8303', '', 0, 726, 0, 880, 07, 0, 877
+);
+
+/* INSERT QUERY NO: 129 */
+INSERT INTO table_name(ID, Comment, SH, Standox, Profiline, Brulex, Mobihel, Normex, NOMIX, REIZ, PPG, NEXA, Debeer, Maxmeyer, Sikkens, Lesonal, Kapci, DuPont, Challenger, Duxone, Vika, RockPaint, YatuEasiCoat, Hebake, RM, GreenLine, QuickLine, Lechler, General)
+VALUES
+(
+129, 'Xi', 585, 845, 857, 214, 504, 785, 45, 'X70', 0, 'XR13', '572', 0, '961H', 0, 926, '745', '392', '5302', '8302', '', 0, 725, 0, 881, 06, 0, 878
+);
+
