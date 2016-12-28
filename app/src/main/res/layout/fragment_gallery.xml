@@ -28,7 +28,7 @@
         android:layout_alignParentRight="true" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Галерея автомобилей по маркам и моделям"
@@ -41,31 +41,46 @@
         android:layout_marginRight="44dp" />
 
     <TextView
-        android:text="Галерея с сайта rustamcolor.ru"
+        android:text="Фотографии автомобилей с открытых ресурсов"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:textColor="@android:color/darker_gray"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textSize="10sp" />
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Нажимайте на названия моделей авто"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:layout_below="@+id/fragm_button_go"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_centerVertical="true" />
 
     <Button
         android:id="@+id/fragm_button_go"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="8dp"
+        android:elevation="10dp"
         android:text="Перейти"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="normal|bold"
         android:padding="0dp"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="23dp"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp" />
 
 </RelativeLayout>
