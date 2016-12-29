@@ -9,8 +9,17 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class DBHelper extends SQLiteOpenHelper {
-    public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, null, version);
+
+    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "converttables";
+    public static final String DATABASE_TABLE = "db_paints";
+
+    public static final String KEY_ID = "ID";
+    public static final String KEY_SH = "SH";
+    public static final String KEY_DuPont = "DuPont";
+
+    public DBHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
@@ -22,4 +31,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+
+
 }
