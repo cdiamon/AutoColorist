@@ -23,14 +23,6 @@
 
     <include layout="@layout/content_convert_tables" />
 
-    <EditText
-        android:layout_width="339dp"
-        android:layout_height="173dp"
-        android:inputType="textPersonName"
-        android:text="CoordinatorLayout SQL query"
-        android:ems="10"
-        android:id="@+id/editText2" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
