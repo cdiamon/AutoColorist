@@ -1,6 +1,7 @@
 package com.cdiamon.autocolorist.tables;
 
 import android.content.Intent;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -12,18 +13,22 @@ import android.view.View;
 
 import com.cdiamon.autocolorist.R;
 
+import java.io.IOException;
+
 public class ActivityConvertTables extends AppCompatActivity {
 
-    DBHelper dbHelper;
+    DBHelper myDbHelper = new DBHelper(this);
+
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
 
-            SQLiteDatabase database = dbHelper.getReadableDatabase();
+//            SQLiteDatabase database = dbHelper.getReadableDatabase();
 
         }
     };
+
 
 
     @Override
@@ -32,6 +37,28 @@ public class ActivityConvertTables extends AppCompatActivity {
         setContentView(R.layout.activity_convert_tables);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        myDbHelper = new DBHelper(this);
+
+        try {
+
+            myDbHelper.createDataBase();
+
+        } catch (IOException ioe) {
+
+            throw new Error("Unable to create database");
+
+        }
+
+        try {
+
+            myDbHelper.openDataBase();
+
+        }catch(SQLException sqle){
+
+            throw sqle;
+
+        }
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -59,7 +86,7 @@ public class ActivityConvertTables extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        dbHelper = new DBHelper(this);
+
 
 
 
