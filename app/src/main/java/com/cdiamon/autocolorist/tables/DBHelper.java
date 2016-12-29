@@ -22,11 +22,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static String DATABASE_PATH = "/data/data/com.cdiamon.autocolorist/databases/";
     public static String DATABASE_NAME = "converttables";
-    public static String DATABASE_TABLE = "db_paints";
+    public static String DATABASE_TABLE = "paints_name";
     public static final int DATABASE_VERSION = 1;
 
     public static final String KEY_ID = "ID";
     public static final String KEY_SH = "SH";
+    public static final String KEY_Profiline = "Profiline";
     public static final String KEY_DuPont = "DuPont";
 
     public SQLiteDatabase myDataBase;
