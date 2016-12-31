@@ -2,6 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:icon="@drawable/icon_calendar"
+        android:id="@+id/menu_calendar"
+        android:orderInCategory="105"
+        android:title="@string/settings_calendar"
+        app:showAsAction="ifRoom" />
+    <item
         android:icon="@drawable/calc_andr_200x200"
         android:id="@+id/menu_calculator"
         android:orderInCategory="104"

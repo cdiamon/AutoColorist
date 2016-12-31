@@ -117,8 +117,20 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(getApplicationContext(), "Настройки в разработке", Toast.LENGTH_SHORT).show();
             return true;
         } else if (id == R.id.menu_calculator) {
-            // startActivity(new Intent(getApplicationContext(), WHAT.class));
-            Toast.makeText(getApplicationContext(), "Калькулятор колориста в разработке", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_APP_CALCULATOR);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            Toast.makeText(getApplicationContext(), "Переходим к калькулятору", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (id == R.id.menu_calendar) {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_APP_CALENDAR);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            Toast.makeText(getApplicationContext(), "Переходим в календарь", Toast.LENGTH_SHORT).show();
             return true;
         }
 

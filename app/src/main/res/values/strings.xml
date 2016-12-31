@@ -7,6 +7,7 @@
     <string name="action_settings">Настройки</string>
     <string name="title_activity_car_codes_gallery">CarCodesGallery</string>
     <string name="settings_calc">Calc</string>
+    <string name="settings_calendar">Calendar</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_gallery_fragment">This is Gallery Fragment </string>
