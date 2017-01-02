@@ -1,6 +1,7 @@
 package com.cdiamon.autocolorist.tables;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -21,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
     //The Android's default system path of your application database.
 
     public static String DATABASE_PATH = "/data/data/com.cdiamon.autocolorist/databases/";
-    public static String DATABASE_NAME = "converttables";
+    public static String DATABASE_NAME = "converttables.db";
     public static String DATABASE_TABLE = "paints_name";
     public static final int DATABASE_VERSION = 1;
 
@@ -34,8 +35,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public final Context myContext;
 
-
-
+    String[] componentNames = new String[30];
 
     /**
      * Constructor
@@ -158,7 +158,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldversion, int newversion) {
 
     }
 
@@ -166,4 +166,46 @@ public class DBHelper extends SQLiteOpenHelper {
     // You could return cursors by doing "return myDataBase.query(....)" so it'd be easy
     // to you to create adapters for your views.
 
+    //select * from paints_name where SH=511;
+    public String searchData(String vendorName, String componentName)
+    {
+        String ValueString=null;
+        myDataBase = this.getReadableDatabase();
+        Cursor cursor=null;
+        String QueryString="select * from "+DATABASE_TABLE+" where "+vendorName+"="+componentName;
+        cursor=myDataBase.rawQuery(QueryString, null);
+        if(cursor!=null&&cursor.moveToFirst())
+        {
+
+            int s = 0;
+//                do{
+//                    componentNames[s] = cursor.getString(s);
+//                    System.out.println(cursor.getString(s));
+//                    s+=1;
+//
+//                }while (cursor.isLast());
+            while (cursor.isLast() && s!=29){
+                componentNames[s] = cursor.getString(s);
+                System.out.println(cursor.getString(s));
+                s+=1;
+            }
+//
+//            do
+//            {
+//                ValueString=cursor.getString(s);
+//                System.out.println(ValueString+"====================");
+//                System.out.println(cursor+"----------------------");
+//                cursor.moveToNext();
+//                s=s+1;
+//
+//            }
+//            while(cursor.isLast());
+
+
+    }
+//        if (cursor != null) {
+//        }
+
+        return ValueString;
+    }
 }

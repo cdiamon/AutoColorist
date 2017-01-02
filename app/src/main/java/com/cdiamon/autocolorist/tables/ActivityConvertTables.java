@@ -1,6 +1,8 @@
 package com.cdiamon.autocolorist.tables;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -9,16 +11,24 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.database.sqlite.*;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.cdiamon.autocolorist.R;
+import com.cdiamon.autocolorist.explistview.ActivitySearchGallery;
+import com.cdiamon.autocolorist.fragments.GalleryFragment;
 
 import java.io.IOException;
 
 public class ActivityConvertTables extends AppCompatActivity {
 
+    Context context;
     DBHelper myDbHelper = new DBHelper(this);
-
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -30,7 +40,6 @@ public class ActivityConvertTables extends AppCompatActivity {
     };
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,28 +47,38 @@ public class ActivityConvertTables extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        myDbHelper = new DBHelper(this);
-
         try {
-
             myDbHelper.createDataBase();
-
         } catch (IOException ioe) {
-
             throw new Error("Unable to create database");
-
         }
 
-        try {
 
-            myDbHelper.openDataBase();
+        Button btn_search = (Button) findViewById(R.id.btn_table_search);
+        btn_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    myDbHelper.openDataBase();
+                }catch(SQLException sqle){
+                    throw sqle;
+                }
+                myDbHelper.searchData("SH", "511");
+                System.out.println(myDbHelper.componentNames.length);
+            }
+        });
 
-        }catch(SQLException sqle){
-
-            throw sqle;
-
-        }
-
+//        try {
+//
+//            myDbHelper.openDataBase();
+//
+//        } catch (SQLException sqle) {
+//
+//            throw sqle;
+//
+//        }
+//
+//        myDbHelper.close();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -85,10 +104,6 @@ public class ActivityConvertTables extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
-
 
     }
 
