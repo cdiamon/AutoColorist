@@ -17,6 +17,7 @@ import android.view.View;
 import android.database.sqlite.*;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.cdiamon.autocolorist.R;
@@ -25,10 +26,14 @@ import com.cdiamon.autocolorist.fragments.GalleryFragment;
 
 import java.io.IOException;
 
+import static com.cdiamon.autocolorist.R.id.textView;
+
 public class ActivityConvertTables extends AppCompatActivity {
 
     Context context;
     DBHelper myDbHelper = new DBHelper(this);
+    String sendComponentName = "";
+    String sendVendorName = "";
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -47,6 +52,31 @@ public class ActivityConvertTables extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final Button btn_search = (Button) findViewById(R.id.btn_table_search);
+        Button btn_clear = (Button) findViewById(R.id.btn_table_clear);
+
+        final EditText editSH = (EditText) findViewById(R.id.SH);
+        final EditText editDuPont = (EditText) findViewById(R.id.DuPont);
+        final EditText editProfiline = (EditText) findViewById(R.id.Profiline);
+        final EditText editMobihel = (EditText) findViewById(R.id.Mobihel);
+        final EditText editNormex = (EditText) findViewById(R.id.Normex);
+        final EditText editBrulex = (EditText) findViewById(R.id.Brulex);
+        final EditText editChallenger = (EditText) findViewById(R.id.Challenger);
+        final EditText editDuxone = (EditText) findViewById(R.id.Duxone);
+        final EditText editEasiCoat = (EditText) findViewById(R.id.EasiCoat);
+        final EditText editDeBeer = (EditText) findViewById(R.id.DeBeer);
+        final EditText editSikkens = (EditText) findViewById(R.id.Sikkens);
+        final EditText editKapci = (EditText) findViewById(R.id.Kapci);
+        final EditText editVika = (EditText) findViewById(R.id.Vika);
+        final EditText editStandox = (EditText) findViewById(R.id.Standox);
+        final EditText editLesonal = (EditText) findViewById(R.id.Lesonal);
+        final EditText editNoMix = (EditText) findViewById(R.id.NoMix);
+        final EditText editReiz = (EditText) findViewById(R.id.Reiz);
+        final EditText editPPG = (EditText) findViewById(R.id.PPG);
+        final EditText editQuickLine = (EditText) findViewById(R.id.QuickLine);
+        final EditText editLechler = (EditText) findViewById(R.id.Lechler);
+        final EditText editGreenLine = (EditText) findViewById(R.id.GreenLine);
+
         try {
             myDbHelper.createDataBase();
         } catch (IOException ioe) {
@@ -54,33 +84,142 @@ public class ActivityConvertTables extends AppCompatActivity {
         }
 
 
-        Button btn_search = (Button) findViewById(R.id.btn_table_search);
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     myDbHelper.openDataBase();
-                }catch(SQLException sqle){
+                } catch (SQLException sqle) {
                     throw sqle;
                 }
+
+                if (editSH.getText().toString().trim().length() > 0) {
+                    sendComponentName = editSH.getText().toString().trim();
+                    sendVendorName = "SH";
+                    System.out.println(sendVendorName + "  +++++++++++++++++++++++  " + sendComponentName);
+                } else if (editDuPont.getText().toString().trim().length() > 0) {
+                    sendComponentName = editDuPont.getText().toString().trim();
+                    sendVendorName = "DuPont";
+                    System.out.println(sendVendorName + "  +++++++++++++++++++++++  " + sendComponentName);
+                } else if (editProfiline.getText().toString().trim().length() > 0){
+                    sendComponentName =editProfiline.getText().toString().trim();
+                    sendVendorName = "Profiline";
+                }else if (editMobihel.getText().toString().trim().length() > 0){
+                    sendComponentName =editMobihel.getText().toString().trim();
+                    sendVendorName = "Mobihel";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }else if (.getText().toString().trim().length() > 0){
+                    sendComponentName =.getText().toString().trim();
+                    sendVendorName = "";
+                }
+
                 myDbHelper.searchData("SH", "511");
                 System.out.println(myDbHelper.componentNames.length);
 
+                editSH.setText(myDbHelper.componentNames[2]);
+                editDuPont.setText(myDbHelper.componentNames[3]);
+                editProfiline.setText(myDbHelper.componentNames[4]);
+                editMobihel.setText(myDbHelper.componentNames[5]);
+                editNormex.setText(myDbHelper.componentNames[6]);
+                editBrulex.setText(myDbHelper.componentNames[7]);
+                editChallenger.setText(myDbHelper.componentNames[8]);
+                editDuxone.setText(myDbHelper.componentNames[9]);
+                editEasiCoat.setText(myDbHelper.componentNames[10]);
+                editDeBeer.setText(myDbHelper.componentNames[11]);
+                editSikkens.setText(myDbHelper.componentNames[12]);
+                editKapci.setText(myDbHelper.componentNames[13]);
+                editVika.setText(myDbHelper.componentNames[14]);
+                editStandox.setText(myDbHelper.componentNames[15]);
+                editLesonal.setText(myDbHelper.componentNames[16]);
+                editNoMix.setText(myDbHelper.componentNames[17]);
+                editReiz.setText(myDbHelper.componentNames[18]);
+                editPPG.setText(myDbHelper.componentNames[19]);
+                editQuickLine.setText(myDbHelper.componentNames[20]);
+                editLechler.setText(myDbHelper.componentNames[21]);
+                editGreenLine.setText(myDbHelper.componentNames[22]);
 
+                btn_search.setEnabled(false);
             }
         });
 
-//        try {
-//
-//            myDbHelper.openDataBase();
-//
-//        } catch (SQLException sqle) {
-//
-//            throw sqle;
-//
-//        }
-//
-//        myDbHelper.close();
+        btn_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editSH.setText("");
+                editDuPont.setText("");
+                editProfiline.setText("");
+                editMobihel.setText("");
+                editNormex.setText("");
+                editBrulex.setText("");
+                editChallenger.setText("");
+                editDuxone.setText("");
+                editEasiCoat.setText("");
+                editDeBeer.setText("");
+                editSikkens.setText("");
+                editKapci.setText("");
+                editVika.setText("");
+                editStandox.setText("");
+                editLesonal.setText("");
+                editNoMix.setText("");
+                editReiz.setText("");
+                editPPG.setText("");
+                editQuickLine.setText("");
+                editLechler.setText("");
+                editGreenLine.setText("");
+
+                btn_search.setEnabled(true);
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
