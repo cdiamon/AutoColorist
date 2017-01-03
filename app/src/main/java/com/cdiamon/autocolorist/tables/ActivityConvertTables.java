@@ -65,6 +65,8 @@ public class ActivityConvertTables extends AppCompatActivity {
                 }
                 myDbHelper.searchData("SH", "511");
                 System.out.println(myDbHelper.componentNames.length);
+
+
             }
         });
 

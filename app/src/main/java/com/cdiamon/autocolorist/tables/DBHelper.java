@@ -40,6 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
     /**
      * Constructor
      * Takes and keeps a reference of the passed context in order to access to the application assets and resources.
+     *
      * @param context
      */
 
@@ -50,14 +51,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     /**
      * Creates a empty database on the system and rewrites it with your own database.
-     * */
+     */
     public void createDataBase() throws IOException {
 
         boolean dbExist = checkDataBase();
 
-        if(dbExist){
+        if (dbExist) {
             //do nothing - database already exist
-        }else{
+        } else {
 
             //By calling this method and empty database will be created into the default system path
             //of your application so we are gonna be able to overwrite that database with our database.
@@ -79,23 +80,24 @@ public class DBHelper extends SQLiteOpenHelper {
 
     /**
      * Check if the database already exist to avoid re-copying the file each time you open the application.
+     *
      * @return true if it exists, false if it doesn't
      */
-    private boolean checkDataBase(){
+    private boolean checkDataBase() {
 
         SQLiteDatabase checkDB = null;
 
-        try{
+        try {
             String myPath = DATABASE_PATH + DATABASE_NAME;
             checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
 
-        }catch(SQLiteException e){
+        } catch (SQLiteException e) {
 
             //database does't exist yet.
 
         }
 
-        if(checkDB != null){
+        if (checkDB != null) {
 
             checkDB.close();
 
@@ -108,8 +110,8 @@ public class DBHelper extends SQLiteOpenHelper {
      * Copies your database from your local assets-folder to the just created empty database in the
      * system folder, from where it can be accessed and handled.
      * This is done by transfering bytestream.
-     * */
-    private void copyDataBase() throws IOException{
+     */
+    private void copyDataBase() throws IOException {
 
         //Open your local db as the input stream
         InputStream myInput = myContext.getAssets().open(DATABASE_NAME);
@@ -123,7 +125,7 @@ public class DBHelper extends SQLiteOpenHelper {
         //transfer bytes from the inputfile to the outputfile
         byte[] buffer = new byte[1024];
         int length;
-        while ((length = myInput.read(buffer))>0){
+        while ((length = myInput.read(buffer)) > 0) {
             myOutput.write(buffer, 0, length);
         }
 
@@ -145,7 +147,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public synchronized void close() {
 
-        if(myDataBase != null)
+        if (myDataBase != null)
             myDataBase.close();
 
         super.close();
@@ -167,45 +169,28 @@ public class DBHelper extends SQLiteOpenHelper {
     // to you to create adapters for your views.
 
     //select * from paints_name where SH=511;
-    public String searchData(String vendorName, String componentName)
-    {
-        String ValueString=null;
+    public String searchData(String vendorName, String componentName) {
+        String ValueString = null;
         myDataBase = this.getReadableDatabase();
-        Cursor cursor=null;
-        String QueryString="select * from "+DATABASE_TABLE+" where "+vendorName+"="+componentName;
-        cursor=myDataBase.rawQuery(QueryString, null);
-        if(cursor!=null&&cursor.moveToFirst())
-        {
+        Cursor cursor = null;
+        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" + componentName;
+        cursor = myDataBase.rawQuery(QueryString, null);
+        if (cursor != null && cursor.moveToFirst()) {
 
             int s = 0;
-//                do{
-//                    componentNames[s] = cursor.getString(s);
-//                    System.out.println(cursor.getString(s));
-//                    s+=1;
-//
-//                }while (cursor.isLast());
-            while (cursor.isLast() && s!=29){
+            while (cursor.isLast() && s != 29) {
                 componentNames[s] = cursor.getString(s);
                 System.out.println(cursor.getString(s));
-                s+=1;
+                s += 1;
             }
-//
-//            do
-//            {
-//                ValueString=cursor.getString(s);
-//                System.out.println(ValueString+"====================");
-//                System.out.println(cursor+"----------------------");
-//                cursor.moveToNext();
-//                s=s+1;
-//
-//            }
-//            while(cursor.isLast());
+        }
+        StringBuilder builder = new StringBuilder();
+        for(String s : componentNames) {
+            builder.append(s);
+        }
+        System.out.println(componentNames[1]);
+        return builder.toString();
 
-
-    }
-//        if (cursor != null) {
-//        }
-
-        return ValueString;
+//        return ValueString;
     }
 }
