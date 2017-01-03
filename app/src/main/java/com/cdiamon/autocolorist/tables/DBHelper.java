@@ -26,13 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static String DATABASE_TABLE = "paints_name";
     public static final int DATABASE_VERSION = 1;
 
-    public static final String KEY_ID = "ID";
-    public static final String KEY_SH = "SH";
-    public static final String KEY_Profiline = "Profiline";
-    public static final String KEY_DuPont = "DuPont";
-
     public SQLiteDatabase myDataBase;
-
     public final Context myContext;
 
     String[] componentNames = new String[30];
@@ -164,16 +158,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    // TODO check; Add your public helper methods to access and get content from the database.
-    // You could return cursors by doing "return myDataBase.query(....)" so it'd be easy
-    // to you to create adapters for your views.
-
-    //select * from paints_name where SH=511;
     public String searchData(String vendorName, String componentName) {
         String ValueString = null;
         myDataBase = this.getReadableDatabase();
         Cursor cursor = null;
-        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" + componentName;
+        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" +componentName;
         cursor = myDataBase.rawQuery(QueryString, null);
         if (cursor != null && cursor.moveToFirst()) {
 

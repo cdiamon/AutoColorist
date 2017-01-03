@@ -158,8 +158,11 @@ public class ActivityConvertTables extends AppCompatActivity {
                 } else if (editGreenLine.getText().toString().trim().length() > 0) {
                     sendComponentName = editGreenLine.getText().toString().trim();
                     sendVendorName = "GreenLine";
-                } else {
-                    
+                }
+                else {
+                    sendComponentName = "null";
+                    sendVendorName = "null";
+                    Toast.makeText(getApplicationContext(), "Введите корректный номер компонента в одно из полей и нажмите кнопку поиска", Toast.LENGTH_SHORT).show();
                 }
 
                 myDbHelper.searchData(sendVendorName, sendComponentName);

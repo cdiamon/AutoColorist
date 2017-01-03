@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.cdiamon.autocolorist.tables.ActivityConvertTables"
     tools:showIn="@layout/activity_convert_tables"
+    android:background="@color/colorBackground"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <FrameLayout
@@ -31,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:text="search"
+                android:text="Поиск"
                 android:background="@color/colorAccent" />
 
             <Space
@@ -43,29 +44,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:text="Clear"
+                android:text="Очистить"
                 android:background="@android:color/holo_orange_dark" />
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_shzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_dupontzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_profilinezxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <EditText
                 android:id="@+id/SH"
@@ -99,24 +103,27 @@
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_mobihelzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_normexzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_brulexzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <EditText
                 android:id="@+id/Mobihel"
@@ -150,24 +157,27 @@
 
             <ImageView
                 android:id="@+id/imageView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_challengerzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_duxonezxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_easicoatzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <EditText
                 android:id="@+id/Challenger"
@@ -201,24 +211,27 @@
 
             <ImageView
                 android:id="@+id/imageView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_debeerzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_sikkenszxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_kapcizxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <EditText
                 android:id="@+id/DeBeer"
@@ -252,24 +265,27 @@
 
             <ImageView
                 android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_vikazxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_standoxzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_lesonalzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <EditText
                 android:id="@+id/Vika"
@@ -303,24 +319,27 @@
 
             <ImageView
                 android:id="@+id/imageView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_nomixzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_reizzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_ppgzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <EditText
                 android:id="@+id/NoMix"
@@ -354,24 +373,27 @@
 
             <ImageView
                 android:id="@+id/imageView24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_quicklinezxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_lechlerzxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <ImageView
                 android:id="@+id/imageView26"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/p_greenlinezxc"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:alpha="0.5" />
 
             <EditText
                 android:id="@+id/QuickLine"
