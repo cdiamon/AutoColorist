@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.database.sqlite.*;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -51,6 +52,8 @@ public class ActivityConvertTables extends AppCompatActivity {
         setContentView(R.layout.activity_convert_tables);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
 
         final Button btn_search = (Button) findViewById(R.id.btn_table_search);
         Button btn_clear = (Button) findViewById(R.id.btn_table_clear);
@@ -190,6 +193,9 @@ public class ActivityConvertTables extends AppCompatActivity {
                 editLechler.setText(myDbHelper.componentNames[21]);
                 editGreenLine.setText(myDbHelper.componentNames[22]);
 
+                for (int i = 0; i < myDbHelper.componentNames.length; i++) {
+                    myDbHelper.componentNames[i] = "";
+                }
                 btn_search.setEnabled(false);
             }
         });

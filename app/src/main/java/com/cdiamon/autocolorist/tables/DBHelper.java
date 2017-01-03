@@ -29,6 +29,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public SQLiteDatabase myDataBase;
     public final Context myContext;
 
+    String QueryString = "";
+
     String[] componentNames = new String[30];
 
     /**
@@ -162,7 +164,7 @@ public class DBHelper extends SQLiteOpenHelper {
         String ValueString = null;
         myDataBase = this.getReadableDatabase();
         Cursor cursor = null;
-        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" +componentName;
+        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" +'"'+componentName.toUpperCase()+'"';
         cursor = myDataBase.rawQuery(QueryString, null);
         if (cursor != null && cursor.moveToFirst()) {
 
@@ -177,7 +179,9 @@ public class DBHelper extends SQLiteOpenHelper {
         for(String s : componentNames) {
             builder.append(s);
         }
+
         System.out.println(componentNames[1]);
+
         return builder.toString();
 
 //        return ValueString;
