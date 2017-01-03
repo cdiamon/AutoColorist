@@ -101,69 +101,68 @@ public class ActivityConvertTables extends AppCompatActivity {
                     sendComponentName = editDuPont.getText().toString().trim();
                     sendVendorName = "DuPont";
                     System.out.println(sendVendorName + "  +++++++++++++++++++++++  " + sendComponentName);
-                } else if (editProfiline.getText().toString().trim().length() > 0){
-                    sendComponentName =editProfiline.getText().toString().trim();
+                } else if (editProfiline.getText().toString().trim().length() > 0) {
+                    sendComponentName = editProfiline.getText().toString().trim();
                     sendVendorName = "Profiline";
-                }else if (editMobihel.getText().toString().trim().length() > 0){
-                    sendComponentName =editMobihel.getText().toString().trim();
+                } else if (editMobihel.getText().toString().trim().length() > 0) {
+                    sendComponentName = editMobihel.getText().toString().trim();
                     sendVendorName = "Mobihel";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
-                }else if (.getText().toString().trim().length() > 0){
-                    sendComponentName =.getText().toString().trim();
-                    sendVendorName = "";
+                } else if (editNormex.getText().toString().trim().length() > 0) {
+                    sendComponentName = editNormex.getText().toString().trim();
+                    sendVendorName = "Normex";
+                } else if (editBrulex.getText().toString().trim().length() > 0) {
+                    sendComponentName = editBrulex.getText().toString().trim();
+                    sendVendorName = "Brulex";
+                } else if (editChallenger.getText().toString().trim().length() > 0) {
+                    sendComponentName = editChallenger.getText().toString().trim();
+                    sendVendorName = "Challenger";
+                } else if (editDuxone.getText().toString().trim().length() > 0) {
+                    sendComponentName = editDuxone.getText().toString().trim();
+                    sendVendorName = "Duxone";
+                } else if (editEasiCoat.getText().toString().trim().length() > 0) {
+                    sendComponentName = editEasiCoat.getText().toString().trim();
+                    sendVendorName = "EasiCoat";
+                } else if (editDeBeer.getText().toString().trim().length() > 0) {
+                    sendComponentName = editDeBeer.getText().toString().trim();
+                    sendVendorName = "DeBeer";
+                } else if (editSikkens.getText().toString().trim().length() > 0) {
+                    sendComponentName = editSikkens.getText().toString().trim();
+                    sendVendorName = "Sikkens";
+                } else if (editKapci.getText().toString().trim().length() > 0) {
+                    sendComponentName = editKapci.getText().toString().trim();
+                    sendVendorName = "Kapci";
+                } else if (editVika.getText().toString().trim().length() > 0) {
+                    sendComponentName = editVika.getText().toString().trim();
+                    sendVendorName = "Vika";
+                } else if (editStandox.getText().toString().trim().length() > 0) {
+                    sendComponentName = editStandox.getText().toString().trim();
+                    sendVendorName = "Standox";
+                } else if (editLesonal.getText().toString().trim().length() > 0) {
+                    sendComponentName = editLesonal.getText().toString().trim();
+                    sendVendorName = "Lesonal";
+                } else if (editNoMix.getText().toString().trim().length() > 0) {
+                    sendComponentName = editNoMix.getText().toString().trim();
+                    sendVendorName = "NoMix";
+                } else if (editReiz.getText().toString().trim().length() > 0) {
+                    sendComponentName = editReiz.getText().toString().trim();
+                    sendVendorName = "Reiz";
+                } else if (editPPG.getText().toString().trim().length() > 0) {
+                    sendComponentName = editPPG.getText().toString().trim();
+                    sendVendorName = "PPG";
+                } else if (editQuickLine.getText().toString().trim().length() > 0) {
+                    sendComponentName = editQuickLine.getText().toString().trim();
+                    sendVendorName = "QuickLine";
+                } else if (editLechler.getText().toString().trim().length() > 0) {
+                    sendComponentName = editLechler.getText().toString().trim();
+                    sendVendorName = "Lechler";
+                } else if (editGreenLine.getText().toString().trim().length() > 0) {
+                    sendComponentName = editGreenLine.getText().toString().trim();
+                    sendVendorName = "GreenLine";
+                } else {
+                    
                 }
 
-                myDbHelper.searchData("SH", "511");
+                myDbHelper.searchData(sendVendorName, sendComponentName);
                 System.out.println(myDbHelper.componentNames.length);
 
                 editSH.setText(myDbHelper.componentNames[2]);
