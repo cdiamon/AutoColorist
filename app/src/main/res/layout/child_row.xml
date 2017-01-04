@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:paddingLeft="35sp"
         android:paddingRight="10dp"
-        android:text="Unknown"
+        android:text="@string/unknown"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#436943" />
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/codeModel"
-        android:text="Unknown"
+        android:text="@string/unknown"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:visibility="gone" />
 
@@ -33,7 +33,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:paddingRight="5dp"
-        android:text="Unknown"
+        android:text="@string/unknown"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/darker_gray"
         android:visibility="gone" />

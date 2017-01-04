@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cdiamon.autocolorist.tables.ActivityConvertTables"
-    tools:showIn="@layout/activity_convert_tables"
     android:background="@color/colorBackground"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cdiamon.autocolorist.tables.ActivityConvertTables"
+    tools:showIn="@layout/activity_convert_tables">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -30,9 +30,9 @@
                 android:id="@+id/btn_table_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text="Поиск"
-                android:background="@color/colorAccent" />
+                android:layout_gravity="end"
+                android:background="@color/colorAccent"
+                android:text="@string/tablesButtonSearch" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -42,30 +42,33 @@
                 android:id="@+id/btn_table_clear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="Очистить"
-                android:background="@android:color/holo_orange_dark" />
+                android:layout_gravity="start"
+                android:background="@android:color/holo_orange_dark"
+                android:text="@string/tablesButtonClear" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_shzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_shzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_dupontzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_dupontzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_profilinezxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_profilinezxc" />
 
             <EditText
                 android:id="@+id/SH"
@@ -73,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="SpiesHecker"
+                android:hint="@string/spieshecker"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -83,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="DuPont"
+                android:hint="@string/dupont"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -93,30 +96,33 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="ProfiLine"
+                android:hint="@string/profiline"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_mobihelzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_mobihelzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_normexzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_normexzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_brulexzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_brulexzxc" />
 
             <EditText
                 android:id="@+id/Mobihel"
@@ -124,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Mobihel"
+                android:hint="@string/mobihel"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -134,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Normex"
+                android:hint="@string/normex"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -144,30 +150,33 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Brulex"
+                android:hint="@string/brulex"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_challengerzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_challengerzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_duxonezxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_duxonezxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_easicoatzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_easicoatzxc" />
 
             <EditText
                 android:id="@+id/Challenger"
@@ -175,7 +184,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Challenger"
+                android:hint="@string/challenger"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -185,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Duxone"
+                android:hint="@string/duxone"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -195,30 +204,33 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="EasiCoat"
+                android:hint="@string/easicoat"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_debeerzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_debeerzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_sikkenszxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_sikkenszxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_kapcizxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_kapcizxc" />
 
             <EditText
                 android:id="@+id/DeBeer"
@@ -226,7 +238,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="DeBeer"
+                android:hint="@string/debeer"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -236,7 +248,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Sikkens"
+                android:hint="@string/sikkens"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -246,30 +258,33 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Kapci"
+                android:hint="@string/kapci"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_vikazxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_vikazxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_standoxzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_standoxzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_lesonalzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_lesonalzxc" />
 
             <EditText
                 android:id="@+id/Vika"
@@ -277,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Vika"
+                android:hint="@string/vika"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -287,7 +302,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Standox"
+                android:hint="@string/standox"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -297,30 +312,33 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Lesonal"
+                android:hint="@string/lesonal"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_nomixzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_nomixzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_reizzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_reizzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_ppgzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_ppgzxc" />
 
             <EditText
                 android:id="@+id/NoMix"
@@ -328,7 +346,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="NoMix"
+                android:hint="@string/nomix"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -338,7 +356,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Reiz"
+                android:hint="@string/reiz"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -348,30 +366,33 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="PPG"
+                android:hint="@string/ppg"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_quicklinezxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_quicklinezxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_lechlerzxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_lechlerzxc" />
 
             <ImageView
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/p_greenlinezxc"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:alpha="0.5" />
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/p_greenlinezxc" />
 
             <EditText
                 android:id="@+id/QuickLine"
@@ -379,7 +400,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="QuickLine"
+                android:hint="@string/quickline"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -389,7 +410,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="Lechler"
+                android:hint="@string/lechler"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -399,7 +420,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="5"
-                android:hint="GreenLine"
+                android:hint="@string/greenline"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 

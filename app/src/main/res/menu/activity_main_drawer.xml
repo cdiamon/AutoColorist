@@ -5,31 +5,31 @@
         <item
             android:id="@+id/nav_circle"
             android:icon="@drawable/icon_osvald"
-            android:title="Круг Освальда" />
+            android:title="@string/menuFragmentOsvald" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Цвета, коды" />
+            android:title="@string/menuFragmentGallery" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/icon_table_grid"
-            android:title="Таблица перевода" />
+            android:title="@string/menuFragmentTable" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Инструменты" />
+            android:title="@string/menuFragmentInstruments" />
     </group>
 
-    <item android:title="Связь">
+    <item android:title="@string/MenuPartConnect">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Поделиться" />
+                android:title="@string/MenuConnectShare" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Отправить" />
+                android:title="@string/MenuConnectSend" />
         </menu>
     </item>
 
