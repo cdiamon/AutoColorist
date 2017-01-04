@@ -19,9 +19,6 @@
         android:contentDescription="@null"
         android:paddingTop="5dp"
         app:srcCompat="@drawable/festekspray_a" />
-    <!--app:srcCompat="@android:drawable/sym_def_app_icon"/>-->
-    <!--android:src="@drawable/color_icon_29194" />-->
-
 
     <TextView
         android:layout_width="match_parent"

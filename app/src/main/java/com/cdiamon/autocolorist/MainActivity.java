@@ -27,6 +27,17 @@ import com.cdiamon.autocolorist.fragments.TablesFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, NewFragment.OnFragmentInteractionListener, TablesFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener, OsvaldFragment.OnFragmentInteractionListener {
 
+    public MainActivity() {
+
+    }
+
+
+    //TODO: isnecessary??? http://stackoverflow.com/questions/28133600/set-initial-fragment-on-startup/34856256#34856256
+//    public void setFragment(Fragment fragment) {
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        fragmentManager.beginTransaction().replace(R.id.container, new OsvaldFragment()).commit();
+//    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +57,8 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
 
 
-                Snackbar.make(view, "Отправить email разработчику", Snackbar.LENGTH_LONG)
-                        .setAction("Отправить", new View.OnClickListener() {
+                Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
+                        .setAction(R.string.SnackbarActionText, new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 Intent Email = new Intent(Intent.ACTION_SEND);
@@ -77,13 +88,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
     }
-
-
-    //TODO: isnecessary??? http://stackoverflow.com/questions/28133600/set-initial-fragment-on-startup/34856256#34856256
-//    public void setFragment(Fragment fragment) {
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        fragmentManager.beginTransaction().replace(R.id.container, new OsvaldFragment()).commit();
-//    }
 
     @Override
     public void onBackPressed() {
@@ -135,7 +139,6 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -149,26 +152,28 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_circle) {
             // Handle the camera action
             fragmentClass = OsvaldFragment.class;
-            Toast.makeText(getApplicationContext(), "Переходим к кругу", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToOsvald, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
             fragmentClass = GalleryFragment.class;
-            Toast.makeText(getApplicationContext(), "Переходим в галерею", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToGallery, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_slideshow) {
             fragmentClass = TablesFragment.class;
-            Toast.makeText(getApplicationContext(), "Переходим к таблице перевода", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToTable, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_manage) {
             fragmentClass = NewFragment.class;
-            Toast.makeText(getApplicationContext(), "Раздел Инструменты в разработке", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
             fragmentClass = OsvaldFragment.class;
-            Toast.makeText(getApplicationContext(), "Раздел Поделиться в разработке", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToShare, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
             fragmentClass = OsvaldFragment.class;
-            Toast.makeText(getApplicationContext(), "Раздел Отправить в разработке", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show();
         }
 
         try {
-            fragment = (Fragment) fragmentClass.newInstance();
+            if (fragmentClass != null) {
+                fragment = (Fragment) fragmentClass.newInstance();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -185,12 +190,6 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    public MainActivity() {
-
-
-    }
-
 
     @Override
     public void onFragmentInteraction(Uri uri) {

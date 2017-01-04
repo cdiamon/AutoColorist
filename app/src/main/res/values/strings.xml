@@ -4,22 +4,22 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Настройки</string>
-    <string name="settings_calc">Calc</string>
+    <string name="action_settings">Settings</string>
+    <string name="settings_calc">Calculator</string>
     <string name="settings_calendar">Calendar</string>
 
-    <string name="title_activity_search_gallery">Поиск по галерее</string>
-    <string name="title_activity_convert_tables">Аналоги компонентов</string>
-    <string name="menuFragmentOsvald">Круг Освальда</string>
-    <string name="menuFragmentGallery">Цвета, коды</string>
-    <string name="menuFragmentTable">Таблица перевода</string>
-    <string name="menuFragmentInstruments">Инструменты</string>
-    <string name="MenuPartConnect">Связь</string>
-    <string name="MenuConnectShare">Поделиться</string>
-    <string name="MenuConnectSend">Отправить</string>
+    <string name="title_activity_search_gallery">Gallery search</string>
+    <string name="title_activity_convert_tables">Analogs of components</string>
+    <string name="menuFragmentOsvald">Osvald\'s circle</string>
+    <string name="menuFragmentGallery">Colors, codes</string>
+    <string name="menuFragmentTable">Translation Table</string>
+    <string name="menuFragmentInstruments">Instruments</string>
+    <string name="MenuPartConnect">Connect</string>
+    <string name="MenuConnectShare">Share</string>
     <string name="unknown">Unknown</string>
-    <string name="tablesButtonSearch">Поиск</string>
-    <string name="tablesButtonClear">Очистить</string>
+    <string name="tablesButtonSearch">Search</string>
+    <string name="tablesButtonClear">Clear</string>
+
     <string name="spieshecker">SpiesHecker</string>
     <string name="dupont">DuPont</string>
     <string name="profiline">ProfiLine</string>
@@ -41,15 +41,28 @@
     <string name="quickline">QuickLine</string>
     <string name="lechler">Lechler</string>
     <string name="greenline">GreenLine</string>
-    <string name="fragmentGalleryDescription">Галерея автомобилей по маркам и моделям</string>
-    <string name="fragmentGallerySource">Фотографии автомобилей с открытых ресурсов</string>
-    <string name="fragmentGalleryRecommend">Нажимайте на названия моделей авто</string>
-    <string name="fragmentGalleryButtonGo">Перейти</string>
-    <string name="fragmentOnConstruction">Раздел в этот самый момент находится в процессе разработки. Предложения с радостью принимаются по email. Email будет удобно отправить по кнопке внизу.</string>
-    <string name="fragmentTablesDescription">Таблица переводов по множеству популярных брендов</string>
-    <string name="fragmentTablesSource">Таблица собрана сообществом колористов</string>
-    <string name="fragmentTablesButtonGo">Перейти</string>
+
+    <string name="fragmentGalleryDescription">Car Gallery sorted by manufacturers and models</string>
+    <string name="fragmentGalleryRecommend">Press on the car models names</string>
+    <string name="fragmentGalleryButtonGo">Go</string>
+
+    <string name="fragmentOnConstruction">This section is under development. Proposals are accepted gladly by email. Email will be handy to send by the below button.</string>
+
+    <string name="fragmentTablesDescription">Translation Table for a variety of popular brands</string>
+    <string name="fragmentTablesSource">Table is assembled by colourists community</string>
+    <string name="fragmentTablesButtonGo">Go</string>
     <string name="fragmentTablesVendors">Spies Hecker, DuPont, Profiline, Mobihel, Normex, Brulex, Challenger, Duxone, EasiCoat, DeBeer, Sikkens, Kapci, Vika, Standox, Lesonal, NoMix, Reiz, PPG, QuickLine, Lechler, GreenLine</string>
+
     <string name="mainHeaderVersion">github.com/cdiamon version 0.20b</string>
     <string name="mainHeaderEmail">padmitriy@gmail.com</string>
+    <string name="MenuConnectSend">Send</string>
+    <string name="fragmentGallerySource">Cars photos are from open sources</string>
+    <string name="MainActivityToastToOsvald">Переходим к кругу</string>
+    <string name="MainActivityToastToGallery">Переходим в галерею</string>
+    <string name="MainActivityToastToTable">Переходим к таблице перевода</string>
+    <string name="MainActivityToastToInstruments">Раздел Инструменты в разработке</string>
+    <string name="MainActivityToastToShare">Раздел Поделиться в разработке</string>
+    <string name="MainActivityToastToSend">Раздел Отправить в разработке</string>
+    <string name="SnackbarViewText">Отправить email разработчику</string>
+    <string name="SnackbarActionText">Отправить</string>
 </resources>
