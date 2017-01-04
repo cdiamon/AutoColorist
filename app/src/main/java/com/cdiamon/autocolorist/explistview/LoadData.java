@@ -8,15 +8,12 @@ import java.util.ArrayList;
 
 class LoadData {
 
-    public final ArrayList<Vendor> vendorArrayAddingList = new ArrayList<>();
-    private ArrayList<Model> modelArrayAddingList = new ArrayList<>();
-    private Model model = new Model();
-    private Vendor vendor = new Vendor();
+    final ArrayList<Vendor> vendorArrayAddingList = new ArrayList<>();
 
-    public void loadSomeData() {
+    void loadSomeData() {
 
-        modelArrayAddingList = new ArrayList<>();
-        model = new Model("A1,S1  (8X)", "Audi", "http://rustamcolor.ru/viewtopic.php?f=13&t=2899#p19495");
+        ArrayList<Model> modelArrayAddingList = new ArrayList<>();
+        Model model = new Model("A1,S1  (8X)", "Audi", "http://rustamcolor.ru/viewtopic.php?f=13&t=2899#p19495");
         modelArrayAddingList.add(model);
         model = new Model("A3,S3  (8V)", "Audi", "http://rustamcolor.ru/viewtopic.php?f=13&t=2883#p19327");
         modelArrayAddingList.add(model);
@@ -49,7 +46,7 @@ class LoadData {
         model = new Model("Q7 II  (4M)", "Audi", "http://rustamcolor.ru/viewtopic.php?f=13&t=2844#p18916");
         modelArrayAddingList.add(model);
 
-        vendor = new Vendor("Audi", modelArrayAddingList);
+        Vendor vendor = new Vendor("Audi", modelArrayAddingList);
         vendorArrayAddingList.add(vendor);
 
         modelArrayAddingList = new ArrayList<>();

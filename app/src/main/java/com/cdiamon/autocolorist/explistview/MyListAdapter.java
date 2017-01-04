@@ -165,7 +165,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
     @Override
     public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long id) {
 
-        Toast.makeText(MyListAdapter.this.context, "Устанавливается соединение..", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MyListAdapter.this.context, R.string.galleryToastConnecting, Toast.LENGTH_SHORT).show();
         System.out.println(" ----- " + groupPosition + "======= " + childPosition);
 
         Intent intentChild;

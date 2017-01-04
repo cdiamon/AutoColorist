@@ -56,8 +56,8 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Отправить email разработчику", Snackbar.LENGTH_LONG)
-                        .setAction("Отправить", new View.OnClickListener() {
+                Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
+                        .setAction(R.string.SnackbarActionText, new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 Intent Email = new Intent(Intent.ACTION_SEND);
@@ -66,9 +66,8 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
                                 Email.putExtra(Intent.EXTRA_EMAIL,
                                         new String[]{"padmitriy@gmail.com"});  //developer 's email
                                 Email.putExtra(Intent.EXTRA_SUBJECT,
-                                        "Отзыв/предложение по AutoColorist"); // Email 's Subject
-                                Email.putExtra(Intent.EXTRA_TEXT, "Здравствуйте, Дмитрий. " +
-                                        "У меня есть исправление/дополнение для вашего приложения AutoColorist.\n" + "");  //Email 's Greeting text
+                                        getString(R.string.SnackbarEmailTitle)); // Email 's Subject
+                                Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody));  //Email 's Greeting text
                                 startActivity(Intent.createChooser(Email, "Send Feedback:"));
                             }
                         }).show();

@@ -67,9 +67,8 @@ public class MainActivity extends AppCompatActivity
                                 Email.putExtra(Intent.EXTRA_EMAIL,
                                         new String[]{"padmitriy@gmail.com"});  //developer 's email
                                 Email.putExtra(Intent.EXTRA_SUBJECT,
-                                        "Отзыв/предложение по AutoColorist"); // Email 's Subject
-                                Email.putExtra(Intent.EXTRA_TEXT, "Здравствуйте, Дмитрий. " +
-                                        "У меня есть исправление/дополнение для вашего приложения AutoColorist.\n" + "");  //Email 's Greeting text
+                                        getString(R.string.SnackbarEmailTitle)); // Email 's Subject
+                                Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody));  //Email 's Greeting text
                                 startActivity(Intent.createChooser(Email, "Send Feedback:"));
                             }
                         }).show();
@@ -116,7 +115,7 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             // startActivity(new Intent(getApplicationContext(), WHAT.class));
-            Toast.makeText(getApplicationContext(), "Настройки в разработке", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.mainToastSettings, Toast.LENGTH_SHORT).show();
             return true;
         } else if (id == R.id.menu_calculator) {
             Intent intent = new Intent();
@@ -124,7 +123,7 @@ public class MainActivity extends AppCompatActivity
             intent.addCategory(Intent.CATEGORY_APP_CALCULATOR);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            Toast.makeText(getApplicationContext(), "Переходим к калькулятору", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.mainToastCalc, Toast.LENGTH_SHORT).show();
             return true;
         } else if (id == R.id.menu_calendar) {
             Intent intent = new Intent();
@@ -132,7 +131,7 @@ public class MainActivity extends AppCompatActivity
             intent.addCategory(Intent.CATEGORY_APP_CALENDAR);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            Toast.makeText(getApplicationContext(), "Переходим в календарь", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.mainToastCalendar, Toast.LENGTH_SHORT).show();
             return true;
         }
 

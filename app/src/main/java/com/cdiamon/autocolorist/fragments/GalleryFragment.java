@@ -76,7 +76,7 @@ public class GalleryFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent;
                 intent = new Intent(GalleryFragment.this.getContext(), ActivitySearchGallery.class);
-                Toast.makeText(GalleryFragment.this.getContext(), "Переходим в поиск по галерее", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GalleryFragment.this.getContext(), R.string.fragmentGalleryToastGo, Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });

@@ -78,7 +78,7 @@ public class TablesFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent;
                 intent = new Intent(TablesFragment.this.getContext(), ActivityConvertTables.class);
-                Toast.makeText(TablesFragment.this.getContext(), "Переходим в раздел базы данных", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TablesFragment.this.getContext(), R.string.fragmentTableToastGo, Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });

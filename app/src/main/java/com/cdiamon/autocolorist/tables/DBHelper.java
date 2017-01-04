@@ -40,7 +40,7 @@ class DBHelper extends SQLiteOpenHelper {
      * @param context
      */
 
-    public DBHelper(Context context) {
+    DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.myContext = context;
     }
@@ -48,7 +48,7 @@ class DBHelper extends SQLiteOpenHelper {
     /**
      * Creates a empty database on the system and rewrites it with your own database.
      */
-    public void createDataBase() throws IOException {
+    void createDataBase() throws IOException {
 
         boolean dbExist = checkDataBase();
 
@@ -132,7 +132,7 @@ class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public void openDataBase() throws SQLException {
+    void openDataBase() throws SQLException {
 
         //Open the database
         String myPath = DATABASE_PATH + DATABASE_NAME;
@@ -160,7 +160,7 @@ class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public void searchData(String vendorName, String componentName) {
+    void searchData(String vendorName, String componentName) {
         myDataBase = this.getReadableDatabase();
         Cursor cursor;
         String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" +'"'+componentName.toUpperCase()+'"';
