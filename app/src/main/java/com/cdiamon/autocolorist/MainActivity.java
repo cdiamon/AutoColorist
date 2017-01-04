@@ -24,8 +24,6 @@ import com.cdiamon.autocolorist.fragments.NewFragment;
 import com.cdiamon.autocolorist.fragments.OsvaldFragment;
 import com.cdiamon.autocolorist.fragments.TablesFragment;
 
-import static android.R.attr.onClick;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, NewFragment.OnFragmentInteractionListener, TablesFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener, OsvaldFragment.OnFragmentInteractionListener {
 

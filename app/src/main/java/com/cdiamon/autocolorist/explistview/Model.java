@@ -4,11 +4,11 @@ package com.cdiamon.autocolorist.explistview;
  * Created by Dmitriy on 21.12.2016.
  */
 
-public class Model {
+class Model {
 
     private String codeModel = "";
     private String nameModel = "";
-    public String siteModel = "";
+    private String siteModel = "";
 
     public Model(String code, String name, String site) {
         super();

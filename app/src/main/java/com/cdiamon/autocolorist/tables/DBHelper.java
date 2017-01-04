@@ -16,22 +16,22 @@ import java.io.OutputStream;
  * Created by Dmitriy on 28.12.2016.
  */
 
-public class DBHelper extends SQLiteOpenHelper {
+class DBHelper extends SQLiteOpenHelper {
 
 
     //The Android's default system path of your application database.
 
-    public static String DATABASE_PATH = "/data/data/com.cdiamon.autocolorist/databases/";
-    public static String DATABASE_NAME = "converttables.db";
-    public static String DATABASE_TABLE = "paints_name";
-    public static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_PATH = "/data/data/com.cdiamon.autocolorist/databases/";
+    private static final String DATABASE_NAME = "converttables.db";
+    private static final String DATABASE_TABLE = "paints_name";
+    private static final int DATABASE_VERSION = 1;
 
-    public SQLiteDatabase myDataBase;
-    public final Context myContext;
+    private SQLiteDatabase myDataBase;
+    private final Context myContext;
 
     String QueryString = "";
 
-    String[] componentNames = new String[30];
+    final String[] componentNames = new String[30];
 
     /**
      * Constructor
@@ -160,10 +160,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public String searchData(String vendorName, String componentName) {
-        String ValueString = null;
+    public void searchData(String vendorName, String componentName) {
         myDataBase = this.getReadableDatabase();
-        Cursor cursor = null;
+        Cursor cursor;
         String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" +'"'+componentName.toUpperCase()+'"';
         cursor = myDataBase.rawQuery(QueryString, null);
         if (cursor != null && cursor.moveToFirst()) {
@@ -181,9 +180,8 @@ public class DBHelper extends SQLiteOpenHelper {
         }
 
         System.out.println(componentNames[1]);
-
-        return builder.toString();
-
-//        return ValueString;
+        if (cursor != null) {
+            cursor.close();
+        }
     }
 }

@@ -40,7 +40,6 @@
         android:textSize="22sp" />
 
     <TextView
-        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -67,7 +66,6 @@
         android:textStyle="normal|bold" />
 
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spies Hecker, DuPont, Profiline, Mobihel, Normex, Brulex, Challenger, Duxone, EasiCoat, DeBeer, Sikkens, Kapci, Vika, Standox, Lesonal, NoMix, Reiz, PPG, QuickLine, Lechler, GreenLine"

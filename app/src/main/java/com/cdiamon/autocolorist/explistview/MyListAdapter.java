@@ -24,16 +24,16 @@ import java.util.ArrayList;
 
 public class MyListAdapter extends BaseExpandableListAdapter implements ExpandableListView.OnChildClickListener {
 
-    public Context context;
-    public ArrayList<Vendor> vendorList;
-    public ArrayList<Vendor> vendorArrList;
+    private Context context;
+    private ArrayList<Vendor> vendorList;
+    private ArrayList<Vendor> vendorArrList;
 
 
     public MyListAdapter(Context context, ArrayList<Vendor> vendorList) {
         this.context = context;
-        this.vendorList = new ArrayList<Vendor>();
+        this.vendorList = new ArrayList<>();
         this.vendorList.addAll(vendorList);
-        this.vendorArrList = new ArrayList<Vendor>();
+        this.vendorArrList = new ArrayList<>();
         this.vendorArrList.addAll(vendorList);
     }
 
@@ -135,7 +135,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
             for (Vendor vendor : vendorArrList) {
 
                 ArrayList<Model> modelList = vendor.getModelList();
-                ArrayList<Model> newList = new ArrayList<Model>();
+                ArrayList<Model> newList = new ArrayList<>();
                 for (Model model : modelList) {
                     if (model.getCodeModel().toLowerCase().contains(query) ||
                             model.getNameModel().toLowerCase().contains(query)) {
@@ -167,8 +167,6 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
         Toast.makeText(MyListAdapter.this.context, "Устанавливается соединение..", Toast.LENGTH_SHORT).show();
         System.out.println(" ----- " + groupPosition + "======= " + childPosition);
-        ActivitySearchGallery sg = new ActivitySearchGallery();
-        Model model = new Model();
 
         Intent intentChild;
         intentChild = new Intent(Intent.ACTION_VIEW, Uri.parse(vendorList.get(groupPosition).getModelList().get(childPosition).getSiteModel()));

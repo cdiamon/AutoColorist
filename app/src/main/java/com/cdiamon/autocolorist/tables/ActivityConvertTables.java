@@ -2,39 +2,28 @@ package com.cdiamon.autocolorist.tables;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.database.sqlite.*;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.cdiamon.autocolorist.R;
-import com.cdiamon.autocolorist.explistview.ActivitySearchGallery;
-import com.cdiamon.autocolorist.fragments.GalleryFragment;
 
 import java.io.IOException;
-
-import static com.cdiamon.autocolorist.R.id.textView;
 
 public class ActivityConvertTables extends AppCompatActivity {
 
     Context context;
-    DBHelper myDbHelper = new DBHelper(this);
-    String sendComponentName = "";
-    String sendVendorName = "";
+    private final DBHelper myDbHelper = new DBHelper(this);
+    private String sendComponentName = "";
+    private String sendVendorName = "";
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override

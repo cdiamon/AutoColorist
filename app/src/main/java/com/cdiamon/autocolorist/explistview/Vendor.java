@@ -6,10 +6,10 @@ package com.cdiamon.autocolorist.explistview;
 
 import java.util.ArrayList;
 
-public class Vendor {
+class Vendor {
 
     private String nameVendor;
-    public ArrayList<Model> modelList = new ArrayList<Model>();
+    private ArrayList<Model> modelList = new ArrayList<>();
 
     public Vendor(String name, ArrayList<Model> modelList) {
         super();
@@ -36,8 +36,6 @@ public class Vendor {
     public void setModelList(ArrayList<Model> modelList) {
         this.modelList = modelList;
     }
-
-    ;
 
 
 }

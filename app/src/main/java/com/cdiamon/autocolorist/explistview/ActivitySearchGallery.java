@@ -28,9 +28,8 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
     //        String value = intent.getStringExtra("key"); //if it's a string you stored.
     //    }
 
-    private SearchView searchView;
-    public static MyListAdapter myListAdapterClass;
-    public ExpandableListView expandableListView;
+    private static MyListAdapter myListAdapterClass;
+    private ExpandableListView expandableListView;
 
 
     @Override
@@ -41,7 +40,7 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
         setSupportActionBar(toolbar);
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        searchView = (SearchView) findViewById(R.id.searchviewid);
+        SearchView searchView = (SearchView) findViewById(R.id.searchviewid);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconifiedByDefault(false);
         searchView.setOnQueryTextListener(this);
@@ -87,7 +86,7 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
         }
     }
 
-    LoadData loadData = new LoadData();
+    private final LoadData loadData = new LoadData();
 
     //method to expand all groups
     private void displayList() {
