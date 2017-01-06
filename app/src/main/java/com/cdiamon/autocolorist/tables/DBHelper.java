@@ -163,7 +163,7 @@ class DBHelper extends SQLiteOpenHelper {
     void searchData(String vendorName, String componentName) {
         myDataBase = this.getReadableDatabase();
         Cursor cursor;
-        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" +'"'+componentName.toUpperCase()+'"';
+        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" +'"'+componentName.toUpperCase()+'"'+ "LIMIT 1";
         cursor = myDataBase.rawQuery(QueryString, null);
         if (cursor != null && cursor.moveToFirst()) {
 
