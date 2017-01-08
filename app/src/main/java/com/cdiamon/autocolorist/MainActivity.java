@@ -19,13 +19,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.cdiamon.autocolorist.fragments.EducationFragment;
 import com.cdiamon.autocolorist.fragments.GalleryFragment;
+import com.cdiamon.autocolorist.fragments.MapsFragment;
 import com.cdiamon.autocolorist.fragments.NewFragment;
 import com.cdiamon.autocolorist.fragments.OsvaldFragment;
 import com.cdiamon.autocolorist.fragments.TablesFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, NewFragment.OnFragmentInteractionListener, TablesFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener, OsvaldFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, NewFragment.OnFragmentInteractionListener,
+        TablesFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener,
+        OsvaldFragment.OnFragmentInteractionListener, MapsFragment.OnFragmentInteractionListener,
+        EducationFragment.OnFragmentInteractionListener {
 
     public MainActivity() {
 
@@ -158,16 +163,31 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
             fragmentClass = TablesFragment.class;
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToTable, Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_school) {
+            fragmentClass = EducationFragment.class;
+            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToSchool, Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_maps) {
+            fragmentClass = MapsFragment.class;
+            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToMaps, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_manage) {
             fragmentClass = NewFragment.class;
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
-            fragmentClass = OsvaldFragment.class;
+            fragmentClass = NewFragment.class;
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToShare, Toast.LENGTH_SHORT).show();
+
+//            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+//            sharingIntent.setType("text/plain");
+//            String shareBody = "Your body here";
+//            String shareSub = "Your subject here";
+//            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
+//            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+//            startActivity(Intent.createChooser(sharingIntent, "Share using"));
         } else if (id == R.id.nav_send) {
-            fragmentClass = OsvaldFragment.class;
+            fragmentClass = NewFragment.class;
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show();
         }
+
 
         try {
             if (fragmentClass != null) {

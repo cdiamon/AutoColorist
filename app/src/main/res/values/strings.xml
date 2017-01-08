@@ -74,4 +74,12 @@
     <string name="fragmentGalleryToastGo">going to Gallery searh</string>
     <string name="fragmentTableToastGo">going to Database section</string>
     <string name="tableToastInputCorrect">Input correct paint number in one field and press SEARCH button</string>
+    <string name="title_activity_maps">Колористы</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menuFragmentMaps">Мы на карте</string>
+    <string name="menuFragmentSchool">Учебные материалы</string>
+    <string name="MainActivityToastToSchool">Переходим к разделу образовательных материалов</string>
+    <string name="MainActivityToastToMaps">Переходим к разделу Карт</string>
 </resources>
