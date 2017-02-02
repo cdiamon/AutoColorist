@@ -1,14 +1,19 @@
 package com.cdiamon.autocolorist.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.cdiamon.autocolorist.R;
+import com.cdiamon.autocolorist.explistview.ActivitySearchGallery;
+import com.cdiamon.autocolorist.maps.MapsActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -65,7 +70,20 @@ public class MapsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_maps, container, false);
+        View view = inflater.inflate(R.layout.fragment_maps, container, false);
+
+        Button goButton = (Button) view.findViewById(R.id.button_maps_go);
+        goButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent;
+                intent = new Intent(MapsFragment.this.getContext(), MapsActivity.class);
+                Toast.makeText(MapsFragment.this.getContext(), "Go to alpha maps activity", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
