@@ -16,19 +16,8 @@ import com.cdiamon.autocolorist.R;
 
 public class ActivitySearchGallery extends AppCompatActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener {
 
-    // TODO send info url of car pics
-    // Intent myIntent = new Intent(CurrentActivity.this, NextActivity.class);
-    //    myIntent.putExtra("key", value); //Optional parameters
-    //    CurrentActivity.this.startActivity(myIntent);
-    //    Extras are retrieved on the other side via:
-    //
-    //    @Override
-    //    protected void onCreate(Bundle savedInstanceState) {
-    //        Intent intent = getIntent();
-    //        String value = intent.getStringExtra("key"); //if it's a string you stored.
-    //    }
 
-    private static MyListAdapter myListAdapterClass;
+    private MyListAdapter myListAdapterClass;
     private ExpandableListView expandableListView;
 
 
@@ -46,11 +35,7 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
         searchView.setOnQueryTextListener(this);
         searchView.setOnCloseListener(this);
 
-        //display the list
         displayList();
-        //expand all Groups
-//        expandAllGroups();
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -76,12 +61,17 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-
-    //method to expand all groups
     private void expandAllGroups() {
         int count = myListAdapterClass.getGroupCount();
         for (int i = 0; i < count; i++) {
             expandableListView.expandGroup(i);
+        }
+    }
+
+    private void collapseAllGroups() {
+        int count = myListAdapterClass.getGroupCount();
+        for (int i = 0; i < count; i++) {
+            expandableListView.collapseGroup(i);
         }
     }
 
@@ -115,7 +105,11 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
     @Override
     public boolean onQueryTextChange(String query) {
         myListAdapterClass.filterData(query);
-        expandAllGroups();
+        if (query.length() == 0) {
+            collapseAllGroups();
+        } else {
+            expandAllGroups();
+        }
         return false;
     }
 

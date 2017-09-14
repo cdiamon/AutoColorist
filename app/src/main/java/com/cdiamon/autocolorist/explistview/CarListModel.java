@@ -4,20 +4,20 @@ package com.cdiamon.autocolorist.explistview;
  * Created by Dmitriy on 21.12.2016.
  */
 
-class Model {
+class CarListModel {
 
     private String codeModel = "";
     private String nameModel = "";
     private String siteModel = "";
 
-    public Model(String code, String name, String site) {
+    public CarListModel(String code, String name, String site) {
         super();
         this.codeModel = code;
         this.nameModel = name;
         this.siteModel = site;
     }
 
-    public Model() {
+    public CarListModel() {
         /////////////////
     }
 

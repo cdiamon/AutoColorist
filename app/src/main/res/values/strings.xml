@@ -61,7 +61,7 @@
     <string name="MainActivityToastToGallery">going to Gallery</string>
     <string name="MainActivityToastToTable">going to Table</string>
     <string name="MainActivityToastToInstruments">Tools section is under development</string>
-    <string name="MainActivityToastToShare">Share section is under development</string>
+    <string name="MainActivityToastToShare">Share application download url</string>
     <string name="MainActivityToastToSend">Send section is under development</string>
     <string name="SnackbarViewText">Send email to developer</string>
     <string name="SnackbarActionText">Send</string>

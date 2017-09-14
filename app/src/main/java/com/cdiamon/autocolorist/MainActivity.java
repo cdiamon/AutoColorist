@@ -28,16 +28,9 @@ import com.cdiamon.autocolorist.fragments.TablesFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, NewFragment.OnFragmentInteractionListener,
-        TablesFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener,
-        OsvaldFragment.OnFragmentInteractionListener, MapsFragment.OnFragmentInteractionListener,
-        EducationFragment.OnFragmentInteractionListener {
-
-    public MainActivity() {
-
-    }
+        TablesFragment.OnFragmentInteractionListener, OsvaldFragment.OnFragmentInteractionListener, MapsFragment.OnFragmentInteractionListener {
 
 
-    //TODO: isnecessary??? http://stackoverflow.com/questions/28133600/set-initial-fragment-on-startup/34856256#34856256
 //    public void setFragment(Fragment fragment) {
 //        FragmentManager fragmentManager = getSupportFragmentManager();
 //        fragmentManager.beginTransaction().replace(R.id.container, new OsvaldFragment()).commit();
@@ -51,7 +44,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        //TODO: is necessary?? http://stackoverflow.com/questions/28133600/set-initial-fragment-on-startup/34856256#34856256
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.container, new OsvaldFragment());
         tx.commit();
@@ -61,7 +53,6 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
-
                 Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
                         .setAction(R.string.SnackbarActionText, new View.OnClickListener() {
                             @Override
@@ -70,10 +61,10 @@ public class MainActivity extends AppCompatActivity
                                 startActivity(Intent.createChooser(Email, "Send Feedback:"));
                                 Email.setType("text/email");
                                 Email.putExtra(Intent.EXTRA_EMAIL,
-                                        new String[]{"padmitriy@gmail.com"});  //developer 's email
+                                        new String[]{"padmitriy@gmail.com"});
                                 Email.putExtra(Intent.EXTRA_SUBJECT,
-                                        getString(R.string.SnackbarEmailTitle)); // Email 's Subject
-                                Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody));  //Email 's Greeting text
+                                        getString(R.string.SnackbarEmailTitle));
+                                Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody));
                                 startActivity(Intent.createChooser(Email, "Send Feedback:"));
                             }
                         }).show();
@@ -112,14 +103,10 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            // startActivity(new Intent(getApplicationContext(), WHAT.class));
+//             startActivity(new Intent(getApplicationContext(), WHAT.class));
             Toast.makeText(getApplicationContext(), R.string.mainToastSettings, Toast.LENGTH_SHORT).show();
             return true;
         } else if (id == R.id.menu_calculator) {
@@ -154,7 +141,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_circle) {
-            // Handle the camera action
             fragmentClass = OsvaldFragment.class;
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToOsvald, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
@@ -173,21 +159,21 @@ public class MainActivity extends AppCompatActivity
             fragmentClass = NewFragment.class;
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
-            fragmentClass = NewFragment.class;
+//            fragmentClass = NewFragment.class;
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToShare, Toast.LENGTH_SHORT).show();
 
-//            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-//            sharingIntent.setType("text/plain");
-//            String shareBody = "Your body here";
-//            String shareSub = "Your subject here";
-//            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
-//            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-//            startActivity(Intent.createChooser(sharingIntent, "Share using"));
+            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            String shareBody = "Приложение для колористов\nскачать бесплатно\nhttps://cdiamon.github.io/AutoColorist/";
+            String shareSub = "Your subject here";
+            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+            startActivity(Intent.createChooser(sharingIntent, "Share using"));
+            return true;
         } else if (id == R.id.nav_send) {
             fragmentClass = NewFragment.class;
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show();
         }
-
 
         try {
             if (fragmentClass != null) {
@@ -212,6 +198,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-
+        //TODO later upgrades
     }
 }

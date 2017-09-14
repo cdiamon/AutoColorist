@@ -9,16 +9,12 @@ import java.util.ArrayList;
 class Vendor {
 
     private String nameVendor;
-    private ArrayList<Model> modelList = new ArrayList<>();
+    private ArrayList<CarListModel> modelList = new ArrayList<>();
 
-    public Vendor(String name, ArrayList<Model> modelList) {
+    public Vendor(String name, ArrayList<CarListModel> modelList) {
         super();
         this.nameVendor = name;
         this.modelList = modelList;
-    }
-
-    public Vendor() {
-        //////////////////////
     }
 
     public String getNameVendor() {
@@ -29,13 +25,12 @@ class Vendor {
         this.nameVendor = nameVendor;
     }
 
-    public ArrayList<Model> getModelList() {
+    public ArrayList<CarListModel> getModelList() {
         return modelList;
     }
 
-    public void setModelList(ArrayList<Model> modelList) {
+    public void setModelList(ArrayList<CarListModel> modelList) {
         this.modelList = modelList;
     }
-
 
 }

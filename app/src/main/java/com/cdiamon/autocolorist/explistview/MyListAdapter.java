@@ -17,7 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cdiamon.autocolorist.R;
-import com.cdiamon.autocolorist.fragments.GalleryFragment;
 
 import java.util.ArrayList;
 
@@ -37,19 +36,14 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
         this.vendorArrList.addAll(vendorList);
     }
 
-    public MyListAdapter(GalleryFragment galleryFragment, ArrayList<Vendor> vendorList) {
-
-    }
-
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        ArrayList<Model> arrModelList = vendorList.get(groupPosition).getModelList();
+        ArrayList<CarListModel> arrModelList = vendorList.get(groupPosition).getModelList();
         return arrModelList.get(childPosition);
     }
 
     @Override
     public long getChildId(int groupPosition, int childPosition) {
-
         return childPosition;
     }
 
@@ -57,7 +51,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild,
                              View view, ViewGroup parent) {
 
-        Model model = (Model) getChild(groupPosition, childPosition);
+        CarListModel carListModel = (CarListModel) getChild(groupPosition, childPosition);
         if (view == null) {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.child_row, null);
@@ -66,9 +60,9 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
         TextView code = (TextView) view.findViewById(R.id.codeModel);
         TextView name = (TextView) view.findViewById(R.id.nameModel);
         TextView site = (TextView) view.findViewById(R.id.siteModel);
-        code.setText(model.getCodeModel().trim());
-        name.setText(model.getNameModel().trim());
-        site.setText(model.getSiteModel().trim());
+        code.setText(carListModel.getCodeModel().trim());
+        name.setText(carListModel.getNameModel().trim());
+        site.setText(carListModel.getSiteModel().trim());
 
         return view;
     }
@@ -76,7 +70,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
     @Override
     public int getChildrenCount(int groupPosition) {
 
-        ArrayList<Model> modelList = vendorList.get(groupPosition).getModelList();
+        ArrayList<CarListModel> modelList = vendorList.get(groupPosition).getModelList();
         return modelList.size();
 
     }
@@ -125,7 +119,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
     public void filterData(String query) {
 
         query = query.toLowerCase();
-        Log.v("MyListAdapter", String.valueOf(vendorList.size()));
+        Log.i("MyListAdapter", String.valueOf(vendorList.size()));
         vendorList.clear();
 
         if (query.isEmpty()) {
@@ -134,12 +128,12 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
 
             for (Vendor vendor : vendorArrList) {
 
-                ArrayList<Model> modelList = vendor.getModelList();
-                ArrayList<Model> newList = new ArrayList<>();
-                for (Model model : modelList) {
-                    if (model.getCodeModel().toLowerCase().contains(query) ||
-                            model.getNameModel().toLowerCase().contains(query)) {
-                        newList.add(model);
+                ArrayList<CarListModel> modelList = vendor.getModelList();
+                ArrayList<CarListModel> newList = new ArrayList<>();
+                for (CarListModel carListModel : modelList) {
+                    if (carListModel.getCodeModel().toLowerCase().contains(query) ||
+                            carListModel.getNameModel().toLowerCase().contains(query)) {
+                        newList.add(carListModel);
                     }
                 }
                 if (newList.size() > 0) {
@@ -149,16 +143,16 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
             }
         }
 
-        Log.v("MyListAdapter", String.valueOf(vendorList.size()));
+        Log.i("MyListAdapter", String.valueOf(vendorList.size()));
         notifyDataSetChanged();
 
     }
 
 //   TODO myListAdapterClass(MyListAdapter).vendorList.0(kia).modelList.0(siteModel=url!!)
 //
-//   TODO vendorArrList.0(Vendor)(kia).modelList(ArrayList).0(Model)(siteModel=url!!)
+//   TODO vendorArrList.0(Vendor)(kia).modelList(ArrayList).0(CarListModel)(siteModel=url!!)
 //
-//   TODO mAdapter(MyListAdapter).context(ActivitySearchGallery).vendorArrayAddingList(ArrayList).0{Model}(nameVendor=kia).modelList.0(siteModel=url!!)
+//   TODO mAdapter(MyListAdapter).context(ActivitySearchGallery).vendorArrayAddingList(ArrayList).0{CarListModel}(nameVendor=kia).modelList.0(siteModel=url!!)
 //
 //   TODO mAdapter.getChild(groupPosition, childPosition).getPopulation();
 

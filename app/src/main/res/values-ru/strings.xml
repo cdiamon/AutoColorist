@@ -61,7 +61,7 @@
     <string name="MainActivityToastToInstruments">Раздел Инструменты в разработке</string>
     <string name="MainActivityToastToOsvald">Переходим к кругу</string>
     <string name="MainActivityToastToSend">Раздел Отправить в разработке</string>
-    <string name="MainActivityToastToShare">Раздел Поделиться в разработке</string>
+    <string name="MainActivityToastToShare">Отправить ссылку на приложение</string>
     <string name="MainActivityToastToTable">Переходим к таблице перевода</string>
     <string name="SnackbarActionText">Отправить</string>
     <string name="SnackbarEmailBody">Здравствуйте, Дмитрий. У меня есть исправление/дополнение для вашего приложения AutoColorist.</string>
