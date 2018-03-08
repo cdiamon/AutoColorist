@@ -27,8 +27,11 @@ import com.cdiamon.autocolorist.fragments.OsvaldFragment;
 import com.cdiamon.autocolorist.fragments.TablesFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, NewFragment.OnFragmentInteractionListener,
-        TablesFragment.OnFragmentInteractionListener, OsvaldFragment.OnFragmentInteractionListener, MapsFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        NewFragment.OnFragmentInteractionListener,
+        TablesFragment.OnFragmentInteractionListener,
+        OsvaldFragment.OnFragmentInteractionListener,
+        MapsFragment.OnFragmentInteractionListener {
 
 
 //    public void setFragment(Fragment fragment) {
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         tx.replace(R.id.container, new OsvaldFragment());
         tx.commit();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -79,14 +82,14 @@ public class MainActivity extends AppCompatActivity
         //first time..
         drawer.openDrawer(GravityCompat.START);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -183,7 +186,6 @@ public class MainActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
-        //insert new fragment, changing previous
         FragmentManager fragmentmanager = getSupportFragmentManager();
         fragmentmanager.beginTransaction().replace(R.id.container, fragment).commit();
         //now hoghlighting selected menu in left bar
@@ -191,7 +193,7 @@ public class MainActivity extends AppCompatActivity
         //show selected item name in top
         setTitle(item.getTitle());
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
