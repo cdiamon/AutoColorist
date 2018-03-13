@@ -11,6 +11,10 @@ import com.cdiamon.autocolorist.R;
 
 public class EducationFragment extends Fragment {
 
+    public static EducationFragment newInstance() {
+        return new EducationFragment();
+    }
+
     public EducationFragment() {
         // Required empty public constructor
     }
@@ -21,5 +25,4 @@ public class EducationFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_education, container, false);
     }
-
 }

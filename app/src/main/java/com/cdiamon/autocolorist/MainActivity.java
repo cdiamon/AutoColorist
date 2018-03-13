@@ -47,32 +47,24 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-        tx.replace(R.id.container, new OsvaldFragment());
-        tx.commit();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, OsvaldFragment.newInstance()).commit();
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
+        fab.setOnClickListener(view ->
                 Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.SnackbarActionText, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent Email = new Intent(Intent.ACTION_SEND);
-                                startActivity(Intent.createChooser(Email, "Send Feedback:"));
-                                Email.setType("text/email");
-                                Email.putExtra(Intent.EXTRA_EMAIL,
-                                        new String[]{"padmitriy@gmail.com"});
-                                Email.putExtra(Intent.EXTRA_SUBJECT,
-                                        getString(R.string.SnackbarEmailTitle));
-                                Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody));
-                                startActivity(Intent.createChooser(Email, "Send Feedback:"));
-                            }
-                        }).show();
-            }
-        });
+                        .setAction(R.string.SnackbarActionText, view1 -> {
+                            Intent Email = new Intent(Intent.ACTION_SEND);
+                            startActivity(Intent.createChooser(Email, "Send Feedback:"));
+                            Email.setType("text/email");
+                            Email.putExtra(Intent.EXTRA_EMAIL,
+                                    new String[]{"padmitriy@gmail.com"});
+                            Email.putExtra(Intent.EXTRA_SUBJECT,
+                                    getString(R.string.SnackbarEmailTitle));
+                            Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody));
+                            startActivity(Intent.createChooser(Email, "Send Feedback:"));
+                        }).show());
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -136,34 +128,24 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        //here create new fragment
         Fragment fragment = null;
-        Class fragmentClass = null;
 
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_circle) {
-            fragmentClass = OsvaldFragment.class;
-            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToOsvald, Toast.LENGTH_SHORT).show();
+            fragment = OsvaldFragment.newInstance();
         } else if (id == R.id.nav_gallery) {
-            fragmentClass = GalleryFragment.class;
-            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToGallery, Toast.LENGTH_SHORT).show();
+            fragment = GalleryFragment.newInstance();
         } else if (id == R.id.nav_slideshow) {
-            fragmentClass = TablesFragment.class;
-            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToTable, Toast.LENGTH_SHORT).show();
+            fragment = TablesFragment.newInstance();
         } else if (id == R.id.nav_school) {
-            fragmentClass = EducationFragment.class;
-            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToSchool, Toast.LENGTH_SHORT).show();
+            fragment = EducationFragment.newInstance();
         } else if (id == R.id.nav_maps) {
-            fragmentClass = MapsFragment.class;
-            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToMaps, Toast.LENGTH_SHORT).show();
+            fragment = MapsFragment.newInstance();
         } else if (id == R.id.nav_manage) {
-            fragmentClass = NewFragment.class;
+            fragment = NewFragment.newInstance();
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
-//            fragmentClass = NewFragment.class;
-            Toast.makeText(getApplicationContext(), R.string.MainActivityToastToShare, Toast.LENGTH_SHORT).show();
 
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
@@ -174,16 +156,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(Intent.createChooser(sharingIntent, "Share using"));
             return true;
         } else if (id == R.id.nav_send) {
-            fragmentClass = NewFragment.class;
+            fragment = NewFragment.newInstance();
             Toast.makeText(getApplicationContext(), R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show();
-        }
-
-        try {
-            if (fragmentClass != null) {
-                fragment = (Fragment) fragmentClass.newInstance();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
 
         FragmentManager fragmentmanager = getSupportFragmentManager();

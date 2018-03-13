@@ -19,8 +19,6 @@ import java.io.OutputStream;
 class DBHelper extends SQLiteOpenHelper {
 
 
-    //The Android's default system path of your application database.
-
     private static final String DATABASE_PATH = "/data/data/com.cdiamon.autocolorist/databases/";
     private static final String DATABASE_NAME = "converttables.db";
     private static final String DATABASE_TABLE = "paints_name";
@@ -28,8 +26,6 @@ class DBHelper extends SQLiteOpenHelper {
 
     private SQLiteDatabase myDataBase;
     private final Context myContext;
-
-    String QueryString = "";
 
     final String[] componentNames = new String[30];
 
@@ -45,32 +41,20 @@ class DBHelper extends SQLiteOpenHelper {
         this.myContext = context;
     }
 
-    /**
-     * Creates a empty database on the system and rewrites it with your own database.
-     */
     void createDataBase() throws IOException {
 
         boolean dbExist = checkDataBase();
 
-        if (dbExist) {
-            //do nothing - database already exist
-        } else {
+        if (!dbExist) {
 
-            //By calling this method and empty database will be created into the default system path
-            //of your application so we are gonna be able to overwrite that database with our database.
             this.getReadableDatabase();
 
             try {
-
                 copyDataBase();
-
             } catch (IOException e) {
-
                 throw new Error("Error copying database");
-
             }
         }
-
 
     }
 
@@ -86,55 +70,40 @@ class DBHelper extends SQLiteOpenHelper {
         try {
             String myPath = DATABASE_PATH + DATABASE_NAME;
             checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
-
         } catch (SQLiteException e) {
-
-            //database does't exist yet.
-
+            e.printStackTrace();
         }
 
         if (checkDB != null) {
-
             checkDB.close();
-
         }
 
-        return checkDB != null ? true : false;
+        return checkDB != null;
     }
 
     /**
-     * Copies your database from your local assets-folder to the just created empty database in the
+     * Copies database from local assets-folder to the just created empty database in the
      * system folder, from where it can be accessed and handled.
-     * This is done by transfering bytestream.
      */
     private void copyDataBase() throws IOException {
 
-        //Open your local db as the input stream
         InputStream myInput = myContext.getAssets().open(DATABASE_NAME);
-
-        // Path to the just created empty db
         String outFileName = DATABASE_PATH + DATABASE_NAME;
-
-        //Open the empty db as the output stream
         OutputStream myOutput = new FileOutputStream(outFileName);
 
-        //transfer bytes from the inputfile to the outputfile
         byte[] buffer = new byte[1024];
         int length;
         while ((length = myInput.read(buffer)) > 0) {
             myOutput.write(buffer, 0, length);
         }
 
-        //Close the streams
         myOutput.flush();
         myOutput.close();
         myInput.close();
-
     }
 
     void openDataBase() throws SQLException {
 
-        //Open the database
         String myPath = DATABASE_PATH + DATABASE_NAME;
         myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
 
@@ -143,8 +112,9 @@ class DBHelper extends SQLiteOpenHelper {
     @Override
     public synchronized void close() {
 
-        if (myDataBase != null)
+        if (myDataBase != null) {
             myDataBase.close();
+        }
 
         super.close();
 
@@ -160,10 +130,13 @@ class DBHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * testing method
+     */
     void searchData(String vendorName, String componentName) {
         myDataBase = this.getReadableDatabase();
         Cursor cursor;
-        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" +'"'+componentName.toUpperCase()+'"'+ "LIMIT 1";
+        String QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" + '"' + componentName.toUpperCase() + '"' + "LIMIT 1";
         cursor = myDataBase.rawQuery(QueryString, null);
         if (cursor != null && cursor.moveToFirst()) {
 
@@ -175,7 +148,7 @@ class DBHelper extends SQLiteOpenHelper {
             }
         }
         StringBuilder builder = new StringBuilder();
-        for(String s : componentNames) {
+        for (String s : componentNames) {
             builder.append(s);
         }
 
