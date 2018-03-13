@@ -57,9 +57,9 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
             view = layoutInflater.inflate(R.layout.child_row, null);
         }
 
-        TextView code = (TextView) view.findViewById(R.id.codeModel);
-        TextView name = (TextView) view.findViewById(R.id.nameModel);
-        TextView site = (TextView) view.findViewById(R.id.siteModel);
+        TextView code = view.findViewById(R.id.codeModel);
+        TextView name = view.findViewById(R.id.nameModel);
+        TextView site = view.findViewById(R.id.siteModel);
         code.setText(carListModel.getCodeModel().trim());
         name.setText(carListModel.getNameModel().trim());
         site.setText(carListModel.getSiteModel().trim());
@@ -100,7 +100,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
             view = layoutInflater.inflate(R.layout.group_row, null);
         }
 
-        TextView heading = (TextView) view.findViewById(R.id.heading);
+        TextView heading = view.findViewById(R.id.heading);
         heading.setText(vendor.getNameVendor().trim());
 
         return view;
@@ -147,14 +147,6 @@ public class MyListAdapter extends BaseExpandableListAdapter implements Expandab
         notifyDataSetChanged();
 
     }
-
-//   TODO myListAdapterClass(MyListAdapter).vendorList.0(kia).modelList.0(siteModel=url!!)
-//
-//   TODO vendorArrList.0(Vendor)(kia).modelList(ArrayList).0(CarListModel)(siteModel=url!!)
-//
-//   TODO mAdapter(MyListAdapter).context(ActivitySearchGallery).vendorArrayAddingList(ArrayList).0{CarListModel}(nameVendor=kia).modelList.0(siteModel=url!!)
-//
-//   TODO mAdapter.getChild(groupPosition, childPosition).getPopulation();
 
     @Override
     public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long id) {
