@@ -8,7 +8,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.SearchView;
 
@@ -25,11 +24,11 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_gallery);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) findViewById(R.id.searchviewid);
+        SearchView searchView = findViewById(R.id.searchviewid);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconifiedByDefault(false);
         searchView.setOnQueryTextListener(this);
@@ -37,27 +36,19 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
 
         displayList();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.SnackbarActionText, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent Email = new Intent(Intent.ACTION_SEND);
-                                startActivity(Intent.createChooser(Email, "Send Feedback:"));
-                                Email.setType("text/email");
-                                Email.putExtra(Intent.EXTRA_EMAIL,
-                                        new String[]{"padmitriy@gmail.com"});  //developer 's email
-                                Email.putExtra(Intent.EXTRA_SUBJECT,
-                                        getString(R.string.SnackbarEmailTitle)); // Email 's Subject
-                                Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody));  //Email 's Greeting text
-                                startActivity(Intent.createChooser(Email, "Send Feedback:"));
-                            }
-                        }).show();
-            }
-        });
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(view -> Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
+                .setAction(R.string.SnackbarActionText, view1 -> {
+                    Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                    startActivity(Intent.createChooser(emailIntent, "Send Feedback:"));
+                    emailIntent.setType("text/email");
+                    emailIntent.putExtra(Intent.EXTRA_EMAIL,
+                            new String[]{"padmitriy@gmail.com"});  //developer 's email
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT,
+                            getString(R.string.SnackbarEmailTitle)); // Email 's Subject
+                    emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody));  //Email 's Greeting text
+                    startActivity(Intent.createChooser(emailIntent, "Send Feedback:"));
+                }).show());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
@@ -77,16 +68,15 @@ public class ActivitySearchGallery extends AppCompatActivity implements SearchVi
 
     private final LoadData loadData = new LoadData();
 
-    //method to expand all groups
     private void displayList() {
 
         //display the list
         loadData.loadSomeData();
 
         //get reference to the ExpandableListView
-        expandableListView = (ExpandableListView) findViewById(R.id.expandableList);
+        expandableListView = findViewById(R.id.expandableList);
         //create the adapter by passing your ArrayList data
-        myListAdapterClass = new MyListAdapter(ActivitySearchGallery.this, loadData.vendorArrayAddingList);
+        myListAdapterClass = new MyListAdapter(ActivitySearchGallery.this, loadData.getVendorArrayAddingList());
         //attach the adapter to the list
         expandableListView.setAdapter(myListAdapterClass);
 
