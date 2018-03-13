@@ -64,7 +64,7 @@
             app:srcCompat="@drawable/p_profilinezxc" />
 
         <EditText
-            android:id="@+id/SH"
+            android:id="@+id/editSH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -74,7 +74,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/DuPont"
+            android:id="@+id/editDuPont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -84,7 +84,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Profiline"
+            android:id="@+id/editProfiline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -118,7 +118,7 @@
             app:srcCompat="@drawable/p_brulexzxc" />
 
         <EditText
-            android:id="@+id/Mobihel"
+            android:id="@+id/editMobihel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -128,7 +128,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Normex"
+            android:id="@+id/editNormex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -138,7 +138,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Brulex"
+            android:id="@+id/editBrulex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -172,7 +172,7 @@
             app:srcCompat="@drawable/p_easicoatzxc" />
 
         <EditText
-            android:id="@+id/Challenger"
+            android:id="@+id/editChallenger"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -182,7 +182,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Duxone"
+            android:id="@+id/editDuxone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -192,7 +192,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/EasiCoat"
+            android:id="@+id/editEasiCoat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -226,7 +226,7 @@
             app:srcCompat="@drawable/p_kapcizxc" />
 
         <EditText
-            android:id="@+id/DeBeer"
+            android:id="@+id/editDeBeer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -236,7 +236,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Sikkens"
+            android:id="@+id/editSikkens"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -246,7 +246,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Kapci"
+            android:id="@+id/editKapci"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -280,7 +280,7 @@
             app:srcCompat="@drawable/p_lesonalzxc" />
 
         <EditText
-            android:id="@+id/Vika"
+            android:id="@+id/editVika"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -290,7 +290,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Standox"
+            android:id="@+id/editStandox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -300,7 +300,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Lesonal"
+            android:id="@+id/editLesonal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -334,7 +334,7 @@
             app:srcCompat="@drawable/p_ppgzxc" />
 
         <EditText
-            android:id="@+id/NoMix"
+            android:id="@+id/editNoMix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -344,7 +344,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Reiz"
+            android:id="@+id/editReiz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -354,7 +354,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/PPG"
+            android:id="@+id/editPPG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -388,7 +388,7 @@
             app:srcCompat="@drawable/p_greenlinezxc" />
 
         <EditText
-            android:id="@+id/QuickLine"
+            android:id="@+id/editQuickLine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -398,7 +398,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/Lechler"
+            android:id="@+id/editLechler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -408,7 +408,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/GreenLine"
+            android:id="@+id/editGreenLine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
