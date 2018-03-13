@@ -14,6 +14,10 @@ import com.cdiamon.autocolorist.explistview.ActivitySearchGallery;
 
 public class GalleryFragment extends Fragment {
 
+    public static GalleryFragment newInstance() {
+        return new GalleryFragment();
+    }
+
     public GalleryFragment() {
         // Required empty public constructor
     }
