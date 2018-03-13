@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.cdiamon.autocolorist.R.id.fab
 import com.cdiamon.autocolorist.fragments.*
 
 class MainActivity : AppCompatActivity(),
@@ -29,7 +30,6 @@ class MainActivity : AppCompatActivity(),
         setContentView(R.layout.activity_main)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-
 
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, OsvaldFragment.newInstance()).commit()
