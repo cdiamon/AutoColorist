@@ -6,9 +6,9 @@ package com.cdiamon.autocolorist.explistview
 
 internal class LoadData {
 
-    val vendorArrayAddingList = ArrayList<Vendor>()
+    fun loadSomeData(): ArrayList<Vendor> {
 
-    fun loadSomeData() {
+        val vendorArrayAddingList = ArrayList<Vendor>()
 
         var modelArrayAddingList = ArrayList<CarListModel>()
         modelArrayAddingList.add(CarListModel("A1,S1  (8X)", "Audi", "http://rustamcolor.ru/viewtopic.php?f=13&t=2899#p19495"))
@@ -653,5 +653,6 @@ internal class LoadData {
 
         vendorArrayAddingList.add(Vendor("ZAZ", modelArrayAddingList))
 
+        return vendorArrayAddingList
     }
 }
