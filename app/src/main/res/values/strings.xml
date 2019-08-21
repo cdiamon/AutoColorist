@@ -53,7 +53,7 @@
     <string name="fragmentTablesButtonGo">Go</string>
     <string name="fragmentTablesVendors">Spies Hecker, DuPont, Profiline, Mobihel, Normex, Brulex, Challenger, Duxone, EasiCoat, DeBeer, Sikkens, Kapci, Vika, Standox, Lesonal, NoMix, Reiz, PPG, QuickLine, Lechler, GreenLine</string>
 
-    <string name="mainHeaderVersion">github.com/cdiamon version 0.30b</string>
+    <string name="mainHeaderVersion">github.com/cdiamon version 0.60</string>
     <string name="mainHeaderEmail">padmitriy@gmail.com</string>
     <string name="MenuConnectSend">Send</string>
     <string name="fragmentGallerySource">Cars photos are from open sources</string>
@@ -74,11 +74,11 @@
     <string name="fragmentGalleryToastGo">going to Gallery searh</string>
     <string name="fragmentTableToastGo">going to Database section</string>
     <string name="tableToastInputCorrect">Input correct paint number in one field and press SEARCH button</string>
-    <string name="title_activity_maps">Колористы</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="menuFragmentMaps">Мы на карте</string>
-    <string name="menuFragmentSchool">Учебные материалы</string>
-    <string name="MainActivityToastToSchool">Переходим к разделу образовательных материалов</string>
-    <string name="MainActivityToastToMaps">Переходим к разделу Карт</string>
+    <string name="calcNotFound">Calculator app not found</string>
+    <string name="title_activity_maps">Colorists</string>
+    <string name="menuFragmentSchool">Education</string>
+    <string name="menuFragmentMaps">We on the map</string>
+    <string name="MainActivityToastToSchool">going to education section</string>
+    <string name="MainActivityToastToMaps">going to Maps section</string>
 </resources>

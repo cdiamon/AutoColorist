@@ -3,20 +3,19 @@ package com.cdiamon.autocolorist
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.NavigationView
-import android.support.design.widget.Snackbar
-import android.support.v4.app.Fragment
-import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import com.cdiamon.autocolorist.R.id.fab
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import com.cdiamon.autocolorist.fragments.*
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity(),
         NavigationView.OnNavigationItemSelectedListener,
@@ -85,7 +84,7 @@ class MainActivity : AppCompatActivity(),
         when (id) {
             R.id.action_settings -> {
                 //             startActivity(new Intent(getApplicationContext(), WHAT.class));
-                Toast.makeText(applicationContext, R.string.mainToastSettings, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.mainToastSettings, Toast.LENGTH_SHORT).show()
                 return true
             }
             R.id.menu_calculator -> {
@@ -93,8 +92,12 @@ class MainActivity : AppCompatActivity(),
                 intent.action = Intent.ACTION_MAIN
                 intent.addCategory(Intent.CATEGORY_APP_CALCULATOR)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(intent)
-                Toast.makeText(applicationContext, R.string.mainToastCalc, Toast.LENGTH_SHORT).show()
+                try {
+                    startActivity(intent)
+                    Toast.makeText(this, R.string.mainToastCalc, Toast.LENGTH_SHORT).show()
+                } catch (e: Exception) {
+                    Toast.makeText(this, getString(R.string.calcNotFound), Toast.LENGTH_SHORT).show()
+                }
                 return true
             }
             R.id.menu_calendar -> {
@@ -103,7 +106,7 @@ class MainActivity : AppCompatActivity(),
                 intent.addCategory(Intent.CATEGORY_APP_CALENDAR)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
-                Toast.makeText(applicationContext, R.string.mainToastCalendar, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.mainToastCalendar, Toast.LENGTH_SHORT).show()
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
@@ -124,7 +127,7 @@ class MainActivity : AppCompatActivity(),
             R.id.nav_maps -> fragment = MapsFragment.newInstance()
             R.id.nav_manage -> {
                 fragment = NewFragment.newInstance()
-                Toast.makeText(applicationContext, R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT).show()
             }
             R.id.nav_share -> {
 
@@ -139,14 +142,14 @@ class MainActivity : AppCompatActivity(),
             }
             R.id.nav_send -> {
                 fragment = NewFragment.newInstance()
-                Toast.makeText(applicationContext, R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show()
             }
         //now hoghlighting selected menu in left bar
         //show selected item name in top
         }
 
         val fragmentManager = supportFragmentManager
-        fragmentManager.beginTransaction().replace(R.id.container, fragment).commit()
+        fragmentManager.beginTransaction().replace(R.id.container, fragment!!).commit()
         //now highlighting selected menu in left bar
         item.isChecked = true
         //show selected item name in top

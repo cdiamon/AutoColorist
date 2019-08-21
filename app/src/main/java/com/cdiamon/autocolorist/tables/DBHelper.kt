@@ -12,8 +12,8 @@ import java.io.IOException
 /**
  * Created by Dmitriy on 28.12.2016.
  */
-
 internal class DBHelper
+
 /**
  * Constructor
  * Takes and keeps a reference of the passed context in order to access to the application assets and resources.
@@ -23,6 +23,12 @@ internal class DBHelper
 (private val myContext: Context) : SQLiteOpenHelper(myContext, DATABASE_NAME, null, DATABASE_VERSION) {
 
     private var myDataBase: SQLiteDatabase? = null
+
+    override fun onOpen(db: SQLiteDatabase?) {
+        super.onOpen(db)
+        //this fixes android 9.0 problem
+        db?.disableWriteAheadLogging()
+    }
 
     @Throws(IOException::class)
     fun createDataBase() {
@@ -34,9 +40,7 @@ internal class DBHelper
             this.readableDatabase
 
             copyDataBase()
-
         }
-
     }
 
     /**
@@ -70,6 +74,7 @@ internal class DBHelper
         try {
             val myInput = myContext.assets.open(DATABASE_NAME)
             val outFileName = DATABASE_PATH + DATABASE_NAME
+            println(outFileName)
             val myOutput = FileOutputStream(outFileName)
             myInput.copyTo(myOutput, 1024)
             myOutput.flush()
@@ -79,25 +84,6 @@ internal class DBHelper
             e.printStackTrace()
         }
     }
-
-    //Old java version
-//    @Throws(IOException::class)
-//    private fun copyDataBase() {
-//
-//        val myInput = myContext.assets.open(DATABASE_NAME)
-//        val outFileName = DATABASE_PATH + DATABASE_NAME
-//        val myOutput = FileOutputStream(outFileName)
-//
-//        val buffer = ByteArray(1024)
-//        var length: Int
-//        while ((length = myInput.read(buffer)) > 0) {
-//            myOutput.write(buffer, 0, length)
-//        }
-//
-//        myOutput.flush()
-//        myOutput.close()
-//        myInput.close()
-//    }
 
     @Throws(SQLException::class)
     fun openDataBase() {
