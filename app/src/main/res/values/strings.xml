@@ -57,11 +57,7 @@
     <string name="mainHeaderEmail">padmitriy@gmail.com</string>
     <string name="MenuConnectSend">Send</string>
     <string name="fragmentGallerySource">Cars photos are from open sources</string>
-    <string name="MainActivityToastToOsvald">going to Circle</string>
-    <string name="MainActivityToastToGallery">going to Gallery</string>
-    <string name="MainActivityToastToTable">going to Table</string>
     <string name="MainActivityToastToInstruments">Tools section is under development</string>
-    <string name="MainActivityToastToShare">Share application download url</string>
     <string name="MainActivityToastToSend">Send section is under development</string>
     <string name="SnackbarViewText">Send email to developer</string>
     <string name="SnackbarActionText">Send</string>
@@ -79,6 +75,4 @@
     <string name="title_activity_maps">Colorists</string>
     <string name="menuFragmentSchool">Education</string>
     <string name="menuFragmentMaps">We on the map</string>
-    <string name="MainActivityToastToSchool">going to education section</string>
-    <string name="MainActivityToastToMaps">going to Maps section</string>
 </resources>

@@ -79,9 +79,8 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
 
-        when (id) {
+        when (item.itemId) {
             R.id.action_settings -> {
                 //             startActivity(new Intent(getApplicationContext(), WHAT.class));
                 Toast.makeText(this, R.string.mainToastSettings, Toast.LENGTH_SHORT).show()
@@ -117,9 +116,7 @@ class MainActivity : AppCompatActivity(),
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         var fragment: Fragment? = null
 
-        val id = item.itemId
-
-        when (id) {
+        when (item.itemId) {
             R.id.nav_circle -> fragment = OsvaldFragment.newInstance()
             R.id.nav_gallery -> fragment = GalleryFragment.newInstance()
             R.id.nav_slideshow -> fragment = TablesFragment.newInstance()
@@ -131,12 +128,12 @@ class MainActivity : AppCompatActivity(),
             }
             R.id.nav_share -> {
 
-                val sharingIntent = Intent(android.content.Intent.ACTION_SEND)
+                val sharingIntent = Intent(Intent.ACTION_SEND)
                 sharingIntent.type = "text/plain"
                 val shareBody = "Приложение для колористов\nскачать бесплатно\nhttps://cdiamon.github.io/AutoColorist/"
                 val shareSub = "Your subject here"
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub)
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody)
+                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub)
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
                 startActivity(Intent.createChooser(sharingIntent, "Share using"))
                 return true
             }
@@ -144,8 +141,8 @@ class MainActivity : AppCompatActivity(),
                 fragment = NewFragment.newInstance()
                 Toast.makeText(this, R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show()
             }
-        //now hoghlighting selected menu in left bar
-        //show selected item name in top
+            //now highlighting selected menu in left bar
+            //show selected item name in top
         }
 
         val fragmentManager = supportFragmentManager
