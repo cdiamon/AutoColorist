@@ -3,19 +3,19 @@ package com.cdiamon.autocolorist.tables
 import android.content.Intent
 import android.database.SQLException
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.cdiamon.autocolorist.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.content_convert_tables.*
 import java.io.IOException
 
 class ActivityConvertTables : AppCompatActivity() {
 
-    private val myDbHelper = DBHelper(this)
+    private lateinit var myDbHelper: DBHelper
     private var sendComponentName = ""
     private var sendVendorName = ""
 
@@ -26,6 +26,8 @@ class ActivityConvertTables : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+
+        myDbHelper = DBHelper(this)
 
         try {
             myDbHelper.createDataBase()
@@ -208,6 +210,4 @@ class ActivityConvertTables : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
     }
-
-
 }
