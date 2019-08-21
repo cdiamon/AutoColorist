@@ -18,7 +18,7 @@ internal class DBHelper
  * Constructor
  * Takes and keeps a reference of the passed context in order to access to the application assets and resources.
  *
- * @param context
+ * @param myContext
  */
 (private val myContext: Context) : SQLiteOpenHelper(myContext, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -59,9 +59,7 @@ internal class DBHelper
             e.printStackTrace()
         }
 
-        if (checkDB != null) {
-            checkDB.close()
-        }
+        checkDB?.close()
 
         return checkDB != null
     }
@@ -114,8 +112,8 @@ internal class DBHelper
 
         myDataBase = this.readableDatabase
         val cursor: Cursor?
-        val QueryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" + '"'.toString() + componentName.toUpperCase() + '"'.toString() + "LIMIT 1"
-        cursor = myDataBase!!.rawQuery(QueryString, null)
+        val queryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" + '"'.toString() + componentName.toUpperCase() + '"'.toString() + "LIMIT 1"
+        cursor = myDataBase!!.rawQuery(queryString, null)
         if (cursor != null && cursor.moveToFirst()) {
 
             var s = 0
@@ -138,10 +136,9 @@ internal class DBHelper
 
     companion object {
 
-
-        private val DATABASE_PATH = "/data/data/com.cdiamon.autocolorist/databases/"
-        private val DATABASE_NAME = "converttables.db"
-        private val DATABASE_TABLE = "paints_name"
-        private val DATABASE_VERSION = 1
+        private const val DATABASE_PATH = "/data/data/com.cdiamon.autocolorist/databases/"
+        private const val DATABASE_NAME = "converttables.db"
+        private const val DATABASE_TABLE = "paints_name"
+        private const val DATABASE_VERSION = 1
     }
 }
