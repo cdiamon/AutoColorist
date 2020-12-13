@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cdiamon.autocolorist.tables.ActivityConvertTables"
+    tools:context="com.cdiamon.autocolorist.tables.ConvertTablesActivity"
     tools:showIn="@layout/activity_convert_tables">
 
     <GridLayout
@@ -20,7 +20,7 @@
         android:rowCount="9">
 
         <Button
-            android:id="@+id/btn_table_search"
+            android:id="@+id/table_search_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/btn_table_clear"
+            android:id="@+id/table_clear_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"

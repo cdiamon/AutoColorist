@@ -4,39 +4,36 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ExpandableListView
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import com.cdiamon.autocolorist.R
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.cdiamon.autocolorist.databinding.ActivitySearchGalleryBinding
 import com.google.android.material.snackbar.Snackbar
 
-class ActivitySearchGallery : AppCompatActivity(),
+class SearchGalleryActivity : AppCompatActivity(),
         SearchView.OnQueryTextListener,
         SearchView.OnCloseListener {
 
 
     private var myListAdapterClass: MyListAdapter? = null
-    private var expandableListView: ExpandableListView? = null
+
+    private lateinit var binding: ActivitySearchGalleryBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_search_gallery)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        binding = ActivitySearchGalleryBinding.inflate(layoutInflater)
+
+        setSupportActionBar(binding.toolbar)
 
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        val searchView = findViewById<SearchView>(R.id.searchviewid)
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
-        searchView.setIconifiedByDefault(false)
-        searchView.setOnQueryTextListener(this)
-        searchView.setOnCloseListener(this)
+        binding.searchContainer.searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+        binding.searchContainer.searchView.setIconifiedByDefault(false)
+        binding.searchContainer.searchView.setOnQueryTextListener(this)
+        binding.searchContainer.searchView.setOnCloseListener(this)
 
         displayList()
 
-        val fab = findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener { view ->
+        binding.fab.setOnClickListener { view ->
             Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
                     .setAction(R.string.SnackbarActionText) {
                         val emailIntent = Intent(Intent.ACTION_SEND)
@@ -51,36 +48,33 @@ class ActivitySearchGallery : AppCompatActivity(),
                     }.show()
         }
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        setContentView(binding.root)
     }
 
     private fun expandAllGroups() {
         val count = myListAdapterClass!!.groupCount
         for (i in 0 until count) {
-            expandableListView!!.expandGroup(i)
+            binding.searchContainer.expandableList.expandGroup(i)
         }
     }
 
     private fun collapseAllGroups() {
         val count = myListAdapterClass!!.groupCount
         for (i in 0 until count) {
-            expandableListView!!.collapseGroup(i)
+            binding.searchContainer.expandableList.collapseGroup(i)
         }
     }
 
     private fun displayList() {
-        val loadData = LoadData()
+        val carsDataRepository = CarsDataRepository()
 
-        //display the list
-//        loadData.loadSomeData()
-
-        //get reference to the ExpandableListView
-        expandableListView = findViewById(R.id.expandableList)
         //create the adapter by passing your ArrayList data
-        myListAdapterClass = MyListAdapter(this@ActivitySearchGallery, loadData.loadSomeData())
+        myListAdapterClass = MyListAdapter(this@SearchGalleryActivity, carsDataRepository.getCarsData())
         //attach the adapter to the list
-        expandableListView!!.setAdapter(myListAdapterClass)
+        binding.searchContainer.expandableList.setAdapter(myListAdapterClass)
 
-        expandableListView!!.setOnChildClickListener(myListAdapterClass)
+        binding.searchContainer.expandableList.setOnChildClickListener(myListAdapterClass)
 
     }
 
@@ -106,5 +100,4 @@ class ActivitySearchGallery : AppCompatActivity(),
         expandAllGroups()
         return false
     }
-
 }

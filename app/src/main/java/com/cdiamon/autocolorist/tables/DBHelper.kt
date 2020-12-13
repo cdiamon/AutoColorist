@@ -6,6 +6,7 @@ import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import java.io.FileOutputStream
 import java.io.IOException
 
@@ -72,7 +73,7 @@ internal class DBHelper
         try {
             val myInput = myContext.assets.open(DATABASE_NAME)
             val outFileName = DATABASE_PATH + DATABASE_NAME
-            println(outFileName)
+            Log.d(this::class.java.simpleName, outFileName)
             val myOutput = FileOutputStream(outFileName)
             myInput.copyTo(myOutput, 1024)
             myOutput.flush()
@@ -119,7 +120,7 @@ internal class DBHelper
             var s = 0
             while (cursor.isLast && s != 29) {
                 componentNames[s] = cursor.getString(s)
-                println(cursor.getString(s))
+                Log.d(this::class.java.simpleName, cursor.getString(s))
                 s += 1
             }
         }
@@ -128,7 +129,6 @@ internal class DBHelper
             builder.append(s)
         }
 
-        println(componentNames[1])
         cursor?.close()
 
         return componentNames

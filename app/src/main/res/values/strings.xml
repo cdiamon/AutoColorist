@@ -53,7 +53,7 @@
     <string name="fragmentTablesButtonGo">Go</string>
     <string name="fragmentTablesVendors">Spies Hecker, DuPont, Profiline, Mobihel, Normex, Brulex, Challenger, Duxone, EasiCoat, DeBeer, Sikkens, Kapci, Vika, Standox, Lesonal, NoMix, Reiz, PPG, QuickLine, Lechler, GreenLine</string>
 
-    <string name="mainHeaderVersion">github.com/cdiamon version 0.60</string>
+    <string name="mainHeaderVersion">github.com/cdiamon version 0.62</string>
     <string name="mainHeaderEmail">padmitriy@gmail.com</string>
     <string name="MenuConnectSend">Send</string>
     <string name="fragmentGallerySource">Cars photos are from open sources</string>
@@ -75,4 +75,5 @@
     <string name="title_activity_maps">Colorists</string>
     <string name="menuFragmentSchool">Education</string>
     <string name="menuFragmentMaps">We on the map</string>
+    <string name="no_data_found">No data found for this query</string>
 </resources>

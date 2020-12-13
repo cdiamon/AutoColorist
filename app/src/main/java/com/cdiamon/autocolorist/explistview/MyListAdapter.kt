@@ -135,7 +135,7 @@ class MyListAdapter(private val context: Context, vendorList: ArrayList<Vendor>)
     override fun onChildClick(expandableListView: ExpandableListView, view: View, groupPosition: Int, childPosition: Int, id: Long): Boolean {
 
         Toast.makeText(this@MyListAdapter.context, R.string.galleryToastConnecting, Toast.LENGTH_SHORT).show()
-        println(" ----- $groupPosition======= $childPosition")
+        Log.d(this::class.java.simpleName, " ----- $groupPosition======= $childPosition")
 
         val intentChild = Intent(Intent.ACTION_VIEW, Uri.parse(vendorList[groupPosition].modelList[childPosition].siteModel))
         context.startActivity(intentChild)
