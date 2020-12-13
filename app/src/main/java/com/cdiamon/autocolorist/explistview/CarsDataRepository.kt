@@ -4,9 +4,9 @@ package com.cdiamon.autocolorist.explistview
  * Created by Dmitriy on 25.12.2016.
  */
 
-internal class LoadData {
+internal class CarsDataRepository {
 
-    fun loadSomeData(): ArrayList<Vendor> {
+    fun getCarsData(): ArrayList<Vendor> {
 
         val vendorArrayAddingList = ArrayList<Vendor>()
 

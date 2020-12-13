@@ -8,33 +8,33 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import com.cdiamon.autocolorist.fragments.*
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.cdiamon.autocolorist.databinding.ActivityMainBinding
+import com.cdiamon.autocolorist.fragments.EducationFragment
+import com.cdiamon.autocolorist.fragments.GalleryFragment
+import com.cdiamon.autocolorist.fragments.MapsFragment
+import com.cdiamon.autocolorist.fragments.NewFragment
+import com.cdiamon.autocolorist.fragments.OsvaldFragment
+import com.cdiamon.autocolorist.fragments.TablesFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity(),
-        NavigationView.OnNavigationItemSelectedListener,
-        NewFragment.OnFragmentInteractionListener,
-        TablesFragment.OnFragmentInteractionListener,
-        OsvaldFragment.OnFragmentInteractionListener,
-        MapsFragment.OnFragmentInteractionListener {
+        NavigationView.OnNavigationItemSelectedListener {
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setSupportActionBar(binding.appBarInclude.toolbar)
 
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, OsvaldFragment.newInstance()).commit()
 
-        val fab = findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener { view ->
+        binding.appBarInclude.fab.setOnClickListener { view ->
             Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
                     .setAction(R.string.SnackbarActionText) {
                         val emailIntent = Intent(Intent.ACTION_SEND)
@@ -49,24 +49,21 @@ class MainActivity : AppCompatActivity(),
                     }.show()
         }
 
-
-        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         val toggle = ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer.addDrawerListener(toggle)
+                this, binding.drawerLayout, binding.appBarInclude.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
         //first time..
-        drawer.openDrawer(GravityCompat.START)
+        binding.drawerLayout.openDrawer(GravityCompat.START)
+        binding.navView.setNavigationItemSelectedListener(this)
 
-        val navigationView = findViewById<NavigationView>(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
-
+        setContentView(binding.root)
     }
 
     override fun onBackPressed() {
-        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START)
+        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
@@ -152,12 +149,7 @@ class MainActivity : AppCompatActivity(),
         //show selected item name in top
         title = item.title
 
-        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
-        drawer.closeDrawer(GravityCompat.START)
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
-    }
-
-    override fun onFragmentInteraction(uri: Uri) {
-        //TODO later upgrades
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.cdiamon.autocolorist.tables.ActivityConvertTables">
+    tools:context="com.cdiamon.autocolorist.tables.ConvertTablesActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,9 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_convert_tables" />
+    <include
+        layout="@layout/content_convert_tables"
+        android:id="@+id/converter_container"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
