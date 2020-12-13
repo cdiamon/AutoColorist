@@ -8,15 +8,11 @@
     android:padding="0dp"
     tools:context="com.cdiamon.autocolorist.fragments.TablesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <ImageView
         android:id="@+id/imageViewCarCollage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="top"
@@ -50,7 +46,7 @@
         android:textSize="12sp" />
 
     <Button
-        android:id="@+id/tables_button_go"
+        android:id="@+id/tables_button"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,9 +64,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/tables_button_go"
+        android:layout_below="@+id/tables_button"
         android:layout_marginTop="41dp"
         android:text="@string/fragmentTablesVendors"
         android:textAlignment="center"

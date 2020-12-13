@@ -1,62 +1,43 @@
 package com.cdiamon.autocolorist.fragments
 
-import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.cdiamon.autocolorist.R
-import com.cdiamon.autocolorist.tables.ActivityConvertTables
+import com.cdiamon.autocolorist.databinding.FragmentTablesBinding
+import com.cdiamon.autocolorist.tables.ConvertTablesActivity
 
 class TablesFragment : Fragment() {
-    private var mListener: OnFragmentInteractionListener? = null
+
+    private var _binding: FragmentTablesBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        _binding = FragmentTablesBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        val view = inflater.inflate(R.layout.fragment_tables, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        val goButton = view.findViewById<View>(R.id.tables_button_go) as Button
-        goButton.setOnClickListener {
-            val intent = Intent(this@TablesFragment.context, ActivityConvertTables::class.java)
+        binding.tablesButton.setOnClickListener {
+            val intent = Intent(this@TablesFragment.context, ConvertTablesActivity::class.java)
             Toast.makeText(this@TablesFragment.context, R.string.fragmentTableToastGo, Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
-
-        return view
     }
 
-    fun onButtonPressed(uri: Uri) {
-        if (mListener != null) {
-            mListener!!.onFragmentInteraction(uri)
-        }
-    }
-
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            mListener = context
-        } else {
-            throw RuntimeException(context!!.toString() + " must implement OnFragmentInteractionListener")
-        }
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        mListener = null
-    }
-
-    interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {
-
         fun newInstance(): TablesFragment {
             return TablesFragment()
         }
