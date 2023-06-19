@@ -23,8 +23,8 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
-        layout="@layout/content_search_gallery"
-        android:id="@+id/search_container"/>
+        android:id="@+id/search_container"
+        layout="@layout/content_search_gallery" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

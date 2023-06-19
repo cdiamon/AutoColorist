@@ -19,7 +19,8 @@ import com.cdiamon.autocolorist.R
 import java.util.*
 
 
-class MyListAdapter(private val context: Context, vendorList: ArrayList<Vendor>) : BaseExpandableListAdapter(), ExpandableListView.OnChildClickListener {
+class MyListAdapter(private val context: Context, vendorList: ArrayList<Vendor>) :
+    BaseExpandableListAdapter(), ExpandableListView.OnChildClickListener {
     private val vendorList: ArrayList<Vendor> = ArrayList()
     private val vendorArrList: ArrayList<Vendor> = ArrayList()
 
@@ -38,13 +39,19 @@ class MyListAdapter(private val context: Context, vendorList: ArrayList<Vendor>)
         return childPosition.toLong()
     }
 
-    override fun getChildView(groupPosition: Int, childPosition: Int, isLastChild: Boolean,
-                              view: View?, parent: ViewGroup): View {
+    override fun getChildView(
+        groupPosition: Int, childPosition: Int, isLastChild: Boolean,
+        view: View?, parent: ViewGroup
+    ): View {
         var childView = view
 
-        val (codeModel, nameModel, siteModel) = getChild(groupPosition, childPosition) as CarListModel
+        val (codeModel, nameModel, siteModel) = getChild(
+            groupPosition,
+            childPosition
+        ) as CarListModel
         if (childView == null) {
-            val layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val layoutInflater =
+                context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             childView = layoutInflater.inflate(R.layout.child_row, null)
         }
 
@@ -77,13 +84,16 @@ class MyListAdapter(private val context: Context, vendorList: ArrayList<Vendor>)
         return groupPosition.toLong()
     }
 
-    override fun getGroupView(groupPosition: Int, isLastChild: Boolean, view: View?,
-                              parent: ViewGroup): View {
+    override fun getGroupView(
+        groupPosition: Int, isLastChild: Boolean, view: View?,
+        parent: ViewGroup
+    ): View {
         var groupView = view
 
         val (nameVendor) = getGroup(groupPosition) as Vendor
         if (groupView == null) {
-            val layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val layoutInflater =
+                context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             groupView = layoutInflater.inflate(R.layout.group_row, null)
         }
 
@@ -116,7 +126,10 @@ class MyListAdapter(private val context: Context, vendorList: ArrayList<Vendor>)
 
                 val newList = ArrayList<CarListModel>()
                 for (carListModel in modelList) {
-                    if (carListModel.codeModel!!.toLowerCase().contains(filterQuery) || carListModel.nameModel!!.toLowerCase().contains(filterQuery)) {
+                    if (carListModel.codeModel!!.toLowerCase()
+                            .contains(filterQuery) || carListModel.nameModel!!.toLowerCase()
+                            .contains(filterQuery)
+                    ) {
                         newList.add(carListModel)
                     }
                 }
@@ -132,12 +145,25 @@ class MyListAdapter(private val context: Context, vendorList: ArrayList<Vendor>)
 
     }
 
-    override fun onChildClick(expandableListView: ExpandableListView, view: View, groupPosition: Int, childPosition: Int, id: Long): Boolean {
+    override fun onChildClick(
+        expandableListView: ExpandableListView,
+        view: View,
+        groupPosition: Int,
+        childPosition: Int,
+        id: Long
+    ): Boolean {
 
-        Toast.makeText(this@MyListAdapter.context, R.string.galleryToastConnecting, Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            this@MyListAdapter.context,
+            R.string.galleryToastConnecting,
+            Toast.LENGTH_SHORT
+        ).show()
         Log.d(this::class.java.simpleName, " ----- $groupPosition======= $childPosition")
 
-        val intentChild = Intent(Intent.ACTION_VIEW, Uri.parse(vendorList[groupPosition].modelList[childPosition].siteModel))
+        val intentChild = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse(vendorList[groupPosition].modelList[childPosition].siteModel)
+        )
         context.startActivity(intentChild)
         return true
     }

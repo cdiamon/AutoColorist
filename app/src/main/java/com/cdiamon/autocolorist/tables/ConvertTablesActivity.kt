@@ -32,15 +32,18 @@ class ConvertTablesActivity : AppCompatActivity() {
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
-                    .setAction(R.string.SnackbarActionText) {
-                        val intentEmail = Intent(Intent.ACTION_SEND)
-                        startActivity(Intent.createChooser(intentEmail, "Send Feedback:"))
-                        intentEmail.type = "text/email"
-                        intentEmail.putExtra(Intent.EXTRA_EMAIL, arrayOf("padmitriy@gmail.com"))
-                        intentEmail.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.SnackbarEmailTitle))
-                        intentEmail.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody))
-                        startActivity(Intent.createChooser(intentEmail, "Send Feedback:"))
-                    }.show()
+                .setAction(R.string.SnackbarActionText) {
+                    val intentEmail = Intent(Intent.ACTION_SEND)
+                    startActivity(Intent.createChooser(intentEmail, "Send Feedback:"))
+                    intentEmail.type = "text/email"
+                    intentEmail.putExtra(Intent.EXTRA_EMAIL, arrayOf("padmitriy@gmail.com"))
+                    intentEmail.putExtra(
+                        Intent.EXTRA_SUBJECT,
+                        getString(R.string.SnackbarEmailTitle)
+                    )
+                    intentEmail.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody))
+                    startActivity(Intent.createChooser(intentEmail, "Send Feedback:"))
+                }.show()
         }
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
@@ -72,95 +75,122 @@ class ConvertTablesActivity : AppCompatActivity() {
                     sendComponentName = convBinding.editSH.text.toString().trim { it <= ' ' }
                     sendVendorName = "SH"
                 }
+
                 convBinding.editDuPont.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editDuPont.text.toString().trim { it <= ' ' }
                     sendVendorName = "DuPont"
                 }
+
                 convBinding.editProfiline.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editProfiline.text.toString().trim { it <= ' ' }
                     sendVendorName = "Profiline"
                 }
+
                 convBinding.editMobihel.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editMobihel.text.toString().trim { it <= ' ' }
                     sendVendorName = "Mobihel"
                 }
+
                 convBinding.editNormex.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editNormex.text.toString().trim { it <= ' ' }
                     sendVendorName = "Normex"
                 }
+
                 convBinding.editBrulex.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editBrulex.text.toString().trim { it <= ' ' }
                     sendVendorName = "Brulex"
                 }
+
                 convBinding.editChallenger.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
-                    sendComponentName = convBinding.editChallenger.text.toString().trim { it <= ' ' }
+                    sendComponentName =
+                        convBinding.editChallenger.text.toString().trim { it <= ' ' }
                     sendVendorName = "Challenger"
                 }
+
                 convBinding.editDuxone.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editDuxone.text.toString().trim { it <= ' ' }
                     sendVendorName = "Duxone"
                 }
+
                 convBinding.editEasiCoat.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editEasiCoat.text.toString().trim { it <= ' ' }
                     sendVendorName = "EasiCoat"
                 }
+
                 convBinding.editDeBeer.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editDeBeer.text.toString().trim { it <= ' ' }
                     sendVendorName = "DeBeer"
                 }
+
                 convBinding.editSikkens.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editSikkens.text.toString().trim { it <= ' ' }
                     sendVendorName = "Sikkens"
                 }
+
                 convBinding.editKapci.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editKapci.text.toString().trim { it <= ' ' }
                     sendVendorName = "Kapci"
                 }
+
                 convBinding.editVika.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editVika.text.toString().trim { it <= ' ' }
                     sendVendorName = "Vika"
                 }
+
                 convBinding.editStandox.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editStandox.text.toString().trim { it <= ' ' }
                     sendVendorName = "Standox"
                 }
+
                 convBinding.editLesonal.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editLesonal.text.toString().trim { it <= ' ' }
                     sendVendorName = "Lesonal"
                 }
+
                 convBinding.editNoMix.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editNoMix.text.toString().trim { it <= ' ' }
                     sendVendorName = "NoMix"
                 }
+
                 convBinding.editReiz.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editReiz.text.toString().trim { it <= ' ' }
                     sendVendorName = "Reiz"
                 }
+
                 convBinding.editPPG.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editPPG.text.toString().trim { it <= ' ' }
                     sendVendorName = "PPG"
                 }
+
                 convBinding.editQuickLine.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editQuickLine.text.toString().trim { it <= ' ' }
                     sendVendorName = "QuickLine"
                 }
+
                 convBinding.editLechler.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editLechler.text.toString().trim { it <= ' ' }
                     sendVendorName = "Lechler"
                 }
+
                 convBinding.editGreenLine.text.toString().trim { it <= ' ' }.isNotEmpty() -> {
                     sendComponentName = convBinding.editGreenLine.text.toString().trim { it <= ' ' }
                     sendVendorName = "GreenLine"
                 }
+
                 else -> {
                     sendComponentName = "null"
                     sendVendorName = "null"
-                    Toast.makeText(applicationContext, R.string.tableToastInputCorrect, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        applicationContext,
+                        R.string.tableToastInputCorrect,
+                        Toast.LENGTH_SHORT
+                    ).show()
                     convBinding.tableSearchBtn.isEnabled = true
                 }
             }
 
-            val componentNames: Array<String?> = myDbHelper.searchData(sendVendorName, sendComponentName)
+            val componentNames: Array<String?> =
+                myDbHelper.searchData(sendVendorName, sendComponentName)
 
             if (componentNames.all { it.isNullOrBlank() }) {
                 Toast.makeText(this, getString(R.string.no_data_found), Toast.LENGTH_LONG).show()

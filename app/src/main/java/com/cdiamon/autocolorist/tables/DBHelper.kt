@@ -21,7 +21,8 @@ internal class DBHelper
  *
  * @param myContext
  */
-(private val myContext: Context) : SQLiteOpenHelper(myContext, DATABASE_NAME, null, DATABASE_VERSION) {
+    (private val myContext: Context) :
+    SQLiteOpenHelper(myContext, DATABASE_NAME, null, DATABASE_VERSION) {
 
     private var myDataBase: SQLiteDatabase? = null
 
@@ -113,7 +114,9 @@ internal class DBHelper
 
         myDataBase = this.readableDatabase
         val cursor: Cursor?
-        val queryString = "select * from " + DATABASE_TABLE + " where " + vendorName + "=" + '"'.toString() + componentName.toUpperCase() + '"'.toString() + "LIMIT 1"
+        val queryString =
+            "select * from " + DATABASE_TABLE + " where " + vendorName + "=" + '"'.toString() +
+                    componentName.toUpperCase() + '"'.toString() + "LIMIT 1"
         cursor = myDataBase!!.rawQuery(queryString, null)
         if (cursor != null && cursor.moveToFirst()) {
 

@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity(),
-        NavigationView.OnNavigationItemSelectedListener {
+    NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -36,21 +36,30 @@ class MainActivity : AppCompatActivity(),
 
         binding.appBarInclude.fab.setOnClickListener { view ->
             Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
-                    .setAction(R.string.SnackbarActionText) {
-                        val emailIntent = Intent(Intent.ACTION_SEND)
-                        startActivity(Intent.createChooser(emailIntent, "Send Feedback:"))
-                        emailIntent.type = "text/email"
-                        emailIntent.putExtra(Intent.EXTRA_EMAIL,
-                                arrayOf("padmitriy@gmail.com"))
-                        emailIntent.putExtra(Intent.EXTRA_SUBJECT,
-                                getString(R.string.SnackbarEmailTitle))
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody))
-                        startActivity(Intent.createChooser(emailIntent, "Send Feedback:"))
-                    }.show()
+                .setAction(R.string.SnackbarActionText) {
+                    val emailIntent = Intent(Intent.ACTION_SEND)
+                    startActivity(Intent.createChooser(emailIntent, "Send Feedback:"))
+                    emailIntent.type = "text/email"
+                    emailIntent.putExtra(
+                        Intent.EXTRA_EMAIL,
+                        arrayOf("padmitriy@gmail.com")
+                    )
+                    emailIntent.putExtra(
+                        Intent.EXTRA_SUBJECT,
+                        getString(R.string.SnackbarEmailTitle)
+                    )
+                    emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody))
+                    startActivity(Intent.createChooser(emailIntent, "Send Feedback:"))
+                }.show()
         }
 
         val toggle = ActionBarDrawerToggle(
-                this, binding.drawerLayout, binding.appBarInclude.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            this,
+            binding.drawerLayout,
+            binding.appBarInclude.toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -83,6 +92,7 @@ class MainActivity : AppCompatActivity(),
                 Toast.makeText(this, R.string.mainToastSettings, Toast.LENGTH_SHORT).show()
                 return true
             }
+
             R.id.menu_calculator -> {
                 val intent = Intent()
                 intent.action = Intent.ACTION_MAIN
@@ -92,10 +102,12 @@ class MainActivity : AppCompatActivity(),
                     startActivity(intent)
                     Toast.makeText(this, R.string.mainToastCalc, Toast.LENGTH_SHORT).show()
                 } catch (e: Exception) {
-                    Toast.makeText(this, getString(R.string.calcNotFound), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.calcNotFound), Toast.LENGTH_SHORT)
+                        .show()
                 }
                 return true
             }
+
             R.id.menu_calendar -> {
                 val intent = Intent()
                 intent.action = Intent.ACTION_MAIN
@@ -105,6 +117,7 @@ class MainActivity : AppCompatActivity(),
                 Toast.makeText(this, R.string.mainToastCalendar, Toast.LENGTH_SHORT).show()
                 return true
             }
+
             else -> return super.onOptionsItemSelected(item)
         }
 
@@ -121,19 +134,23 @@ class MainActivity : AppCompatActivity(),
             R.id.nav_maps -> fragment = MapsFragment.newInstance()
             R.id.nav_manage -> {
                 fragment = NewFragment.newInstance()
-                Toast.makeText(this, R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT)
+                    .show()
             }
+
             R.id.nav_share -> {
 
                 val sharingIntent = Intent(Intent.ACTION_SEND)
                 sharingIntent.type = "text/plain"
-                val shareBody = "Приложение для колористов\nскачать бесплатно\nhttps://cdiamon.github.io/AutoColorist/"
+                val shareBody =
+                    "Приложение для колористов\nскачать бесплатно\nhttps://cdiamon.github.io/AutoColorist/"
                 val shareSub = "Your subject here"
                 sharingIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub)
                 sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
                 startActivity(Intent.createChooser(sharingIntent, "Share using"))
                 return true
             }
+
             R.id.nav_send -> {
                 fragment = NewFragment.newInstance()
                 Toast.makeText(this, R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show()

@@ -11,8 +11,8 @@ import com.cdiamon.autocolorist.databinding.ActivitySearchGalleryBinding
 import com.google.android.material.snackbar.Snackbar
 
 class SearchGalleryActivity : AppCompatActivity(),
-        SearchView.OnQueryTextListener,
-        SearchView.OnCloseListener {
+    SearchView.OnQueryTextListener,
+    SearchView.OnCloseListener {
 
 
     private var myListAdapterClass: MyListAdapter? = null
@@ -26,7 +26,11 @@ class SearchGalleryActivity : AppCompatActivity(),
         setSupportActionBar(binding.toolbar)
 
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        binding.searchContainer.searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+        binding.searchContainer.searchView.setSearchableInfo(
+            searchManager.getSearchableInfo(
+                componentName
+            )
+        )
         binding.searchContainer.searchView.setIconifiedByDefault(false)
         binding.searchContainer.searchView.setOnQueryTextListener(this)
         binding.searchContainer.searchView.setOnCloseListener(this)
@@ -35,17 +39,21 @@ class SearchGalleryActivity : AppCompatActivity(),
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, R.string.SnackbarViewText, Snackbar.LENGTH_LONG)
-                    .setAction(R.string.SnackbarActionText) {
-                        val emailIntent = Intent(Intent.ACTION_SEND)
-                        startActivity(Intent.createChooser(emailIntent, "Send Feedback:"))
-                        emailIntent.type = "text/email"
-                        emailIntent.putExtra(Intent.EXTRA_EMAIL,
-                                "padmitriy@gmail.com")
-                        emailIntent.putExtra(Intent.EXTRA_SUBJECT,
-                                getString(R.string.SnackbarEmailTitle)) // Subject
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody))
-                        startActivity(Intent.createChooser(emailIntent, "Send Feedback:"))
-                    }.show()
+                .setAction(R.string.SnackbarActionText) {
+                    val emailIntent = Intent(Intent.ACTION_SEND)
+                    startActivity(Intent.createChooser(emailIntent, "Send Feedback:"))
+                    emailIntent.type = "text/email"
+                    emailIntent.putExtra(
+                        Intent.EXTRA_EMAIL,
+                        "padmitriy@gmail.com"
+                    )
+                    emailIntent.putExtra(
+                        Intent.EXTRA_SUBJECT,
+                        getString(R.string.SnackbarEmailTitle)
+                    ) // Subject
+                    emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.SnackbarEmailBody))
+                    startActivity(Intent.createChooser(emailIntent, "Send Feedback:"))
+                }.show()
         }
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
@@ -70,7 +78,8 @@ class SearchGalleryActivity : AppCompatActivity(),
         val carsDataRepository = CarsDataRepository()
 
         //create the adapter by passing your ArrayList data
-        myListAdapterClass = MyListAdapter(this@SearchGalleryActivity, carsDataRepository.getCarsData())
+        myListAdapterClass =
+            MyListAdapter(this@SearchGalleryActivity, carsDataRepository.getCarsData())
         //attach the adapter to the list
         binding.searchContainer.expandableList.setAdapter(myListAdapterClass)
 

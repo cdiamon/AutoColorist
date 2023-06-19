@@ -22,8 +22,8 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
-        layout="@layout/content_convert_tables"
-        android:id="@+id/converter_container"/>
+        android:id="@+id/converter_container"
+        layout="@layout/content_convert_tables" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
