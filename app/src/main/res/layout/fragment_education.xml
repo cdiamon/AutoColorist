@@ -5,6 +5,7 @@
     tools:context=".fragments.EducationFragment">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="139dp"
@@ -13,6 +14,5 @@
         android:textAllCaps="true"
         android:textColor="?android:attr/colorActivatedHighlight"
         android:textSize="14sp"
-        android:textStyle="normal|bold"
-        android:id="@+id/textView2" />
+        android:textStyle="normal|bold" />
 </FrameLayout>

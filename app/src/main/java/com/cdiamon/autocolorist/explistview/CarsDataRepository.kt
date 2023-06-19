@@ -3,7 +3,6 @@ package com.cdiamon.autocolorist.explistview
 /**
  * Created by Dmitriy on 25.12.2016.
  */
-
 internal class CarsDataRepository {
 
     fun getCarsData(): ArrayList<Vendor> {

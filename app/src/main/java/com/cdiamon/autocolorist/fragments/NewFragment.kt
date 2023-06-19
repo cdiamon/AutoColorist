@@ -16,8 +16,10 @@ class NewFragment : Fragment() {
     private var _binding: FragmentNewBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         _binding = FragmentNewBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -27,7 +29,8 @@ class NewFragment : Fragment() {
 
         binding.inProgressTv.text = getText(R.string.fragmentOnConstruction)
         binding.inProgressTv.setTextColor(
-                ContextCompat.getColor(requireContext(), android.R.color.holo_orange_dark))
+            ContextCompat.getColor(requireContext(), android.R.color.holo_orange_dark)
+        )
     }
 
     override fun onDestroyView() {

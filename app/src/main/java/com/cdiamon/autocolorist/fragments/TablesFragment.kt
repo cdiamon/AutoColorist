@@ -16,8 +16,10 @@ class TablesFragment : Fragment() {
     private var _binding: FragmentTablesBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         _binding = FragmentTablesBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -27,7 +29,11 @@ class TablesFragment : Fragment() {
 
         binding.tablesButton.setOnClickListener {
             val intent = Intent(this@TablesFragment.context, ConvertTablesActivity::class.java)
-            Toast.makeText(this@TablesFragment.context, R.string.fragmentTableToastGo, Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@TablesFragment.context,
+                R.string.fragmentTableToastGo,
+                Toast.LENGTH_SHORT
+            ).show()
             startActivity(intent)
         }
     }

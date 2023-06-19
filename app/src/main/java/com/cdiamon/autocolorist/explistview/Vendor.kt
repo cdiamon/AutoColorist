@@ -6,11 +6,4 @@ package com.cdiamon.autocolorist.explistview
 
 import java.util.ArrayList
 
-data class Vendor(val nameVendor: String?, val modelList: ArrayList<CarListModel>) {
-//    var modelList = ArrayList<CarListModel>()
-//
-//    init {
-//        this.modelList = modelList
-//    }
-
-}
+data class Vendor(val nameVendor: String?, val modelList: ArrayList<CarListModel>)
