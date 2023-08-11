@@ -13,7 +13,6 @@
     <string name="menuFragmentOsvald">Круг Освальда</string>
     <string name="menuFragmentGallery">Цвета, коды</string>
     <string name="menuFragmentTable">Таблица перевода</string>
-    <string name="menuFragmentInstruments">Инструменты</string>
     <string name="MenuPartConnect">Связь</string>
     <string name="MenuConnectShare">Поделиться</string>
     <string name="unknown">Неизвестно</string>
@@ -47,18 +46,13 @@
     <string name="fragmentGalleryRecommend">Нажимайте на названия моделей авто</string>
     <string name="fragmentGalleryButtonGo">Перейти</string>
 
-    <string name="fragmentOnConstruction">Раздел в этот самый момент находится в процессе разработки. Предложения с радостью принимаются по email. Email будет удобно отправить по кнопке внизу.</string>
-
     <string name="fragmentTablesDescription">Таблица переводов по множеству популярных брендов</string>
     <string name="fragmentTablesSource">Таблица собрана сообществом колористов</string>
     <string name="fragmentTablesButtonGo">Перейти</string>
 
     <string name="mainHeaderVersion">github.com/cdiamon version 0.62</string>
     <string name="mainHeaderEmail">padmitriy@gmail.com</string>
-    <string name="MenuConnectSend">Отправить</string>
     <string name="fragmentTablesVendors">Spies Hecker, DuPont, Profiline, Mobihel, Normex, Brulex, Challenger, Duxone, EasiCoat, DeBeer, Sikkens, Kapci, Vika, Standox, Lesonal, NoMix, Reiz, PPG, QuickLine, Lechler, GreenLine</string>
-    <string name="MainActivityToastToInstruments">Раздел Инструменты в разработке</string>
-    <string name="MainActivityToastToSend">Раздел Отправить в разработке</string>
     <string name="SnackbarActionText">Отправить</string>
     <string name="SnackbarEmailBody">Здравствуйте, Дмитрий. У меня есть исправление/дополнение для вашего приложения AutoColorist.</string>
     <string name="SnackbarEmailTitle">Отзыв/предложение по AutoColorist</string>
@@ -72,7 +66,6 @@
     <string name="tableToastInputCorrect">Введите корректный номер компонента в одно из полей и нажмите кнопку ПОИСК</string>
     <string name="calcNotFound">Не найдено приложение Калькулятор</string>
     <string name="title_activity_maps">Колористы</string>
-    <string name="menuFragmentSchool">Учебные материалы</string>
     <string name="menuFragmentMaps">Мы на карте</string>
     <string name="no_data_found">Не найден введённый номер</string>
 </resources>

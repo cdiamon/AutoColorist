@@ -1,7 +1,6 @@
 package com.cdiamon.autocolorist
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -11,10 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.cdiamon.autocolorist.databinding.ActivityMainBinding
-import com.cdiamon.autocolorist.fragments.EducationFragment
 import com.cdiamon.autocolorist.fragments.GalleryFragment
-import com.cdiamon.autocolorist.fragments.MapsFragment
-import com.cdiamon.autocolorist.fragments.NewFragment
+import com.cdiamon.autocolorist.maps.MapsFragment
 import com.cdiamon.autocolorist.fragments.OsvaldFragment
 import com.cdiamon.autocolorist.fragments.TablesFragment
 import com.google.android.material.navigation.NavigationView
@@ -130,13 +127,7 @@ class MainActivity : AppCompatActivity(),
             R.id.nav_circle -> fragment = OsvaldFragment.newInstance()
             R.id.nav_gallery -> fragment = GalleryFragment.newInstance()
             R.id.nav_slideshow -> fragment = TablesFragment.newInstance()
-            R.id.nav_school -> fragment = EducationFragment.newInstance()
             R.id.nav_maps -> fragment = MapsFragment.newInstance()
-            R.id.nav_manage -> {
-                fragment = NewFragment.newInstance()
-                Toast.makeText(this, R.string.MainActivityToastToInstruments, Toast.LENGTH_SHORT)
-                    .show()
-            }
 
             R.id.nav_share -> {
 
@@ -150,13 +141,6 @@ class MainActivity : AppCompatActivity(),
                 startActivity(Intent.createChooser(sharingIntent, "Share using"))
                 return true
             }
-
-            R.id.nav_send -> {
-                fragment = NewFragment.newInstance()
-                Toast.makeText(this, R.string.MainActivityToastToSend, Toast.LENGTH_SHORT).show()
-            }
-            //now highlighting selected menu in left bar
-            //show selected item name in top
         }
 
         val fragmentManager = supportFragmentManager

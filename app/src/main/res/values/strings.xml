@@ -13,7 +13,6 @@
     <string name="menuFragmentOsvald">Osvald\'s circle</string>
     <string name="menuFragmentGallery">Colors, codes</string>
     <string name="menuFragmentTable">Translation Table</string>
-    <string name="menuFragmentInstruments">Instruments</string>
     <string name="MenuPartConnect">Connect</string>
     <string name="MenuConnectShare">Share</string>
     <string name="unknown">Unknown</string>
@@ -46,8 +45,6 @@
     <string name="fragmentGalleryRecommend">Press on the car models names</string>
     <string name="fragmentGalleryButtonGo">Go</string>
 
-    <string name="fragmentOnConstruction">This section is under development. Proposals are accepted gladly by email. Email will be handy to send by the below button.</string>
-
     <string name="fragmentTablesDescription">Translation Table for a variety of popular brands</string>
     <string name="fragmentTablesSource">Table is assembled by colourists community</string>
     <string name="fragmentTablesButtonGo">Go</string>
@@ -55,10 +52,7 @@
 
     <string name="mainHeaderVersion">github.com/cdiamon version 0.62</string>
     <string name="mainHeaderEmail">padmitriy@gmail.com</string>
-    <string name="MenuConnectSend">Send</string>
     <string name="fragmentGallerySource">Cars photos are from open sources</string>
-    <string name="MainActivityToastToInstruments">Tools section is under development</string>
-    <string name="MainActivityToastToSend">Send section is under development</string>
     <string name="SnackbarViewText">Send email to developer</string>
     <string name="SnackbarActionText">Send</string>
     <string name="SnackbarEmailTitle">Feedback about AutoColorist app</string>
@@ -73,7 +67,6 @@
 
     <string name="calcNotFound">Calculator app not found</string>
     <string name="title_activity_maps">Colorists</string>
-    <string name="menuFragmentSchool">Education</string>
     <string name="menuFragmentMaps">We on the map</string>
     <string name="no_data_found">No data found for this query</string>
 </resources>

@@ -2,32 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.MapsFragment">
+    tools:context=".maps.MapsFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="139dp"
-        android:text="@string/fragmentOnConstruction"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="?android:attr/colorActivatedHighlight"
-        android:textSize="14sp"
-        android:textStyle="normal|bold" />
-
-    <Button
-        android:id="@+id/maps_go_button"
-        style="@style/Widget.AppCompat.Button.Colored"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="55dp"
-        android:padding="0dp"
-        android:text="@string/fragmentTablesButtonGo"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="normal|bold" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>

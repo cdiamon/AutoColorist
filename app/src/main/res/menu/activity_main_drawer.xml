@@ -15,17 +15,9 @@
             android:icon="@drawable/icon_table_grid"
             android:title="@string/menuFragmentTable" />
         <item
-            android:id="@+id/nav_school"
-            android:icon="@drawable/ic_school_black_24dp"
-            android:title="@string/menuFragmentSchool" />
-        <item
             android:id="@+id/nav_maps"
             android:icon="@drawable/ic_map_black_24dp"
             android:title="@string/menuFragmentMaps" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menuFragmentInstruments" />
     </group>
 
     <item android:title="@string/MenuPartConnect">
@@ -34,10 +26,6 @@
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/MenuConnectShare" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/MenuConnectSend" />
         </menu>
     </item>
 
